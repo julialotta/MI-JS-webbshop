@@ -1,0 +1,27 @@
+{
+  "name": "mi-js-webbshop",
+  "version": "1.0.0",
+  "description": "webshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel src/index.html",
+    "cyp": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julialotta/MI-JS-webbshop.git"
+  },
+  "author": "julia-lotta & tuva-li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julialotta/MI-JS-webbshop/issues"
+  },
+  "homepage": "https://github.com/julialotta/MI-JS-webbshop#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "cypress": "^9.1.0",
+    "parcel": "^2.0.1",
+    "typescript": "^4.5.2"
+  }
+}
