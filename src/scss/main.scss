@@ -1,3 +1,17 @@
-body {
-  background-color: red;
+html {
+  scroll-behavior: smooth;
 }
+
+// Mixins
+@import "mixins";
+
+// Style repeated elements
+@import "./elements/header";
+@import "./elements/footer";
+
+// Style separate elements
+@import "./elements/homepage";
+@import "./elements/product-page";
+@import "./elements/product-spec";
+@import "./elements/cart";
+@import "./elements/order-confirmation";
