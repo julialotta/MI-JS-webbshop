@@ -1,0 +1,26 @@
+{
+  "name": "mi-js-webshop",
+  "version": "1.0.0",
+  "description": "Draw me like one of your french bulldogs webshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julialotta/MI-JS-webshop.git"
+  },
+  "author": "Julia-Lotta Tinglof, Tuva-Li Wass Vallin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julialotta/MI-JS-webshop/issues"
+  },
+  "homepage": "https://github.com/julialotta/MI-JS-webshop#readme",
+  "dependencies": {
+    "parcel": "^2.0.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1"
+  }
+}
