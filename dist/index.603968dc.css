@@ -82,7 +82,8 @@ body {
   height: 100%;
   margin-top: 50px;
 }
-.category-header {
-  font: "Permanent Marker", cursive;
+.productpage h2,
+.productpage h3 {
+  font-family: "Permanent Marker", cursive;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
