@@ -138,17 +138,32 @@ body {
   left: 0;
 }
 .productpage .dogproduct i:hover {
-  animation: wiggle infinite;
+  animation: wiggle 2.2s infinite;
 }
 @keyframes wiggle {
   0% {
-    rotate: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  30% {
+    transform: rotate(-25deg);
+  }
+  35% {
+    transform: rotate(25deg);
+  }
+  40% {
+    transform: rotate(-25deg);
+  }
+  45% {
+    transform: rotate(25deg);
   }
   50% {
-    rotate: -20deg;
-  }
-  100% {
-    rotate: 30deg;
+    transform: rotate(0deg);
   }
 }
 .productpage .dogproduct i {
