@@ -96,7 +96,13 @@ body {
 }
 @media (min-width: 564px) {
   .outerContainer .blueContainer .containerPink .hamburgerMenuContainer .burgerContainer {
+    top: 20%;
     left: 90%;
+  }
+}
+@media (min-width: 650px) {
+  .outerContainer .blueContainer .containerPink .hamburgerMenuContainer .burgerContainer {
+    margin-top: 60%;
   }
 }
 @media (min-width: 768px) {
@@ -108,15 +114,15 @@ body {
   height: 3px;
   width: 35px;
   background-color: black;
-  margin: 3px;
+  margin-bottom: 3px;
 }
 .outerContainer .blueContainer .logoContainer {
-  width: 80%;
+  /* width: 80%;
+  height: 100%; */
 }
 @media (min-width: 768px) {
   .outerContainer .blueContainer .logoContainer {
-    width: 60%;
-    height: 100%;
+    width: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -124,9 +130,14 @@ body {
     width: 50%;
   }
 }
+@media (min-width: 1200px) {
+  .outerContainer .blueContainer .logoContainer {
+    width: 40%;
+  }
+}
 .outerContainer .blueContainer .logoContainer .logoImage {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   margin-top: 50px;
 }
 .tabletHeader {
@@ -145,19 +156,24 @@ body {
   font-family: "Permanent Marker", cursive;
 }
 .header {
-  height: 100%;
+  height: 50%;
   width: 100%;
   display: flex;
+  margin: 0;
 }
 .header .logoNameContainer {
   width: 50%;
   position: relative;
-  top: 20%;
   left: 5%;
 }
 .header .logoNameContainer .logoName {
   font-size: 14pt;
   font-family: "Permanent Marker", cursive;
+}
+@media (min-width: 650px) {
+  .header .logoNameContainer .logoName {
+    margin-top: 60%;
+  }
 }
 @media (min-width: 768px) {
   .header .logoNameContainer .logoName {

@@ -87,7 +87,12 @@ body {
           top: 10%;
 
           @include for-phone-only {
+            top: 20%;
             left: 90%;
+          }
+
+          @include for-phone-landscape-up {
+            margin-top: 60%;
           }
           @include for-tablet-landscape-up {
             display: none;
@@ -97,21 +102,23 @@ body {
             height: 3px;
             width: 35px;
             background-color: black;
-            margin: 3px;
+            margin-bottom: 3px;
           }
         }
       }
     }
     .logoContainer {
       width: 80%;
-
+      height: 100%;
       @include for-tablet-landscape-up {
-        width: 60%;
-        height: 100%;
+        width: 50%;
       }
 
       @include for-desktop-up {
         width: 50%;
+      }
+      @include for-big-desktop-up {
+        width: 40%;
       }
 
       .logoImage {
