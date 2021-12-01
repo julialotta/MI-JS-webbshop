@@ -46,6 +46,7 @@
       width: 200px;
     }
     .cartcontainer {
+      cursor: pointer;
       border: 2px $blue solid;
       border-radius: 5px;
       clip-path: polygon(0 79%, 0% 100%, 25% 100%);
@@ -53,6 +54,20 @@
       position: absolute;
       bottom: 4px;
       left: 0;
+    }
+    .cartcontainer:hover {
+      animation: wiggle infinite;
+    }
+    @keyframes wiggle {
+      0% {
+        rotate: 0;
+      }
+      50% {
+        rotate: -3deg;
+      }
+      100% {
+        rotate: 3deg;
+      }
     }
     i {
       color: $black;
