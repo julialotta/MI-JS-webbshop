@@ -137,8 +137,19 @@ body {
   bottom: 4px;
   left: 0;
 }
-.productpage .dogproduct .cartcontainer:hover {
+.productpage .dogproduct i:hover {
   animation: wiggle infinite;
+}
+@keyframes wiggle {
+  0% {
+    rotate: 0;
+  }
+  50% {
+    rotate: -20deg;
+  }
+  100% {
+    rotate: 30deg;
+  }
 }
 .productpage .dogproduct i {
   color: #000000;
