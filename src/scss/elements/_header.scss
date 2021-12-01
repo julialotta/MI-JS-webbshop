@@ -1,19 +1,24 @@
 body {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 .outerContainer {
-  height: 90vh;
+  height: 110vh;
   width: 90vw;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   background-color: $lightgrey;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   @include for-tablet-landscape-up {
+    height: 95vh;
+  }
+  @include for-desktop-up {
     height: 80vh;
-    width: 90vw;
+    width: 80vw;
   }
 
   .blueContainer {
@@ -21,8 +26,13 @@ body {
     width: 100%;
     background-color: $blue;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include for-tablet-landscape-up {
+      height: 50%;
+    }
 
     .containerPink {
       height: 90%;
@@ -33,51 +43,82 @@ body {
       align-items: center;
       justify-content: flex-end;
 
-      @include for-tablet-landscape-up {
+      @include for-phone-only {
         height: 90%;
         width: 80%;
       }
+      @include for-tablet-landscape-up {
+        height: 80%;
+        width: 90%;
+      }
 
-      .header {
-        height: 40%;
-        width: 100%;
-        display: flex;
-        .logoNameContainer {
-          width: 50%;
-          margin: 15px;
-          font-size: 14pt;
+      .desktopLinksContainer {
+        display: none;
 
-          .logoName {
+        .linksContainer {
+          .links {
+            color: $black;
             font-family: $header-font;
+            cursor: pointer;
+            text-decoration: none;
           }
         }
 
-        .hamburgerMenuContainer {
+        @include for-tablet-landscape-up {
+          display: inline;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 60vw;
+          position: relative;
+          top: 20%;
+        }
+      }
+
+      .hamburgerMenuContainer {
+        width: 40%;
+        height: 100%;
+
+        .burgerContainer {
           width: 50px;
           height: 50px;
+          position: relative;
+          left: 80%;
+          top: 10%;
+
+          @include for-phone-only {
+            left: 90%;
+          }
+          @include for-tablet-landscape-up {
+            display: none;
+          }
 
           .burgerMenu {
-            height: 5px;
-            width: 40px;
+            height: 3px;
+            width: 35px;
             background-color: black;
             margin: 3px;
           }
         }
       }
-      .logoContainer {
-        width: 80%;
-        height: 80%;
+    }
+    .logoContainer {
+      width: 80%;
+      height: 80%;
 
-        @include for-tablet-landscape-up {
-          width: 60%;
-          height: 90%;
-        }
+      @include for-tablet-landscape-up {
+        width: 60%;
+        height: 100%;
+      }
 
-        .logoImage {
-          width: 100%;
-          height: 100%;
-          margin-top: 50px;
-        }
+      @include for-desktop-up {
+        width: 50%;
+      }
+
+      .logoImage {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
       }
     }
   }
