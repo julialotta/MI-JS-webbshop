@@ -7,7 +7,7 @@ body {
   height: 90vh;
   width: 90vw;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-  background-color: $white-color;
+  background-color: $lightgrey;
   display: flex;
   justify-content: center;
 
@@ -19,7 +19,7 @@ body {
   .blueContainer {
     height: 70%;
     width: 100%;
-    background-color: $blue-color;
+    background-color: $blue;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -27,7 +27,7 @@ body {
     .containerPink {
       height: 90%;
       width: 90%;
-      background-color: $pink-color;
+      background-color: $lightpink;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -42,6 +42,15 @@ body {
         height: 40%;
         width: 100%;
         display: flex;
+        .logoNameContainer {
+          width: 50%;
+          margin: 15px;
+          font-size: 14pt;
+
+          .logoName {
+            font-family: $header-font;
+          }
+        }
 
         .hamburgerMenuContainer {
           width: 50px;
