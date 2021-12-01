@@ -112,7 +112,6 @@ body {
 }
 .outerContainer .blueContainer .logoContainer {
   width: 80%;
-  height: 80%;
 }
 @media (min-width: 768px) {
   .outerContainer .blueContainer .logoContainer {
