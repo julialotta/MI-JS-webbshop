@@ -109,10 +109,14 @@ body {
 }
 .productpage .dogcontainer {
   display: flex;
+  align-self: center;
+  overflow-x: scroll;
+  width: 100%;
+  height: 100%;
 }
 .productpage .dogproduct {
   font-family: "Montserrat", sans-serif;
-  width: 200px;
+  width: 400px;
   margin: 0 30px;
 }
 .productpage .dogproduct .dogimgcontainer {
@@ -120,11 +124,11 @@ body {
 }
 .productpage .dogproduct img {
   clip-path: polygon(100% 0, 100% 100%, 26% 100%, 0 80.7%, 0 0);
-  width: 100%;
   border-radius: 5px;
+  width: 200px;
 }
 .productpage .dogproduct .cartcontainer {
-  border: 1px #000000 solid;
+  border: 2px #78c5d4 solid;
   border-radius: 5px;
   clip-path: polygon(0 79%, 0% 100%, 25% 100%);
   padding: 105px;
