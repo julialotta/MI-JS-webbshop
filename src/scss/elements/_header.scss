@@ -3,7 +3,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-#outerContainer {
+.outerContainer {
   height: 90vh;
   width: 90vw;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
@@ -16,7 +16,7 @@ body {
     width: 90vw;
   }
 
-  #blueContainer {
+  .blueContainer {
     height: 70%;
     width: 100%;
     background-color: $blue-color;
@@ -24,8 +24,8 @@ body {
     justify-content: center;
     align-items: flex-end;
 
-    #containerPink {
-      height: 95%;
+    .containerPink {
+      height: 90%;
       width: 90%;
       background-color: $pink-color;
       display: flex;
@@ -35,7 +35,7 @@ body {
 
       @include for-tablet-landscape-up {
         height: 90%;
-        width: 70%;
+        width: 80%;
       }
 
       .header {
@@ -55,7 +55,7 @@ body {
           }
         }
       }
-      #logoContainer {
+      .logoContainer {
         width: 80%;
         height: 80%;
 
@@ -67,7 +67,7 @@ body {
         .logoImage {
           width: 100%;
           height: 100%;
-          margin-top: 60px;
+          margin-top: 50px;
         }
       }
     }

@@ -8,7 +8,7 @@ body {
   flex-direction: column;
 }
 
-#outerContainer {
+.outerContainer {
   height: 90vh;
   width: 90vw;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
@@ -17,12 +17,12 @@ body {
   justify-content: center;
 }
 @media (min-width: 768px) {
-  #outerContainer {
+  .outerContainer {
     height: 80vh;
     width: 90vw;
   }
 }
-#outerContainer #blueContainer {
+.outerContainer .blueContainer {
   height: 70%;
   width: 100%;
   background-color: #78c4d4;
@@ -30,8 +30,8 @@ body {
   justify-content: center;
   align-items: flex-end;
 }
-#outerContainer #blueContainer #containerPink {
-  height: 95%;
+.outerContainer .blueContainer .containerPink {
+  height: 90%;
   width: 90%;
   background-color: #fe9596;
   display: flex;
@@ -40,39 +40,39 @@ body {
   justify-content: flex-end;
 }
 @media (min-width: 768px) {
-  #outerContainer #blueContainer #containerPink {
+  .outerContainer .blueContainer .containerPink {
     height: 90%;
-    width: 70%;
+    width: 80%;
   }
 }
-#outerContainer #blueContainer #containerPink .header {
+.outerContainer .blueContainer .containerPink .header {
   height: 40%;
   width: 100%;
   display: flex;
 }
-#outerContainer #blueContainer #containerPink .header .hamburgerMenuContainer {
+.outerContainer .blueContainer .containerPink .header .hamburgerMenuContainer {
   width: 50px;
   height: 50px;
 }
-#outerContainer #blueContainer #containerPink .header .hamburgerMenuContainer .burgerMenu {
+.outerContainer .blueContainer .containerPink .header .hamburgerMenuContainer .burgerMenu {
   height: 5px;
   width: 40px;
   background-color: black;
   margin: 3px;
 }
-#outerContainer #blueContainer #containerPink #logoContainer {
+.outerContainer .blueContainer .containerPink .logoContainer {
   width: 80%;
   height: 80%;
 }
 @media (min-width: 768px) {
-  #outerContainer #blueContainer #containerPink #logoContainer {
+  .outerContainer .blueContainer .containerPink .logoContainer {
     width: 60%;
     height: 90%;
   }
 }
-#outerContainer #blueContainer #containerPink #logoContainer .logoImage {
+.outerContainer .blueContainer .containerPink .logoContainer .logoImage {
   width: 100%;
   height: 100%;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
