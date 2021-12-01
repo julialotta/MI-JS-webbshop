@@ -1,1 +1,19 @@
-{"mappings":"AAAA;EACE","sources":["src/scss/main.scss"],"sourcesContent":["html {\n  scroll-behavior: smooth;\n}\n\n// Mixins\n@import \"mixins\";\n\n// Style repeated elements\n@import \"./elements/header\";\n@import \"./elements/footer\";\n\n// Style separate elements\n@import \"./elements/homepage\";\n@import \"./elements/product-page\";\n@import \"./elements/product-spec\";\n@import \"./elements/cart\";\n@import \"./elements/order-confirmation\";\n"],"names":[],"version":3,"file":"index.603968dc.css.map","sourceRoot":"/__parcel_source_root/"}
+{
+  "mappings": "AAAA;EACE;;;ACDF;EACE;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA,kBCTY;EDUZ;EACA;;AEAA;EFNF;IASI;IACA;;;AAGF;EACE;EACA;EACA,kBCpBS;EDqBT;EACA;EACA;;AAEA;EACE;EACA;EACA,kBC3BO;ED4BP;EACA;EACA;EACA;;AEtBJ;EFeE;IAUI;IACA;;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIN;EACE;EACA;;AEhDN;EF8CI;IAKI;IACA;;;AAGF;EACE;EACA;EACA",
+  "sources": [
+    "src/scss/main.scss",
+    "src/scss/elements/_header.scss",
+    "src/scss/_variables.scss",
+    "src/scss/_mixins.scss"
+  ],
+  "sourcesContent": [
+    "html {\n  scroll-behavior: smooth;\n}\n\n// Mixins\n@import \"mixins\";\n@import \"variables\";\n\n// Style repeated elements\n@import \"./elements/header\";\n@import \"./elements/footer\";\n\n// Style separate elements\n@import \"./elements/homepage\";\n@import \"./elements/product-page\";\n@import \"./elements/product-spec\";\n@import \"./elements/cart\";\n@import \"./elements/order-confirmation\";\n",
+    null,
+    null,
+    null
+  ],
+  "names": [],
+  "version": 3,
+  "file": "index.603968dc.css.map",
+  "sourceRoot": "/__parcel_source_root/"
+}
