@@ -5,23 +5,15 @@ html {
 body {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   justify-content: center;
   flex-direction: column;
 }
 .outerContainer {
   height: 110vh;
-=======
-  flex-direction: column;
-}
-.outerContainer {
-  height: 90vh;
->>>>>>> feature/productpage
   width: 90vw;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   background-color: #f2f2f2;
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
   align-items: center;
 }
@@ -34,14 +26,6 @@ body {
   .outerContainer {
     height: 80vh;
     width: 80vw;
-=======
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .outerContainer {
-    height: 80vh;
-    width: 90vw;
->>>>>>> feature/productpage
   }
 }
 .outerContainer .blueContainer {
@@ -49,7 +33,6 @@ body {
   width: 100%;
   background-color: #78c5d4;
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
@@ -58,10 +41,6 @@ body {
   .outerContainer .blueContainer {
     height: 50%;
   }
-=======
-  justify-content: center;
-  align-items: flex-end;
->>>>>>> feature/productpage
 }
 .outerContainer .blueContainer .containerPink {
   height: 90%;
@@ -72,17 +51,12 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
-<<<<<<< HEAD
 @media (min-width: 564px) {
-=======
-@media (min-width: 768px) {
->>>>>>> feature/productpage
   .outerContainer .blueContainer .containerPink {
     height: 90%;
     width: 80%;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 768px) {
   .outerContainer .blueContainer .containerPink {
     height: 80%;
@@ -137,37 +111,10 @@ body {
   margin: 3px;
 }
 .outerContainer .blueContainer .logoContainer {
-=======
-.outerContainer .blueContainer .containerPink .header {
-  height: 40%;
-  width: 100%;
-  display: flex;
-}
-.outerContainer .blueContainer .containerPink .header .logoNameContainer {
-  width: 50%;
-  margin: 15px;
-  font-size: 14pt;
-}
-.outerContainer .blueContainer .containerPink .header .logoNameContainer .logoName {
-  font-family: "Permanent Marker", cursive;
-}
-.outerContainer .blueContainer .containerPink .header .hamburgerMenuContainer {
-  width: 50px;
-  height: 50px;
-}
-.outerContainer .blueContainer .containerPink .header .hamburgerMenuContainer .burgerMenu {
-  height: 5px;
-  width: 40px;
-  background-color: black;
-  margin: 3px;
-}
-.outerContainer .blueContainer .containerPink .logoContainer {
->>>>>>> feature/productpage
   width: 80%;
   height: 80%;
 }
 @media (min-width: 768px) {
-<<<<<<< HEAD
   .outerContainer .blueContainer .logoContainer {
     width: 60%;
     height: 100%;
@@ -179,19 +126,10 @@ body {
   }
 }
 .outerContainer .blueContainer .logoContainer .logoImage {
-=======
-  .outerContainer .blueContainer .containerPink .logoContainer {
-    width: 60%;
-    height: 90%;
-  }
-}
-.outerContainer .blueContainer .containerPink .logoContainer .logoImage {
->>>>>>> feature/productpage
   width: 100%;
   height: 100%;
   margin-top: 50px;
 }
-<<<<<<< HEAD
 .tabletHeader {
   display: none;
 }
@@ -246,9 +184,6 @@ body {
 .descriptionContainer .description {
   font-family: "Montserrat", sans-serif;
 }
-.category-header {
-  font: "Permanent Marker", cursive;
-=======
 .productpage {
   display: flex;
   flex-direction: column;
@@ -320,6 +255,5 @@ body {
   margin: 0px;
   font-weight: 200;
   font-size: 15px;
->>>>>>> feature/productpage
 }
 /*# sourceMappingURL=product-page.603968dc.css.map */
