@@ -139,6 +139,63 @@ body {
   width: 100%;
   margin-top: 50px;
 }
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20%;
+  background-color: #f2f2f2;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: -40vh;
+}
+@media (min-width: 768px) {
+  .footer {
+    gap: 10%;
+  }
+}
+.footer .copyrightContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.footer .contactContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .contactContainer .contact {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer .contactContainer .contact .contactLink {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px;
+}
+.footer .socialMediaContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .socialMediaContainer .socialMedia {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer .socialMediaContainer .socialMedia .socialMediaLinks {
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
 .tabletHeader {
   display: none;
 }
@@ -313,7 +370,6 @@ body {
 .checkoutProductsContainer {
   width: 100%;
   height: 200px;
-  background-color: royalblue;
 }
 @media (min-width: 768px) {
   .checkoutProductsContainer {
@@ -367,6 +423,7 @@ body {
   .checkoutBody .checkoutContainer {
     width: 90%;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
   }
 }
@@ -374,6 +431,22 @@ body {
   .checkoutBody .checkoutContainer {
     width: 70%;
   }
+}
+.checkoutBody .checkoutContainer .continueShopping {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.checkoutBody .checkoutContainer .continueShopping .continueShoppingButton {
+  border-radius: 5px;
+  width: 130px;
+  height: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  /*         padding: 5px;
+  */
 }
 .checkoutBody .checkoutContainer .firstForm {
   display: flex;
@@ -414,6 +487,7 @@ body {
   width: 30%;
   border-radius: 5px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
 }
 .checkoutBody .acceptedCards {
   display: flex;
