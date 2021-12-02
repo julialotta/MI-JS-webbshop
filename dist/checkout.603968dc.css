@@ -384,6 +384,17 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+.checkoutBody .checkoutContainer .firstForm .personalDataForm .nextButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+.checkoutBody .checkoutContainer .firstForm .personalDataForm .nextButtonContainer .nextButton {
+  text-align: center;
+  background-color: #f2f2f2;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
 .checkoutBody .checkoutContainer .secondForm {
   display: flex;
   flex-direction: column;
@@ -393,23 +404,16 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-.checkoutBody .checkoutContainer .checkoutButtonContainer {
-  width: 100%;
-  margin: 10px;
+.checkoutBody .checkoutContainer .secondForm .paymentForm .checkoutButtonContainer {
+  display: flex;
+  justify-content: center;
 }
-.checkoutBody .checkoutContainer .checkoutButtonContainer .checkoutButton {
+.checkoutBody .checkoutContainer .secondForm .paymentForm .checkoutButtonContainer .checkoutButton {
   text-align: center;
   background-color: #f2f2f2;
-  width: 35px;
+  width: 30%;
   border-radius: 5px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-  position: relative;
-  left: 100%;
-}
-@media (min-width: 768px) {
-  .checkoutBody .checkoutContainer .checkoutButtonContainer .checkoutButton {
-    left: 90%;
-  }
 }
 .checkoutBody .acceptedCards {
   display: flex;
