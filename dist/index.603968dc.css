@@ -96,14 +96,11 @@ header {
   margin-top: 30px;
 }
 .header .logoNameContainer {
-  display: flex;
-  flex-direction: row;
   margin: 0 0 5px 35px;
 }
 .header .logoNameContainer .logoName {
   font-size: 15pt;
   font-family: "Permanent Marker", cursive;
-  width: 100px;
   margin: 0;
 }
 @media (min-width: 768px) {
