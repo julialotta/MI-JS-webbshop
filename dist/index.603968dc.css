@@ -242,7 +242,6 @@ body {
 }
 .productpage .dogproduct i:hover {
   animation: wiggle 2.2s infinite;
-
 }
 @keyframes wiggle {
   0% {
@@ -267,7 +266,6 @@ body {
     transform: rotate(25deg);
   }
   50% {
-
     transform: rotate(0deg);
   }
 }
