@@ -66,12 +66,7 @@ body {
 .outerContainer .blueContainer .containerPink .desktopLinksContainer {
   display: none;
 }
-.outerContainer
-  .blueContainer
-  .containerPink
-  .desktopLinksContainer
-  .linksContainer
-  .links {
+.outerContainer .blueContainer .containerPink .desktopLinksContainer .linksContainer .links {
   color: #000000;
   font-family: "Permanent Marker", cursive;
   cursor: pointer;
@@ -94,11 +89,7 @@ body {
   height: 100%; */
   margin-top: 15px;
 }
-.outerContainer
-  .blueContainer
-  .containerPink
-  .hamburgerMenuContainer
-  .burgerContainer {
+.outerContainer .blueContainer .containerPink .hamburgerMenuContainer .burgerContainer {
   /*  width: 50px;
   height: 50px; */
   /* position: relative; */
@@ -114,20 +105,11 @@ body {
   }*/
 }
 @media (min-width: 768px) {
-  .outerContainer
-    .blueContainer
-    .containerPink
-    .hamburgerMenuContainer
-    .burgerContainer {
+  .outerContainer .blueContainer .containerPink .hamburgerMenuContainer .burgerContainer {
     display: none;
   }
 }
-.outerContainer
-  .blueContainer
-  .containerPink
-  .hamburgerMenuContainer
-  .burgerContainer
-  .burgerMenu {
+.outerContainer .blueContainer .containerPink .hamburgerMenuContainer .burgerContainer .burgerMenu {
   height: 3px;
   width: 35px;
   background-color: black;
