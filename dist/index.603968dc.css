@@ -139,6 +139,63 @@ body {
   width: 100%;
   margin-top: 50px;
 }
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20%;
+  background-color: #f2f2f2;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: -40vh;
+}
+@media (min-width: 768px) {
+  .footer {
+    gap: 10%;
+  }
+}
+.footer .copyrightContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.footer .contactContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .contactContainer .contact {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer .contactContainer .contact .contactLink {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px;
+}
+.footer .socialMediaContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .socialMediaContainer .socialMedia {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer .socialMediaContainer .socialMedia .socialMediaLinks {
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
 .tabletHeader {
   display: none;
 }
@@ -309,5 +366,123 @@ body {
   margin: 0px;
   font-weight: 200;
   font-size: 15px;
+}
+.checkoutProductsContainer {
+  width: 100%;
+  height: 200px;
+  background-color: royalblue;
+}
+@media (min-width: 768px) {
+  .checkoutProductsContainer {
+    width: 50%;
+  }
+}
+.checkoutBody {
+  background-color: #f2f2f2;
+}
+.checkoutBody .checkoutHeader {
+  font-family: "Permanent Marker", cursive;
+  font-size: 12pt;
+  margin-top: 10px;
+}
+@media (min-width: 650px) {
+  .checkoutBody .checkoutHeader {
+    margin-top: 20px;
+    font-size: 18pt;
+  }
+}
+.checkoutBody .logoPaymentContainer {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  justify-content: flex-end;
+}
+.checkoutBody .logoPaymentContainer .paymentLogo {
+  height: 100%;
+  width: 100%;
+}
+.checkoutBody .checkoutContainer {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  width: 95vw;
+}
+@media (min-width: 564px) {
+  .checkoutBody .checkoutContainer {
+    width: 80vw;
+  }
+}
+@media (min-width: 650px) {
+  .checkoutBody .checkoutContainer {
+    width: 70vw;
+  }
+}
+@media (min-width: 768px) {
+  .checkoutBody .checkoutContainer {
+    width: 90%;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .checkoutBody .checkoutContainer {
+    width: 70%;
+  }
+}
+.checkoutBody .checkoutContainer .firstForm {
+  display: flex;
+  flex-direction: column;
+}
+.checkoutBody .checkoutContainer .firstForm .personalDataForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.checkoutBody .checkoutContainer .firstForm .personalDataForm .nextButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+.checkoutBody .checkoutContainer .firstForm .personalDataForm .nextButtonContainer .nextButton {
+  text-align: center;
+  background-color: #f2f2f2;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.checkoutBody .checkoutContainer .secondForm {
+  display: flex;
+  flex-direction: column;
+}
+.checkoutBody .checkoutContainer .secondForm .paymentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.checkoutBody .checkoutContainer .secondForm .paymentForm .checkoutButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+.checkoutBody .checkoutContainer .secondForm .paymentForm .checkoutButtonContainer .checkoutButton {
+  text-align: center;
+  background-color: #f2f2f2;
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.checkoutBody .acceptedCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.checkoutBody .acceptedCards .imgCard {
+  width: 30px;
+  padding: 10px;
+}
+.checkoutBody .showTotal {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
