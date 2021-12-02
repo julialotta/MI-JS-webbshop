@@ -1,9 +1,6 @@
 header {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin: 0;
 }
 .outerContainer {
   display: flex;
@@ -21,7 +18,8 @@ header {
     top: 0;
 
     .pinkContainer {
-      margin: 35px 35px 0 35px;
+      width: 85%;
+      margin-top: 35px;
       border-radius: 5px 5px 0 0;
       background-color: $lightpink;
       display: flex;
@@ -29,8 +27,12 @@ header {
       align-items: center;
       box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 
-      .desktopLinksContainer {
+      .menuContainer {
         display: none;
+
+        @include for-tablet-landscape-up {
+          display: flex;
+        }
 
         .linksContainer {
           .links {
@@ -43,26 +45,27 @@ header {
         }
       }
 
-      .hamburgerMenuContainer {
-        margin: 9px 35px 0 0;
+      .burgerContainer {
+        margin-top: 13px;
+        cursor: pointer;
+        @include for-tablet-landscape-up {
+          display: none;
+        }
 
-        .burgerContainer {
-          @include for-tablet-landscape-up {
-            display: none;
-          }
-
-          .burgerMenu {
-            height: 3px;
-            width: 35px;
-            background-color: black;
-            margin-bottom: 3px;
-          }
+        .burgerMenu {
+          height: 2px;
+          width: 38px;
+          background-color: black;
+          margin-bottom: 6px;
+          border-radius: 3px;
         }
       }
     }
     .logoImageContainer {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
       padding: 0;
-      margin: 20px 35px 20px 35px;
 
       @include for-tablet-landscape-up {
         margin: 0 30px 30px 30px;
@@ -76,43 +79,33 @@ header {
       }
 
       .logoImage {
-        width: 100%;
+        width: 60%;
         border-radius: 5px;
       }
     }
   }
 }
 
-.tabletHeader {
-  display: none;
-
-  .tabletLogoHeader {
-    font-family: $header-font;
-  }
-}
-
 .header {
-  height: 50%;
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 30px;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 80%;
 
-  .logoNameContainer {
+  @include for-tablet-landscape-up {
     display: flex;
-    flex-direction: row;
-    margin: 0 0 5px 35px;
+    justify-content: center;
+  }
+  .logoName {
+    font-size: 20pt;
+    font-family: $header-font;
+    margin: 0;
+    max-width: 200px;
 
-    .logoName {
-      font-size: 15pt;
-      font-family: $header-font;
-      margin: 0;
-
-      @include for-tablet-landscape-up {
-        display: none;
-      }
+    @include for-tablet-landscape-up {
+      font-size: 30pt;
+      max-width: none;
+      text-align: center;
     }
   }
 }

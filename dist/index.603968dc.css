@@ -4,10 +4,7 @@ html {
 }
 header {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin: 0;
 }
 .outerContainer {
   display: flex;
@@ -25,7 +22,8 @@ header {
   top: 0;
 }
 .outerContainer .blueContainer .pinkContainer {
-  margin: 35px 35px 0 35px;
+  width: 85%;
+  margin-top: 35px;
   border-radius: 5px 5px 0 0;
   background-color: #fe9596;
   display: flex;
@@ -33,33 +31,42 @@ header {
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 }
-.outerContainer .blueContainer .pinkContainer .desktopLinksContainer {
+.outerContainer .blueContainer .pinkContainer .menuContainer {
   display: none;
 }
-.outerContainer .blueContainer .pinkContainer .desktopLinksContainer .linksContainer .links {
+@media (min-width: 768px) {
+  .outerContainer .blueContainer .pinkContainer .menuContainer {
+    display: flex;
+  }
+}
+.outerContainer .blueContainer .pinkContainer .menuContainer .linksContainer .links {
   color: #000000;
   font-family: "Permanent Marker", cursive;
   cursor: pointer;
   text-decoration: none;
   margin-top: 10px;
 }
-.outerContainer .blueContainer .pinkContainer .hamburgerMenuContainer {
-  margin: 9px 35px 0 0;
+.outerContainer .blueContainer .pinkContainer .burgerContainer {
+  margin-top: 13px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
-  .outerContainer .blueContainer .pinkContainer .hamburgerMenuContainer .burgerContainer {
+  .outerContainer .blueContainer .pinkContainer .burgerContainer {
     display: none;
   }
 }
-.outerContainer .blueContainer .pinkContainer .hamburgerMenuContainer .burgerContainer .burgerMenu {
-  height: 3px;
-  width: 35px;
+.outerContainer .blueContainer .pinkContainer .burgerContainer .burgerMenu {
+  height: 2px;
+  width: 38px;
   background-color: black;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
+  border-radius: 3px;
 }
 .outerContainer .blueContainer .logoImageContainer {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
   padding: 0;
-  margin: 20px 35px 20px 35px;
 }
 @media (min-width: 768px) {
   .outerContainer .blueContainer .logoImageContainer {
@@ -77,35 +84,32 @@ header {
   }
 }
 .outerContainer .blueContainer .logoImageContainer .logoImage {
-  width: 100%;
+  width: 60%;
   border-radius: 5px;
 }
-.tabletHeader {
-  display: none;
-}
-.tabletHeader .tabletLogoHeader {
-  font-family: "Permanent Marker", cursive;
-}
 .header {
-  height: 50%;
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 30px;
-}
-.header .logoNameContainer {
-  margin: 0 0 5px 35px;
-}
-.header .logoNameContainer .logoName {
-  font-size: 15pt;
-  font-family: "Permanent Marker", cursive;
-  margin: 0;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 80%;
 }
 @media (min-width: 768px) {
-  .header .logoNameContainer .logoName {
-    display: none;
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+}
+.header .logoName {
+  font-size: 20pt;
+  font-family: "Permanent Marker", cursive;
+  margin: 0;
+  max-width: 200px;
+}
+@media (min-width: 768px) {
+  .header .logoName {
+    font-size: 30pt;
+    max-width: none;
+    text-align: center;
   }
 }
 .footer {
@@ -172,7 +176,7 @@ header {
   justify-content: center;
 }
 .descriptionContainer {
-  margin: 0 50px 50px 50px;
+  width: 85%;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   background-color: #ffffff;
 }
