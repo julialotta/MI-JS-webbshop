@@ -1,1 +1,54 @@
+.tabletHeader {
+  display: none;
 
+  @include for-tablet-landscape-up {
+    display: block;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tabletLogoHeader {
+    font-family: $header-font;
+  }
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .logoNameContainer {
+    width: 50%;
+    position: relative;
+    top: 20px;
+    left: 5%;
+
+    .logoName {
+      font-size: 14pt;
+      font-family: $header-font;
+
+      @include for-tablet-landscape-up {
+        display: none;
+      }
+    }
+  }
+}
+
+.descriptionContainer {
+  position: relative;
+  margin: 20px;
+  margin-top: 60px;
+
+  @include for-tablet-landscape-up {
+    margin-top: 100px;
+    width: 80%;
+  }
+
+  @include for-desktop-up {
+    width: 60%;
+  }
+
+  .description {
+    font-family: $primary-font;
+  }
+}
