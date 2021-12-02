@@ -2,31 +2,17 @@
 html {
   scroll-behavior: smooth;
 }
-body {
+header {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0;
 }
 .outerContainer {
-  height: 110vh;
-  width: 90vw;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-@media (min-width: 768px) {
-  .outerContainer {
-    height: 95vh;
-  }
-}
-@media (min-width: 992px) {
-  .outerContainer {
-    height: 80vh;
-    width: 80vw;
-  }
 }
 .outerContainer .blueContainer {
   height: 70%;
@@ -36,32 +22,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-}
-@media (min-width: 768px) {
-  .outerContainer .blueContainer {
-    height: 50%;
-  }
+  top: 0;
 }
 .outerContainer .blueContainer .containerPink {
-  height: 90%;
-  width: 90%;
+  margin: 60px 30px 0 30px;
   background-color: #fe9596;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-}
-@media (min-width: 564px) {
-  .outerContainer .blueContainer .containerPink {
-    height: 90%;
-    width: 80%;
-  }
-}
-@media (min-width: 768px) {
-  .outerContainer .blueContainer .containerPink {
-    height: 80%;
-    width: 90%;
-  }
 }
 .outerContainer .blueContainer .containerPink .desktopLinksContainer {
   display: none;
@@ -73,21 +41,10 @@ body {
   text-decoration: none;
   margin-top: 10px;
 }
-@media (min-width: 768px) {
-  .outerContainer .blueContainer .containerPink .desktopLinksContainer {
-    display: inline;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 60vw;
-    position: relative;
-    top: 20%;
-  }
-}
 .outerContainer .blueContainer .containerPink .hamburgerMenuContainer {
   /*  width: 40%;
   height: 100%; */
-  margin-top: 15px;
+  margin: 5px 30px 0 0;
 }
 .outerContainer .blueContainer .containerPink .hamburgerMenuContainer .burgerContainer {
   /*  width: 50px;
@@ -116,22 +73,22 @@ body {
   margin-bottom: 3px;
 }
 .outerContainer .blueContainer .logoContainer {
-  width: 90%;
-  height: 80%;
+  padding: 0;
+  margin: 0 30px 30px 30px;
 }
 @media (min-width: 768px) {
   .outerContainer .blueContainer .logoContainer {
-    width: 40%;
+    margin: 0 30px 30px 30px;
   }
 }
 @media (min-width: 992px) {
   .outerContainer .blueContainer .logoContainer {
-    width: 30%;
+    margin: 0 30px 30px 30px;
   }
 }
 @media (min-width: 1200px) {
   .outerContainer .blueContainer .logoContainer {
-    width: 30%;
+    margin: 50px 30px 0 30px;
   }
 }
 .outerContainer .blueContainer .logoContainer .logoImage {
@@ -169,7 +126,7 @@ body {
   left: 5%; */
   display: flex;
   flex-direction: row;
-  margin-top: 25px;
+  margin: 30px 0 0 30px;
   gap: 30%;
 }
 @media (min-width: 650px) {
@@ -189,10 +146,16 @@ body {
     display: none;
   }
 }
+.contentContainer {
+  background-color: #f2f2f2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .descriptionContainer {
-  position: relative;
-  margin: 20px;
-  margin-top: 60px;
+  margin: 0 30px 60px 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #ffffff;
 }
 @media (min-width: 768px) {
   .descriptionContainer {
@@ -206,6 +169,11 @@ body {
   }
 }
 .descriptionContainer .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
   font-family: "Montserrat", sans-serif;
 }
 .productpage {

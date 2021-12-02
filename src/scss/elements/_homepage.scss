@@ -1,58 +1,14 @@
-.tabletHeader {
-  display: none;
-
-  @include for-tablet-landscape-up {
-    display: block;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .tabletLogoHeader {
-    font-family: $header-font;
-  }
-}
-
-.header {
-  height: 50%;
+.contentContainer {
+  background-color: $lightgrey;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
-
-  .logoNameContainer {
-    /* width: 50%; */
-    /* position: relative;
-
-    left: 5%; */
-    display: flex;
-    flex-direction: row;
-
-    margin-top: 25px;
-    gap: 30%;
-    @include for-phone-landscape-up {
-      gap: 40%;
-    }
-
-    .logoName {
-      font-size: 14pt;
-      font-family: $header-font;
-
-      /*  @include for-phone-landscape-up {
-        padding-top: 70%;
-      } */
-      @include for-tablet-landscape-up {
-        display: none;
-      }
-    }
-  }
 }
 
 .descriptionContainer {
-  position: relative;
-  margin: 20px;
-  margin-top: 60px;
+  margin: 0 30px 60px 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: $white;
 
   @include for-tablet-landscape-up {
     margin-top: 100px;
@@ -64,6 +20,11 @@
   }
 
   .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
     font-family: $primary-font;
   }
 }
