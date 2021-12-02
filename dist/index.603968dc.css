@@ -25,7 +25,7 @@ header {
   top: 0;
 }
 .outerContainer .blueContainer .pinkContainer {
-  margin: 50px 50px 0 50px;
+  margin: 35px 35px 0 35px;
   border-radius: 5px 5px 0 0;
   background-color: #fe9596;
   display: flex;
@@ -44,7 +44,7 @@ header {
   margin-top: 10px;
 }
 .outerContainer .blueContainer .pinkContainer .hamburgerMenuContainer {
-  margin: 9px 50px 0 0;
+  margin: 9px 35px 0 0;
 }
 @media (min-width: 768px) {
   .outerContainer .blueContainer .pinkContainer .hamburgerMenuContainer .burgerContainer {
@@ -59,7 +59,7 @@ header {
 }
 .outerContainer .blueContainer .logoImageContainer {
   padding: 0;
-  margin: 20px 50px 30px 50px;
+  margin: 20px 35px 20px 35px;
 }
 @media (min-width: 768px) {
   .outerContainer .blueContainer .logoImageContainer {
@@ -98,11 +98,12 @@ header {
 .header .logoNameContainer {
   display: flex;
   flex-direction: row;
-  margin: 0 0 20px 50px;
+  margin: 0 0 5px 35px;
 }
 .header .logoNameContainer .logoName {
   font-size: 15pt;
   font-family: "Permanent Marker", cursive;
+  width: 100px;
   margin: 0;
 }
 @media (min-width: 768px) {

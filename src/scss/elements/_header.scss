@@ -21,7 +21,7 @@ header {
     top: 0;
 
     .pinkContainer {
-      margin: 50px 50px 0 50px;
+      margin: 35px 35px 0 35px;
       border-radius: 5px 5px 0 0;
       background-color: $lightpink;
       display: flex;
@@ -44,7 +44,7 @@ header {
       }
 
       .hamburgerMenuContainer {
-        margin: 9px 50px 0 0;
+        margin: 9px 35px 0 0;
 
         .burgerContainer {
           @include for-tablet-landscape-up {
@@ -62,7 +62,7 @@ header {
     }
     .logoImageContainer {
       padding: 0;
-      margin: 20px 50px 30px 50px;
+      margin: 20px 35px 20px 35px;
 
       @include for-tablet-landscape-up {
         margin: 0 30px 30px 30px;
@@ -103,11 +103,12 @@ header {
   .logoNameContainer {
     display: flex;
     flex-direction: row;
-    margin: 0 0 20px 50px;
+    margin: 0 0 5px 35px;
 
     .logoName {
       font-size: 15pt;
       font-family: $header-font;
+      width: 100px;
       margin: 0;
 
       @include for-tablet-landscape-up {
