@@ -2,17 +2,31 @@
 html {
   scroll-behavior: smooth;
 }
-header {
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0;
 }
 .outerContainer {
+  height: 110vh;
+  width: 90vw;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .outerContainer {
+    height: 95vh;
+  }
+}
+@media (min-width: 992px) {
+  .outerContainer {
+    height: 80vh;
+    width: 80vw;
+  }
 }
 .outerContainer .blueContainer {
   height: 70%;
@@ -22,14 +36,32 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  top: 0;
+}
+@media (min-width: 768px) {
+  .outerContainer .blueContainer {
+    height: 50%;
+  }
 }
 .outerContainer .blueContainer .containerPink {
-  margin: 60px 30px 0 30px;
+  height: 90%;
+  width: 90%;
   background-color: #fe9596;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+}
+@media (min-width: 564px) {
+  .outerContainer .blueContainer .containerPink {
+    height: 90%;
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .outerContainer .blueContainer .containerPink {
+    height: 80%;
+    width: 90%;
+  }
 }
 .outerContainer .blueContainer .containerPink .desktopLinksContainer {
   display: none;
@@ -41,10 +73,21 @@ header {
   text-decoration: none;
   margin-top: 10px;
 }
+@media (min-width: 768px) {
+  .outerContainer .blueContainer .containerPink .desktopLinksContainer {
+    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60vw;
+    position: relative;
+    top: 20%;
+  }
+}
 .outerContainer .blueContainer .containerPink .hamburgerMenuContainer {
   /*  width: 40%;
   height: 100%; */
-  margin: 5px 30px 0 0;
+  margin-top: 15px;
 }
 .outerContainer .blueContainer .containerPink .hamburgerMenuContainer .burgerContainer {
   /*  width: 50px;
@@ -73,85 +116,28 @@ header {
   margin-bottom: 3px;
 }
 .outerContainer .blueContainer .logoContainer {
-  padding: 0;
-  margin: 0 30px 30px 30px;
+  width: 90%;
+  height: 80%;
 }
 @media (min-width: 768px) {
   .outerContainer .blueContainer .logoContainer {
-    margin: 0 30px 30px 30px;
+    width: 40%;
   }
 }
 @media (min-width: 992px) {
   .outerContainer .blueContainer .logoContainer {
-    margin: 0 30px 30px 30px;
+    width: 30%;
   }
 }
 @media (min-width: 1200px) {
   .outerContainer .blueContainer .logoContainer {
-    margin: 50px 30px 0 30px;
+    width: 30%;
   }
 }
 .outerContainer .blueContainer .logoContainer .logoImage {
   height: 100%;
   width: 100%;
   margin-top: 50px;
-}
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20%;
-  background-color: #f2f2f2;
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  bottom: -40vh;
-}
-@media (min-width: 768px) {
-  .footer {
-    gap: 10%;
-  }
-}
-.footer .copyrightContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-}
-.footer .contactContainer {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer .contactContainer .contact {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.footer .contactContainer .contact .contactLink {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  margin: 5px;
-}
-.footer .socialMediaContainer {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.footer .socialMediaContainer .socialMedia {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.footer .socialMediaContainer .socialMedia .socialMediaLinks {
-  color: black;
-  text-decoration: none;
-  margin: 5px;
-  cursor: pointer;
 }
 .tabletHeader {
   display: none;
@@ -183,7 +169,7 @@ header {
   left: 5%; */
   display: flex;
   flex-direction: row;
-  margin: 30px 0 0 30px;
+  margin-top: 25px;
   gap: 30%;
 }
 @media (min-width: 650px) {
@@ -203,16 +189,10 @@ header {
     display: none;
   }
 }
-.contentContainer {
-  background-color: #f2f2f2;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 .descriptionContainer {
-  margin: 0 30px 60px 30px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: #ffffff;
+  position: relative;
+  margin: 20px;
+  margin-top: 60px;
 }
 @media (min-width: 768px) {
   .descriptionContainer {
@@ -226,11 +206,6 @@ header {
   }
 }
 .descriptionContainer .description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
   font-family: "Montserrat", sans-serif;
 }
 .productpage {
@@ -453,4 +428,4 @@ header {
 .checkoutBody .showTotal {
   margin-top: 20px;
 }
-/*# sourceMappingURL=index.603968dc.css.map */
+/*# sourceMappingURL=checkout.603968dc.css.map */
