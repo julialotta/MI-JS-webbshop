@@ -10,6 +10,7 @@
     "buildproductspec": "parcel src/product-spec.html",
     "buildcart": "parcel src/cart.html",
     "buildorderconf": "parcel src/order-confirmation.html",
+    "buildcheckout": "parcel src/checkout.html",
     "cyp": "cypress open"
   },
   "repository": {
