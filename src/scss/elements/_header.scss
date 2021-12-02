@@ -117,7 +117,7 @@ body {
       }
 
       @include for-desktop-up {
-        width: 40%;
+        width: 30%;
       }
       @include for-big-desktop-up {
         width: 30%;
