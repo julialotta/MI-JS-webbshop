@@ -11,10 +11,8 @@
 @import "./elements/product-page";
 @import "./elements/product-spec";
 @import "./elements/cart";
-@import "./elements/order-confirmation";
-@import "./elements/payment.scss";
-@import "./elements/thanku";
 @import "./elements/checkout.scss";
+@import "./elements/order-confirmation";
 
 html {
   scroll-behavior: smooth;
