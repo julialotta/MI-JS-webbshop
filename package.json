@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildindex": "parcel src/index.html",
-    "buildproductpage": "parcel src/product-page.html",
+    "build": "parcel src/index.html src/product-page.html",
     "buildproductspec": "parcel src/product-spec.html",
     "buildcart": "parcel src/cart.html",
     "buildorderconf": "parcel src/order-confirmation.html",
