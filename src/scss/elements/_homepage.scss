@@ -1,8 +1,13 @@
-.contentContainer {
+.greyContainer {
   background-color: $lightgrey;
   width: 100%;
+  height: max-content;
+}
+
+.contentContainer {
   display: flex;
   justify-content: center;
+  background-color: $lightgrey;
 }
 
 .descriptionContainer {
@@ -10,21 +15,20 @@
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   background-color: $white;
 
-  @include for-tablet-landscape-up {
-    margin-top: 100px;
-    width: 80%;
-  }
-
-  @include for-desktop-up {
-    width: 60%;
-  }
-
   .description {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
+    padding: 30px 50px;
     font-family: $primary-font;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include for-tablet-landscape-up {
+      font-size: 35px;
+      line-height: 40px;
+      padding: 30px 140px;
+    }
   }
 }
