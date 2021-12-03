@@ -47,7 +47,7 @@
       border-radius: 5px;
       width: 200px;
     }
-    .cartcontainer {
+    .cartSymbolContainer {
       cursor: pointer;
       border: 2px $blue solid;
       border-radius: 5px;
@@ -57,6 +57,7 @@
       bottom: 4px;
       left: 0;
     }
+
     i:hover {
       animation: wiggle 2.2s infinite;
     }
