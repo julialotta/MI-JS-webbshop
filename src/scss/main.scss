@@ -1,7 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
 // Mixins
 @import "mixins";
 @import "variables";
@@ -11,9 +7,17 @@ html {
 @import "./elements/footer";
 
 // Style separate elements
-@import "./elements/homepage";
+@import "./elements/maincontent";
 @import "./elements/product-page";
 @import "./elements/product-spec";
 @import "./elements/cart";
 @import "./elements/order-confirmation";
 @import "./elements/payment.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $lightgrey;
+}
