@@ -370,7 +370,6 @@ body {
 .checkoutProductsContainer {
   width: 100%;
   height: 200px;
-  background-color: royalblue;
 }
 @media (min-width: 768px) {
   .checkoutProductsContainer {
@@ -424,6 +423,7 @@ body {
   .checkoutBody .checkoutContainer {
     width: 90%;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
   }
 }
@@ -431,6 +431,22 @@ body {
   .checkoutBody .checkoutContainer {
     width: 70%;
   }
+}
+.checkoutBody .checkoutContainer .continueShopping {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.checkoutBody .checkoutContainer .continueShopping .continueShoppingButton {
+  border-radius: 5px;
+  width: 130px;
+  height: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  /*         padding: 5px;
+  */
 }
 .checkoutBody .checkoutContainer .firstForm {
   display: flex;
@@ -471,6 +487,7 @@ body {
   width: 30%;
   border-radius: 5px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
 }
 .checkoutBody .acceptedCards {
   display: flex;
