@@ -1,7 +1,4 @@
 @import "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&family=Permanent+Marker&display=swap";
-html {
-  scroll-behavior: smooth;
-}
 header {
   display: flex;
   flex-direction: column;
@@ -120,6 +117,10 @@ header {
   margin: 0;
   max-width: 200px;
 }
+.header .logoName a {
+  text-decoration: none;
+  color: #000000;
+}
 @media (min-width: 768px) {
   .header .logoName {
     font-size: 30pt;
@@ -197,15 +198,16 @@ header {
   width: 85%;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   background-color: #ffffff;
+  display: flex;
+  justify-content: center;
 }
 .descriptionContainer .description {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px 50px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
   line-height: 30px;
 }
 @media (min-width: 768px) {
@@ -215,11 +217,20 @@ header {
     padding: 30px 140px;
   }
 }
+.descriptionContainer .description h3 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 30px;
+}
+.descriptionContainer .description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+}
 .productpage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 85%;
+  margin-bottom: 50px;
 }
 .productpage h2 {
   font-family: "Permanent Marker", cursive;
@@ -316,6 +327,28 @@ header {
   margin: 0px;
   font-weight: 200;
   font-size: 15px;
+}
+.cart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.cart h2 {
+  font-family: "Permanent Marker", cursive;
+}
+.orderCompleted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+.orderCompleted h3 {
+  font-family: "Permanent Marker", cursive;
+}
+.orderCompleted p {
+  font-family: "Montserrat", sans-serif;
 }
 .checkoutProductsContainer {
   width: 100%;
@@ -434,5 +467,11 @@ header {
 }
 .checkoutBody .showTotal {
   margin-top: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f2f2f2;
 }
 /*# sourceMappingURL=index.603968dc.css.map */
