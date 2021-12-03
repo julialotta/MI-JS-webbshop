@@ -1,7 +1,7 @@
 .checkoutProductsContainer {
   width: 100%;
   height: 200px;
-  background-color: royalblue;
+
   @include for-tablet-landscape-up {
     width: 50%;
   }
@@ -49,10 +49,28 @@
     @include for-tablet-landscape-up {
       width: 90%;
       flex-direction: row;
+      flex-wrap: wrap;
       gap: 30px;
     }
     @include for-desktop-up {
       width: 70%;
+    }
+
+    .continueShopping {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      .continueShoppingButton {
+        border-radius: 5px;
+        width: 130px;
+        height: 20px;
+        background-color: $lightgrey;
+        text-align: center;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+        margin: 10px;
+        /*         padding: 5px;
+ */
+      }
     }
 
     .firstForm {
@@ -95,6 +113,7 @@
             width: 30%;
             border-radius: 5px;
             box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+            margin-bottom: 10px;
           }
         }
       }
