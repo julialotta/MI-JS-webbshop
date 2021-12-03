@@ -1,0 +1,16 @@
+.orderCompleted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+
+  h3 {
+    font-family: $header-font;
+  }
+
+  p {
+    font-family: $primary-font;
+  }
+}
