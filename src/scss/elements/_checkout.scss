@@ -1,0 +1,94 @@
+.checkoutForm {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 70px 0;
+
+  h2,
+  h3 {
+    text-align: center;
+    font-family: $header-font;
+  }
+  h2 {
+    font-size: 35px;
+    margin: 20px 0 0 0;
+  }
+  h3 {
+    font-size: 23px;
+    margin: 10px;
+  }
+  label,
+  p,
+  span,
+  button,
+  ::placeholder,
+  input {
+    font-family: $primary-font;
+  }
+
+  input {
+    width: 90%;
+    margin-left: 10px;
+  }
+  label {
+    margin-left: 10px;
+  }
+
+  button {
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(136, 90, 90, 0.4);
+    background-color: $white;
+    border: 1px black solid;
+    width: 150px;
+    height: 50px;
+  }
+  button:hover {
+    background-color: $lightpink;
+    transform: scale(1.1);
+  }
+}
+
+.firstForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .personalDataForm {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+.secondForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
+  .paymentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+.acceptedCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .imgCard {
+    width: 30px;
+    padding: 10px;
+  }
+}
+
+.showTotal {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
