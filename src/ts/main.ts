@@ -11,7 +11,7 @@ let secondForm: HTMLElement = document.getElementById(
 ) as HTMLElement;
 function hideForm() {
   firstForm.style.display = "none";
-  secondForm.style.visibility = "hidden";
+  secondForm.style.display = "none";
 }
 function openForm() {
   let openFirstForm: HTMLElement = document.getElementById(
