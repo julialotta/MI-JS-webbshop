@@ -1,7 +1,10 @@
-import { hideForm } from "./functions/hideForm";
-import { openForm } from "./functions/openForm";
+/* import { funktionensNamn } from "./functions/funktionensNamn";
+ */
+import { burgerMenu } from "./functions/burgerMenu";
+
 
 window.onload = () => {
-  hideForm();
-  openForm();
+    burgerMenu();
+    alert("it's working");
+/* funktionensNamn () */
 };
