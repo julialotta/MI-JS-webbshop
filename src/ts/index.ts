@@ -1,7 +1,5 @@
-/* import { funktionensNamn } from "./functions/funktionensNamn";
- */
+import { burgerMenu } from "./functions/burgerMenu";
 
 window.onload = () => {
-    alert("it's working");
-/* funktionensNamn () */
+burgerMenu ();
 };
