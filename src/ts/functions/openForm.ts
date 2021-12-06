@@ -1,19 +1,10 @@
-window.onload = function () {
-  hideForm();
-  openForm();
-};
-
-let firstForm: HTMLElement = document.getElementById(
+export function openForm() {
+    let firstForm: HTMLElement = document.getElementById(
   "firstOfForms"
 ) as HTMLElement;
 let secondForm: HTMLElement = document.getElementById(
   "secondOfForms"
 ) as HTMLElement;
-function hideForm() {
-  firstForm.style.display = "none";
-  secondForm.style.visibility = "hidden";
-}
-function openForm() {
   let openFirstForm: HTMLElement = document.getElementById(
     "openFirstForm"
   ) as HTMLElement;
@@ -57,5 +48,3 @@ function openForm() {
     }
   });
 }
-
-
