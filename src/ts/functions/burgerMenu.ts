@@ -1,6 +1,6 @@
 export function burgerMenu () {
     let btn:HTMLElement = document.getElementById(
-    "nav-tgl"
+    "burgerCircle"
     ) as HTMLElement;
      btn.addEventListener('click', test)
   function test(){

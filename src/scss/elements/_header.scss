@@ -58,27 +58,62 @@ header {
         }
       }
 
-      /* Codepen */
-      .nav {
-        ul {
+      /* hamburgermeny */
+      .menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        @include for-tablet-landscape-up {
           display: none;
         }
       }
+      .nav {
+        display: flex;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        ul {
+          visibility: hidden;
+          position: fixed;
+          top: 33px;
+          margin: auto;
+          padding: 0;
+          opacity: 0;
+          transition: all 500ms ease-in-out;
+          list-style: none;
+          font-family: $header-font;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 150px;
+        }
+        li {
+          padding: 10px;
+        }
+        a {
+          text-decoration: none;
+          color: $darkpink;
+        }
+      }
 
-      .nav-tgl {
+      .burgerCircle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
-        z-index: 2;
-        right: 70px;
-        top: 90px;
-        width: 50px;
-        height: 50px;
+        z-index: 100;
+        right: 30px;
+        top: 30px;
+        width: 60px;
+        height: 60px;
         border: none;
         border-radius: 50%;
         padding: 0;
-        background: $blue;
-        box-shadow: 0px 4px 24px rgba(#000, 0.24);
-        line-height: 0.6;
-        text-align: center;
+        background: $yellow;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         cursor: pointer;
 
         > span {
@@ -86,12 +121,11 @@ header {
           display: inline-block;
           position: relative;
           height: 2px;
-          width: 34px;
+          width: 30px;
           border-radius: 1px;
           background: $black;
-          vertical-align: middle;
 
-          // the first & the third dividers
+          // pinnarna
           &:before,
           &:after {
             display: inline-block;
@@ -103,20 +137,20 @@ header {
             transition: all 200ms;
           }
           &:before {
-            top: -11px;
-            left: 3px;
-            width: 28px;
+            top: -9px;
+            left: 4px;
+            width: 22px;
           }
           &:after {
-            top: 11px;
-            left: 6px;
+            top: 9px;
+            left: 4px;
             width: 22px;
           }
         }
-
+        //pin--aninmation
         &:hover > span:after,
         &:hover > span:before {
-          width: 34px;
+          width: 30px;
           left: 0;
         }
       }
@@ -124,52 +158,50 @@ header {
       // for the nav background
       .nav:before {
         position: fixed;
-        right: 0;
-        top: 30px;
         content: "";
-        width: 100%;
-        height: 250px;
+        top: 0;
+        width: 100vw;
+        height: 50vh;
         background: $darkpink;
-        border-radius: 5px;
         transition: all 500ms ease-in-out;
         clip-path: circle(30px at calc(100% - 65px) 65px);
         visibility: hidden;
-      }
-
-      .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       .menu.active {
         nav {
           display: flex;
           justify-content: center;
-          align-items: center;
         }
         ul {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          list-style: none;
-          color: white;
-          z-index: 1;
-          font-family: $header-font;
+          visibility: visible;
+          z-index: 100;
+          opacity: 100%;
+          color: $black;
+          li {
+            a {
+              color: $black;
+            }
+          }
         }
         .nav:before {
           visibility: visible;
           clip-path: circle(100%);
+          position: fixed;
+          top: 20px;
+          border-radius: 10px;
+          width: 100%;
+          height: 200px;
         }
-
-        .nav-tgl {
+        //pinn-animation
+        .burgerCircle {
           span {
             height: 0;
             &:after,
             &:before {
-              top: 0px;
+              top: 0;
               left: 0;
-              width: 34px;
+              width: 30px;
             }
           }
           &:after {
@@ -180,10 +212,11 @@ header {
           }
         }
       }
+
       /* Codepen */
     }
     .logoImageContainer {
-      margin: 40px 0;
+      margin: 0;
       display: flex;
       justify-content: center;
       padding: 0;
@@ -191,6 +224,7 @@ header {
       .phoneLogo {
         width: 60%;
         border-radius: 5px;
+        margin: 30px;
         @include for-tablet-landscape-up {
           display: none;
         }
