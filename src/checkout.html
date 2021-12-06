@@ -58,11 +58,14 @@
           <section class="checkoutForm">
             <h2>Kassa</h2>
             <a href="index.html"> <p>Handla mer</p></a>
-            <h3 id="openFirstForm">
+            <h3 class="closeOpenForm" id="openFirstForm">
               Personuppgifter
-              <i id="openFirstArrow" class="bi bi-chevron-compact-down"></i>
+              <i
+                id="openOrCloseArrow"
+                class="bi bi-chevron-compact-down openAndClose"
+              ></i>
             </h3>
-            <article id="firstOfForms" class="firstForm">
+            <article id="firstOfForms" class="forms firstForm">
               <form class="personalDataForm">
                 <label for="name"
                   ><i class="bi bi-person-fill"></i> Full name:</label
@@ -105,11 +108,14 @@
                 />
               </form>
             </article>
-            <h3 id="openSecondForm">
+            <h3 class="closeOpenForm" id="openSecondForm">
               Payment
-              <i id="openOrCloseArrow" class="bi bi-chevron-compact-down"></i>
+              <i
+                id="openOrCloseArrow"
+                class="bi bi-chevron-compact-down openAndClose"
+              ></i>
             </h3>
-            <article id="secondOfForms" class="secondForm">
+            <article id="secondOfForms" class="forms secondForm">
               <div class="acceptedCards">
                 <span>Accepted cards:</span>
                 <div class="cardsContainer">

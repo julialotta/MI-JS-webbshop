@@ -1,7 +1,7 @@
-/* import { funktionensNamn } from "./functions/funktionensNamn";
- */
+import { hideForm } from "./functions/hideForm";
+import { openForm } from "./functions/openForm";
 
 window.onload = () => {
-    alert("it's working");
-/* funktionensNamn () */
+  hideForm();
+  openForm();
 };
