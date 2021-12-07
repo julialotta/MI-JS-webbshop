@@ -79,10 +79,11 @@ header {
           visibility: hidden;
           position: fixed;
           top: 33px;
+          z-index: -1;
           margin: auto;
           padding: 0;
           opacity: 0;
-          transition: all 500ms ease-in-out;
+          transition: all 200ms ease-in-out;
           list-style: none;
           font-family: $header-font;
           display: flex;
@@ -94,8 +95,8 @@ header {
           padding: 10px;
         }
         a {
+          color: black;
           text-decoration: none;
-          color: $darkpink;
         }
       }
 
@@ -158,10 +159,12 @@ header {
       // for the nav background
       .nav:before {
         position: fixed;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         content: "";
         top: 0;
         width: 100vw;
         height: 50vh;
+        z-index: 100;
         background: $darkpink;
         transition: all 500ms ease-in-out;
         clip-path: circle(30px at calc(100% - 65px) 65px);
