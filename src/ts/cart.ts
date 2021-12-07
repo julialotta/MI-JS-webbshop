@@ -1,12 +1,12 @@
 /* import { funktionensNamn } from "./functions/funktionensNamn";
  */
 import { burgerMenu } from "./functions/burgerMenu";
-import { deleteItem } from "./functions/deleteItem";
-import { showTotal } from "./functions/showTotal";
+//import { deleteItem } from "./functions/deleteItem";
+//import { updateTotal } from "./functions/updateTotal";
 
 window.onload = () => {
   burgerMenu();
-  deleteItem();
-  showTotal();
+  //deleteItem();
+  //updateTotal();
   /* funktionensNamn () */
 };
