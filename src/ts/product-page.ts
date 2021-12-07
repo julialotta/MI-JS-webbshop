@@ -71,12 +71,11 @@ let product1 = new Products(
      <div class="dogimgcontainer">
         <img src="./assets/product images/Sassy, classy and bad-assy/Sassy, classy and bad-assy 1.png"
              alt="Dog with pink glasses">
-          
              <div class="cartSymbolContainer">
              <i class="fas fa-cart-plus"></i>
             </div>
             </div>
-            <h5>Doga Lipa</h5>
+        <h5>Doga Lipa</h5>
              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio
                   consequatur.</p>
             <p class="dogprice">$1500</p>
@@ -85,7 +84,7 @@ let product1 = new Products(
 function addProducts () {
     for (let i = 0; i < productList.length; i++) {
         if (productList[i].category = 1) {
-            let cat1 = document.getElementById("sassy");
+            let cat1: HTMLElement = document.getElementById("sassy");
             let dogproduct:HTMLDivElement = document.createElement("div");
             dogproduct.className = "dogproduct";
             cat1.appendChild(dogproduct);
@@ -96,11 +95,22 @@ function addProducts () {
             dogImg.src = productList[i].picture;
             dogImg.alt = productList[i].pictureAlt;
             dogImgContainer.appendChild(dogImg);
-            let cartSymbol = document.createElement("div");
-            cartSymbol.className = "cartSymbolContainer";
+            let cartSymbolContainer: HTMLDivElement = document.createElement("div");
+            cartSymbolContainer.className = "cartSymbolContainer";
+            dogImgContainer.appendChild(cartSymbolContainer);
+            let cartSymbol: HTMLElement = document.createElement("i");
+            cartSymbol.className = "fas fa-cart-plus";
+            cartSymbolContainer.appendChild(cartSymbol);
+            let name:HTMLHeadingElement = document.createElement("h5");
+            name.innerHTML = productList[i].name;
+            dogproduct.appendChild(name);
+            let info:HTMLHeadingElement = document.createElement("p");
+            info.innerHTML = productList[i].info;
+            dogproduct.appendChild(info);
+            let price:HTMLHeadingElement = document.createElement("p");
+            price.innerHTML = "$" + productList[i].price;
+            dogproduct.appendChild(price);
         }
-        
-        
         
     }
     
