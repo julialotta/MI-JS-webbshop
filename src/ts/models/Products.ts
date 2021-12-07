@@ -3,10 +3,10 @@ export class Products {
     picture: string;
     pictureAlt: string;
     info: string;
-
     category: number;
     price: number;
     cart: boolean;
+    productSpec: boolean;
 
         constructor(
             name: string,
@@ -15,7 +15,8 @@ export class Products {
             info: string,
             category: number,
             price: number,
-            cart: boolean
+            cart: boolean,
+            productSpec: boolean
         )
         {  
             this.name = name;
@@ -25,6 +26,7 @@ export class Products {
             this.category = category;
             this.price = price;
             this.cart = cart;
+            this.productSpec = productSpec;
      }};
 /* 
 

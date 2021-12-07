@@ -7,6 +7,7 @@ let product101 = new Products(
    "This english french has a talent for singing.",
    1,
    500,
+   false, 
    false);
 
 let product102 = new Products(
@@ -16,6 +17,7 @@ let product102 = new Products(
    "This english, norweigan AND french bulldog is an awesome DJ.",
    1,
    500,
+   false, 
    false);
 
 let product103 = new Products(
@@ -25,6 +27,7 @@ let product103 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    1,
    500,
+   false,
    false);
 
 let product104 = new Products(
@@ -34,6 +37,7 @@ let product104 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    1,
    500,
+   false,
    false);
 
 let product201 = new Products(
@@ -43,6 +47,7 @@ let product201 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    2,
    500,
+   false, 
    false);
 
 let product202 = new Products(
@@ -52,6 +57,7 @@ let product202 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    2,
    500,
+   false,
    false);
 
 let product203 = new Products(
@@ -61,6 +67,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    2,
    500,
+   false, 
    false);
 
    let product301 = new Products(
@@ -70,6 +77,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    3,
    500,
+   false,
    false);
 
    let product302 = new Products(
@@ -79,6 +87,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    3,
    500,
+   false,
    false);
 
    let product303 = new Products(
@@ -88,6 +97,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    3,
    500,
+   false, 
    false);
 
    let product304 = new Products(
@@ -97,6 +107,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    3,
    500,
+   false, 
    false);
 
    let product401 = new Products(
@@ -106,6 +117,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    4,
    500,
+   false, 
    false);
 
    let product402 = new Products(
@@ -115,6 +127,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    4,
    500,
+   false,
    false);
 
    let product403 = new Products(
@@ -124,6 +137,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    4,
    500,
+   false,
    false);
 
    let product501 = new Products(
@@ -133,6 +147,7 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    5,
    500,
+   false,
    false);
 
    let product502 = new Products(
@@ -142,25 +157,28 @@ let product203 = new Products(
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    5,
    500,
+   false,
    false);
 
    let product503 = new Products(
     "XXX",
-   "Oldies but goodies 4.d8979501.png",
+   "Oldies but goodies 3.0222d14f.png",
    "Dog with red dress",
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    5,
    500,
+   false,
    false);
 
    let product504 = new Products(
     "Dogtor Snuffles",
-   "Sassy, classy and bad-assy 4.33d25a77.png",
+   "Oldies but goodies 4.d8979501.png",
    "XXX",
    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
    5,
    500,
-   false);
+   false,
+   true);
 
    export let productList = [
        product101,

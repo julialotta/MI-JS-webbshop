@@ -5,7 +5,6 @@ import { productList } from "./models/objects";
 window.onload = () => {
     burgerMenu();
     addProducts();
-/* funktionensNamn () */
 };
 
 /* Kategorier:
