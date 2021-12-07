@@ -46,8 +46,9 @@ let product1 = new Products(
    ]
 
 function addProducts () {
-    for (let i = 0; index < productList.length; i++) {
-        const element = array[index];
+    for (let i = 0; i < productList.length; i++) {
+        console.log(productList[i]);
+        
         
     }
     
