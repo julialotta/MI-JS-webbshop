@@ -1,50 +1,27 @@
 export function openForm() {
-    let firstForm: HTMLElement = document.getElementById(
-  "firstOfForms"
-) as HTMLElement;
-let secondForm: HTMLElement = document.getElementById(
-  "secondOfForms"
-) as HTMLElement;
-  let openFirstForm: HTMLElement = document.getElementById(
-    "openFirstForm"
-  ) as HTMLElement;
-  let openSecondForm: HTMLElement = document.getElementById(
-    "openSecondForm"
-  ) as HTMLElement;
-  openFirstForm.style.cursor = "pointer";
-  openSecondForm.style.cursor = "pointer";
+  let formsDisplayButton = document.getElementsByClassName("closeOpenForm");
 
-  let openArrow: HTMLElement = document.getElementById(
-    "openFirstArrow"
-  ) as HTMLElement;
-  let secondArrow: HTMLElement = document.getElementById(
-    "openOrCloseArrow"
-  ) as HTMLElement;
-  openFirstForm.addEventListener("click", () => {
-    if (window.getComputedStyle(firstForm).display === "none") {
-      firstForm.style.display = "";
+  for (let i = 0; i < formsDisplayButton.length; i++) {
+    let formHeading = formsDisplayButton[i] as HTMLElement;
+    formHeading.style.cursor = "pointer";
+    formHeading.addEventListener("click", () => {
+      let forms = document.getElementsByClassName("forms");
+      let theForms = forms[i] as HTMLElement;
 
-      openArrow.classList.remove("bi-chevron-compact-down");
+      let openArrow = document.getElementsByClassName("openAndClose");
+      let arrowAndX = openArrow[i] as HTMLElement;
 
-      openArrow.classList.add("bi-x-lg");
-    } else {
-      firstForm.style.display = "none";
-      openArrow.classList.remove("bi-x-lg");
-      openArrow.classList.add("bi-chevron-compact-down");
-    }
-  });
+      if (window.getComputedStyle(theForms).display === "none") {
+        theForms.style.display = "";
 
-  openSecondForm.addEventListener("click", () => {
-    if (window.getComputedStyle(secondForm).visibility === "hidden") {
-      secondForm.style.visibility = "visible";
+        arrowAndX.classList.remove("bi-chevron-compact-down");
 
-      secondArrow.classList.remove("bi-chevron-compact-down");
-
-      secondArrow.classList.add("bi-x-lg");
-    } else {
-      secondForm.style.visibility = "hidden";
-      secondArrow.classList.remove("bi-x-lg");
-      secondArrow.classList.add("bi-chevron-compact-down");
-    }
-  });
+        arrowAndX.classList.add("bi-x-lg");
+      } else {
+        theForms.style.display = "none";
+        arrowAndX.classList.remove("bi-x-lg");
+        arrowAndX.classList.add("bi-chevron-compact-down");
+      }
+    });
+  }
 }
