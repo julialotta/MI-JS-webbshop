@@ -3,6 +3,7 @@ export { Products };
 class Products {
     name: string;
     picture: string;
+    pictureAlt: string;
     info: string;
     category: number;
     price: number;
@@ -11,6 +12,7 @@ class Products {
         constructor(
             name: string,
             picture: string,
+            pictureAlt: string,
             info: string,
             category: number,
             price: number,
@@ -19,6 +21,7 @@ class Products {
         {  
             this.name = name;
             this.picture = picture;
+            this.pictureAlt = pictureAlt;
             this.info = info;
             this.category = category;
             this.price = price;
