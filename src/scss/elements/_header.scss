@@ -178,7 +178,7 @@ header {
         }
         ul {
           visibility: visible;
-          z-index: 100;
+          z-index: 200;
           opacity: 100%;
           color: $black;
           li {
@@ -190,6 +190,7 @@ header {
         .nav:before {
           visibility: visible;
           clip-path: circle(100%);
+          z-index: 100;
           position: fixed;
           top: 20px;
           border-radius: 10px;
