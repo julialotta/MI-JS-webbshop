@@ -1,5 +1,3 @@
-import { updateTotal } from "./updateTotal";
-
 export function deleteItem() {
   let deleteButton = document.getElementsByClassName("fa-times");
   for (let i = 0; i < deleteButton.length; i++) {
@@ -8,5 +6,4 @@ export function deleteItem() {
       button.parentElement.parentElement.parentElement.remove();
     });
   }
-  updateTotal();
 }

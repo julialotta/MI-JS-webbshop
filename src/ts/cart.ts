@@ -2,11 +2,11 @@
  */
 import { burgerMenu } from "./functions/burgerMenu";
 import { deleteItem } from "./functions/deleteItem";
-import { updateTotal } from "./functions/updateTotal";
+import { showTotal } from "./functions/showTotal";
 
 window.onload = () => {
   burgerMenu();
   deleteItem();
-  updateTotal();
+  showTotal();
   /* funktionensNamn () */
 };
