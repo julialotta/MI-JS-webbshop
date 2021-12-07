@@ -66,7 +66,7 @@
   }
   .dogproduct {
     font-family: $primary-font;
-    width: 400px;
+    width: 200px;
     margin: 0 30px;
 
     .dogimgcontainer {
@@ -78,54 +78,7 @@
       border-radius: 5px;
       width: 200px;
     }
-    .cartSymbolContainer {
-      cursor: pointer;
-      border: 2px $blue solid;
-      border-radius: 5px;
-      clip-path: polygon(0 79%, 0% 100%, 25% 100%);
-      padding: 105px;
-      position: absolute;
-      bottom: 4px;
-      left: 0;
-    }
 
-    i:hover {
-      animation: wiggle 2.2s infinite;
-    }
-    @keyframes wiggle {
-      0% {
-        transform: rotate(0deg);
-      }
-      20% {
-        transform: rotate(0deg);
-      }
-      25% {
-        transform: rotate(25deg);
-      }
-      30% {
-        transform: rotate(-25deg);
-      }
-      35% {
-        transform: rotate(25deg);
-      }
-      40% {
-        transform: rotate(-25deg);
-      }
-      45% {
-        transform: rotate(25deg);
-      }
-      50% {
-        transform: rotate(0deg);
-      }
-    }
-    i {
-      color: $black;
-      font-size: 14px;
-      position: absolute;
-      padding: 6px;
-      bottom: 0px;
-      left: 0;
-    }
     h5 {
       font-weight: 800;
       font-size: 20px;
@@ -136,5 +89,53 @@
       font-weight: 200;
       font-size: 15px;
     }
+  }
+}
+.cartSymbolContainer {
+  cursor: pointer;
+  border: 2px $blue solid;
+  border-radius: 5px;
+  clip-path: polygon(0 79%, 0% 100%, 25% 100%);
+  padding: 105px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+
+  i:hover {
+    animation: wiggle 2.2s infinite;
+  }
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(25deg);
+    }
+    30% {
+      transform: rotate(-25deg);
+    }
+    35% {
+      transform: rotate(25deg);
+    }
+    40% {
+      transform: rotate(-25deg);
+    }
+    45% {
+      transform: rotate(25deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+  }
+  i {
+    color: $black;
+    font-size: 14px;
+    position: absolute;
+    padding: 6px;
+    bottom: 0px;
+    left: 0;
   }
 }
