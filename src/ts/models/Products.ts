@@ -1,10 +1,9 @@
-export { Products };
-
-class Products {
+export class Products {
     name: string;
     picture: string;
     pictureAlt: string;
     info: string;
+
     category: number;
     price: number;
     cart: boolean;
