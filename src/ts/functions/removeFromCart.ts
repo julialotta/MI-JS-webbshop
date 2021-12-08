@@ -1,12 +1,8 @@
 import { productList } from "../models/productList";
 import { updateLocalStorage } from "./updateLocalStorage";
 export function removeFromCart(i: number) {
-  let removeFromCartButton =
-    document.getElementsByClassName("crossIconContainer");
-  removeFromCartButton[i].addEventListener("click", () => {
-    productList[i].cart = !productList[i].cart === false;
-    updateLocalStorage();
-  });
+  productList[i].cart = !productList[i].cart == false;
+  updateLocalStorage();
 }
 
 /*export function deleteItem() {
