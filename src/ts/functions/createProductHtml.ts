@@ -25,7 +25,6 @@ export function createProductHtml() {
     let dogImg: HTMLImageElement = document.createElement("img");
     dogImg.src = productList[i].picture;
     dogImg.alt = productList[i].pictureAlt;
-    /* dogImg.id = "infoClick"; */
     dogImg.addEventListener("mouseover", () => {
       cartSymbolContainer.classList.add("hover");
       dogImg.classList.add("hover");
