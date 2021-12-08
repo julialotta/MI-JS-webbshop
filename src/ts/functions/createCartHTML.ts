@@ -3,6 +3,7 @@ import { updateLocalStorage } from "./updateLocalStorage";
 import { productList } from "../models/productList";
 import { Products } from "../models/Products";
 import { removeFromCart } from "./removeFromCart";
+import { showTotal } from "./showTotal";
 
 export function createCartHTML() {
   for (let i = 0; i < productList.length; i++) {
@@ -43,4 +44,25 @@ export function createCartHTML() {
       });
     }
   }
+
+  let cartTotal: HTMLSpanElement = document.createElement("span");
+  cartTotal.innerHTML = "Totalt:";
+  cartTotal.classList.add("cartTotal");
+
+  let totalSum: HTMLSpanElement = document.createElement("span");
+  totalSum.id = "cartTotal";
+  totalSum.classList.add("addSum");
+
+  cartTotal.appendChild(totalSum);
+
+  let doneCartButton: HTMLButtonElement = document.createElement("button");
+  doneCartButton.classList.add("checkoutBtn");
+  doneCartButton.type = "sumbit";
+  doneCartButton.innerHTML = "Gå vidare till betalning";
+
+  let categoryCartContainer = document.getElementsByClassName("category")[0];
+  categoryCartContainer.appendChild(cartTotal);
+  categoryCartContainer.appendChild(doneCartButton);
+
+  showTotal();
 }
