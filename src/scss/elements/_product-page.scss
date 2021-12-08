@@ -74,9 +74,14 @@
     }
 
     img {
+      cursor: pointer;
       clip-path: polygon(100% 0, 100% 100%, 26% 100%, 0 80.7%, 0 0);
       border-radius: 5px;
       width: 200px;
+    }
+    .hover {
+      transform: scale(1.03);
+      border-radius: 2px;
     }
 
     h5 {

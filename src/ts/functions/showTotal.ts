@@ -1,4 +1,4 @@
-import { productList } from "../models/objects";
+import { productList } from "../models/productList";
 
 export function showTotal() {
   let sum = 0;
