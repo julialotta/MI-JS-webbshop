@@ -2,6 +2,7 @@ import { productList } from "../models/productList";
 import { addToCart } from "./addToCart";
 import { openProductSpec } from "./openProductSpec";
 import { updateLocalStorage } from "./updateLocalStorage";
+
 /* Category:
 1 = Sassy classy and bad-assy
 2 = Kriminella men snälla
@@ -25,7 +26,6 @@ export function createProductHtml() {
     let dogImg: HTMLImageElement = document.createElement("img");
     dogImg.src = productList[i].picture;
     dogImg.alt = productList[i].pictureAlt;
-    /* dogImg.id = "infoClick"; */
     dogImg.addEventListener("mouseover", () => {
       cartSymbolContainer.classList.add("hover");
       dogImg.classList.add("hover");

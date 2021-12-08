@@ -32,9 +32,14 @@ export function createProductSpec () {
             dogproduct?.appendChild(info);
 
             let age:HTMLParagraphElement = document.createElement("p");
-            age.innerHTML = "Ålder: " + productList[i].age;
-            dogproduct?.appendChild(age); 
+            age.innerHTML = "Hundår: " + productList[i].age;
+            dogproduct.appendChild(age);
             
+            let humanAge:HTMLParagraphElement = document.createElement("p");
+            let humanAgeCalc = productList[i].age * 7;
+            humanAge.innerHTML = "Ålder i människoår: " + humanAgeCalc;
+            dogproduct.appendChild(humanAge); 
+        
            let toy:HTMLParagraphElement = document.createElement("p");
             toy.innerHTML = "Favoritleksak: " + productList[i].favoriteToy;
             dogproduct.appendChild(toy); 

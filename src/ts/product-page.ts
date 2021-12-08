@@ -5,4 +5,6 @@ import { addToCart } from "./functions/addToCart";
 window.onload = () => {
   burgerMenu();
   createProductHtml();
+
+
 };
