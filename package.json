@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel src/index.html src/product-page.html src/product-spec.html src/cart.html src/checkout.html src/thanku.html",
+    "build": "parcel src/index.html src/product-page.html src/product-spec.html src/cart.html src/checkout.html src/thanku.html src/assets/productImages/*/*.png",
     "cyp": "cypress open"
   },
   "repository": {

@@ -2,6 +2,7 @@ import { productList } from "../models/productList";
 import { addToCart } from "./addToCart";
 import { openProductSpec } from "./openProductSpec";
 import { updateLocalStorage } from "./updateLocalStorage";
+
 /* Category:
 1 = Sassy classy and bad-assy
 2 = Kriminella men snälla
