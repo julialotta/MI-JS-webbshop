@@ -6,8 +6,7 @@ export function createCartHTML() {
   for (let i = 0; i < inCart.length; i++){
     if (inCart === undefined || inCart.length == 0) {
       console.log("inget i varukorgen"); 
-    } else {
-
+    } else {      
       console.log(inCart.length);
       let productsCartContainer = document.getElementById("cart");
       let dogProduct: HTMLDivElement = document.createElement("div");
@@ -28,7 +27,7 @@ export function createCartHTML() {
       dogImageCartContainer.appendChild(cartIconContainer);
       
       let cartIcon: HTMLElement = document.createElement("i");
-      cartIcon.classList.add("fas", "fa-times");
+      cartIcon.className = "bi bi-x-circle";
       cartIconContainer.appendChild(cartIcon);
       
       let dogCartName: HTMLElement = document.createElement("h5");
@@ -36,7 +35,7 @@ export function createCartHTML() {
       dogProduct.appendChild(dogCartName);
 
       let cartDogPrice: HTMLElement = document.createElement("p");
-      cartDogPrice.className ="dogprice";
+      cartDogPrice.className = "dogprice";
       cartDogPrice.innerHTML = "$" + inCart[i].product.price;
       dogProduct.appendChild(cartDogPrice);
 
@@ -45,26 +44,7 @@ export function createCartHTML() {
       });
     }
   }
-/* 
-  let cartTotal: HTMLSpanElement = document.createElement("span");
-  cartTotal.innerHTML = "Totalt:";
-  cartTotal.classList.add("cartTotal");
 
-  let totalSum: HTMLSpanElement = document.createElement("span");
-  totalSum.id = "cartTotal";
-  totalSum.classList.add("addSum");
-
-  cartTotal.appendChild(totalSum);
-
-  let doneCartButton: HTMLButtonElement = document.createElement("button");
-  doneCartButton.classList.add("checkoutBtn");
-  doneCartButton.type = "sumbit";
-  doneCartButton.innerHTML = "Gå vidare till betalning";
-
-  let categoryCartContainer = document.getElementsByClassName("category")[0];
-  categoryCartContainer.appendChild(cartTotal);
-  categoryCartContainer.appendChild(doneCartButton);
-
-  showTotal(); */
+  showTotal();
   }
 
