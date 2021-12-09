@@ -1,13 +1,12 @@
-import { productList } from "../models/productList";
-import { updateLocalStorage } from "./updateLocalStorage";
+import { orderInfoList } from "../models/orderInfoList";
+import { updateCartLocalStorage } from "./updateCartLocalStorage";
+
+
 export function removeFromCart(i: number) {
-  for (let i = 0; i < productList.length; i++) {
-    if (productList[i].cart === true) {
-      productList[i].cart = !productList[i].cart;
-      updateLocalStorage();
+    orderInfoList.splice(i,1);
+    updateCartLocalStorage();
     }
-  }
-}
+
 
 /*export function deleteItem() {
   let deleteButton = document.getElementsByClassName("fa-times");

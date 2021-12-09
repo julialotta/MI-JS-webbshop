@@ -1,6 +1,6 @@
 import { burgerMenu } from "./functions/burgerMenu";
 import { createProductSpec } from "./functions/createProductSpec";
-import { removeProductSpec } from "./functions/removeProductSpec";
+import { backToProductPage } from "./functions/backToProductPage";
 
 
 window.onload = () => {
@@ -8,7 +8,7 @@ window.onload = () => {
     createProductSpec ();
     let arrow = document.getElementById("backArrow");
     arrow.addEventListener("click", () => {
-                removeProductSpec ();
+                backToProductPage ();
             });
 };
 
