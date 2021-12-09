@@ -85,6 +85,20 @@
   margin: 20px 30px;
   font-weight: 200;
 }
-#cartTotal {
+.cartTotalDogs {
+  font-family: $primary-font;
+  padding-top: 10px;
+  font-weight: 200;
+}
+#cartTotal,
+.totalOfDogs {
   font-weight: 800;
+}
+
+.fa-minus,
+.fa-plus {
+  color: $black;
+  font-size: 10px;
+  padding: 5px;
+  cursor: pointer;
 }

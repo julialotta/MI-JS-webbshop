@@ -1,7 +1,7 @@
-import { orderInfoList } from "../models/orderInfoList";
+import { productList } from "../models/productList";
 import { removeFromCart } from "./removeFromCart";
 import { showTotal } from "./showTotal";
-
+import { minusDogs } from "./changeTotal";
 export function createCartHTML() {
   let productsCartContainer:HTMLElement = document.getElementById("cart");
   productsCartContainer.innerHTML = "";
@@ -34,7 +34,45 @@ export function createCartHTML() {
       dogImageCartContainer.appendChild(cartIMG);
 
       let cartIconContainer: HTMLDivElement = document.createElement("div");
-      cartIconContainer.className = "crossIconContainer";
+      cartIconContainer.classList.add("crossIconContainer");
+      let cartIcon: HTMLElement = document.createElement("i");
+      cartIcon.classList.add("fas");
+      cartIcon.classList.add("fa-times");
+      let dogCartName: HTMLElement = document.createElement("h5");
+      dogCartName.innerHTML = productList[i].name;
+      let cartDogPrice: HTMLElement = document.createElement("p");
+      cartDogPrice.classList.add("dogprice");
+      cartDogPrice.innerHTML = "$" + productList[i].price;
+
+      let totalOfDogs: HTMLSpanElement = document.createElement("span");
+      totalOfDogs.classList.add("cartTotalDogs");
+      totalOfDogs.innerHTML = "Hundar: ";
+
+      let dogsShowTotal: HTMLSpanElement = document.createElement("span");
+      dogsShowTotal.classList.add("totalOfDogs");
+      dogsShowTotal.innerHTML = productList[i].amount;
+      console.log(productList[i].amount);
+      console.log(productList[i].price);
+
+      let removeADogButton: HTMLElement = document.createElement("i");
+      removeADogButton.classList.add("fas");
+      removeADogButton.classList.add("fa-minus");
+
+      let addADogButton: HTMLElement = document.createElement("i");
+      addADogButton.classList.add("fas");
+      addADogButton.classList.add("fa-plus");
+
+      removeADogButton.addEventListener("click", () => {
+        minusDogs();
+      });
+
+      totalOfDogs.appendChild(removeADogButton);
+      totalOfDogs.appendChild(dogsShowTotal);
+      totalOfDogs.appendChild(addADogButton);
+
+      dogProduct.appendChild(dogImageCartContainer);
+      dogImageCartContainer.appendChild(cartIMG);
+      
       dogImageCartContainer.appendChild(cartIconContainer);
       
       let cartIcon: HTMLElement = document.createElement("i");
@@ -44,6 +82,12 @@ export function createCartHTML() {
       let dogCartName: HTMLElement = document.createElement("h5");
       dogCartName.innerHTML = orderInfoList[i].product.name;
       dogProduct.appendChild(dogCartName);
+      dogProduct.appendChild(cartDogPrice);
+      dogProduct.appendChild(totalOfDogs);
+
+      let productsCartContainer =
+        document.getElementsByClassName("cartContainer")[0];
+
 
       let cartDogPrice: HTMLElement = document.createElement("p");
       cartDogPrice.className = "dogprice";
@@ -55,10 +99,12 @@ export function createCartHTML() {
       });
     }
 
+
   }
   let categoryCartContainer = document.getElementById("cart");
   cartTotal.innerHTML = "Totalt:";
   categoryCartContainer.appendChild(cartTotal);
+
   cartTotal.classList.add("cartTotal");
 
   let totalSum: HTMLSpanElement = document.createElement("span");
@@ -69,11 +115,12 @@ export function createCartHTML() {
 
   let doneCartButton: HTMLButtonElement = document.createElement("button");
   doneCartButton.classList.add("checkoutBtn");
-  doneCartButton.type = "sumbit";
+  doneCartButton.type = "submit";
   doneCartButton.innerHTML = "Gå vidare till betalning";
 
   categoryCartContainer.appendChild(doneCartButton);
 
   showTotal();
-  }
+  //changeTotal();
+}
 
