@@ -6,7 +6,6 @@ export function showTotal() {
     if (productList[i].cart === true) {
       let price = productList[i].price;
       sum += price;
-      console.log(sum);
     }
   }
   let totalSum = document.getElementsByClassName("addSum")[0];
