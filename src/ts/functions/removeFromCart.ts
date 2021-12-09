@@ -1,9 +1,9 @@
-import { inCart } from "../models/cartList";
+import { orderInfoList } from "../models/orderInfoList";
 import { updateCartLocalStorage } from "./updateCartLocalStorage";
 
 
 export function removeFromCart(i: number) {
-    inCart.splice(i,1);
+    orderInfoList.splice(i,1);
     updateCartLocalStorage();
     }
 

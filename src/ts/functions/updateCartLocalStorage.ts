@@ -1,11 +1,11 @@
-import { inCart } from "../models/cartList";
+import { orderInfoList } from "../models/orderInfoList";
 import { productList } from "../models/productList";
-import { createCartHTML } from "./createCartHTML";
+import { createCartHTML } from "./createCartHtml";
 
 export function updateCartLocalStorage () {
     console.log("hej");
     
-    let listastext = JSON.stringify(inCart);
+    let listastext = JSON.stringify(orderInfoList);
     localStorage.setItem("savedCartList", listastext);
     createCartHTML ();
 }

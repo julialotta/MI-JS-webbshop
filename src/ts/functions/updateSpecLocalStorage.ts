@@ -1,5 +1,5 @@
 import { productList } from "../models/productList";
-import { createCartHTML } from "./createCartHTML";
+import { createCartHTML } from "./createCartHtml";
 import { createProductSpec } from "./createProductSpec";
 
 export function updateSpecLocalStorage () {

@@ -1,22 +1,13 @@
+import { orderInfoList } from "../models/orderInfoList";
 import { productList } from "../models/productList";
 import { addToCart } from "./addToCart";
 import { openProductSpec } from "./openProductSpec";
 
-/* Category:
-1 = Sassy classy and bad-assy
-2 = Kriminella men snälla
-3 = Singlar som vill mingla
-4 = Call me Puppy
-5 = Oldies but goodies 
-
-this.name
-this.picture
-this.info
-this.category
-this.price
-this.cart */
 
 export function createProductHtml() {
+  let p = document.getElementById("floatingcartnumber");
+  p.innerHTML = orderInfoList.length;
+
   for (let i = 0; i < productList.length; i++) {
     let dogproduct: HTMLDivElement = document.createElement("div");
     let dogImgContainer: HTMLDivElement = document.createElement("div");
