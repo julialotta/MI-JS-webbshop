@@ -13,7 +13,6 @@ let product101 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product102 = new Products(
@@ -29,7 +28,6 @@ let product102 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product103 = new Products(
@@ -45,7 +43,6 @@ let product103 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product104 = new Products(
@@ -61,7 +58,6 @@ let product104 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product201 = new Products(
@@ -77,7 +73,6 @@ let product201 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product202 = new Products(
@@ -93,7 +88,6 @@ let product202 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product203 = new Products(
@@ -109,7 +103,6 @@ let product203 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product301 = new Products(
@@ -125,7 +118,6 @@ let product301 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product302 = new Products(
@@ -141,7 +133,6 @@ let product302 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product303 = new Products(
@@ -157,7 +148,6 @@ let product303 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product304 = new Products(
@@ -173,7 +163,6 @@ let product304 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product401 = new Products(
@@ -189,7 +178,6 @@ let product401 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product402 = new Products(
@@ -205,7 +193,6 @@ let product402 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product403 = new Products(
@@ -221,7 +208,6 @@ let product403 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product501 = new Products(
@@ -237,7 +223,6 @@ let product501 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product502 = new Products(
@@ -253,7 +238,6 @@ let product502 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product503 = new Products(
@@ -269,7 +253,6 @@ let product503 = new Products(
   500,
   false,
   false,
-  1
 );
 
 let product504 = new Products(
@@ -285,7 +268,6 @@ let product504 = new Products(
   500,
   false,
   false,
-  1
 );
 
 export let productList = JSON.parse(localStorage.getItem("savedList")) || [

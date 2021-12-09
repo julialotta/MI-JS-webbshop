@@ -1,6 +1,5 @@
 import { productList } from "../models/productList";
 import { removeFromCart } from "./removeFromCart";
-import { updateLocalStorage } from "./updateLocalStorage";
 
 let listOfDogs: number = 1;
 
