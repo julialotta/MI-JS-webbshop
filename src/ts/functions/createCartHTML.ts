@@ -5,6 +5,12 @@ import { showTotal } from "./showTotal";
 export function createCartHTML() {
   let productsCartContainer:HTMLElement = document.getElementById("cart");
   productsCartContainer.innerHTML = "";
+  let heading = document.createElement("h3");
+  heading.innerHTML = "Dina varor";
+  productsCartContainer.appendChild(heading);
+  let productDiv = document.createElement("div");
+  productDiv.className = "cartContainer";
+  productsCartContainer.appendChild(productDiv);
    let cartTotal: HTMLSpanElement = document.createElement("span");
   cartTotal.innerHTML = "";
   
@@ -16,7 +22,7 @@ export function createCartHTML() {
       console.log(orderInfoList.length);
       let dogProduct: HTMLDivElement = document.createElement("div");
       dogProduct.className = "dogproduct";
-      productsCartContainer.appendChild(dogProduct);
+      productDiv.appendChild(dogProduct);
     
       let dogImageCartContainer: HTMLDivElement = document.createElement("div");
       dogImageCartContainer.className = "dogimgcontainer";
