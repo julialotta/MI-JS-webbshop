@@ -42,7 +42,7 @@ export function createProductHtml() {
     dogImgContainer.appendChild(cartSymbolContainer);
 
     let cartSymbol: HTMLElement = document.createElement("i");
-    cartSymbol.className = "fas fa-cart-plus";
+    cartSymbol.className = "bi bi-bag-plus";
     cartSymbolContainer.appendChild(cartSymbol);
 
     let name: HTMLHeadingElement = document.createElement("h5");

@@ -1,5 +1,5 @@
 .floatingcart {
-  width: 80px;
+  width: 70px;
   height: 45px;
   position: fixed;
   bottom: 20px;
@@ -13,19 +13,19 @@
   }
 
   #floatingcartnumber {
-    color: $white;
+    color: $darkpink;
     font-size: 13px;
     position: relative;
-    top: 10px;
+    top: 18px;
     margin: 0;
-    left: 36px;
+    left: 32px;
     z-index: 1;
   }
-  .fa-shopping-cart {
+  .bi-bag {
     font-size: 35px;
     color: $darkpink;
     position: absolute;
-    top: 5px;
+    top: 1px;
     left: 17px;
   }
 }

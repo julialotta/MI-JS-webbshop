@@ -3,7 +3,8 @@
 import { burgerMenu } from "./functions/burgerMenu";
 import { createCartHTML } from "./functions/createCartHTML";
 
-window.onload = () => {
+
+window.onload = function () {
   burgerMenu();
   createCartHTML();
 };
