@@ -1,23 +1,13 @@
+import { orderInfoList } from "../models/orderInfoList";
 import { productList } from "../models/productList";
 import { addToCart } from "./addToCart";
 import { openProductSpec } from "./openProductSpec";
-import { updateLocalStorage } from "./updateLocalStorage";
 
-/* Category:
-1 = Sassy classy and bad-assy
-2 = Kriminella men snälla
-3 = Singlar som vill mingla
-4 = Call me Puppy
-5 = Oldies but goodies 
-
-this.name
-this.picture
-this.info
-this.category
-this.price
-this.cart */
 
 export function createProductHtml() {
+  let p = document.getElementById("floatingcartnumber");
+  p.innerHTML = orderInfoList.length;
+
   for (let i = 0; i < productList.length; i++) {
     let dogproduct: HTMLDivElement = document.createElement("div");
     let dogImgContainer: HTMLDivElement = document.createElement("div");
@@ -26,10 +16,12 @@ export function createProductHtml() {
     let dogImg: HTMLImageElement = document.createElement("img");
     dogImg.src = productList[i].picture;
     dogImg.alt = productList[i].pictureAlt;
+
     dogImg.addEventListener("mouseover", () => {
       cartSymbolContainer.classList.add("hover");
       dogImg.classList.add("hover");
     });
+
     dogImg.addEventListener("mouseout", () => {
       dogImg.classList.remove("hover");
       cartSymbolContainer.classList.remove("hover");
@@ -39,25 +31,29 @@ export function createProductHtml() {
     let cartSymbolContainer: HTMLDivElement = document.createElement("div");
     cartSymbolContainer.className = "cartSymbolContainer";
     dogImgContainer.appendChild(cartSymbolContainer);
+
     let cartSymbol: HTMLElement = document.createElement("i");
-    cartSymbol.className = "fas fa-cart-plus";
+    cartSymbol.className = "bi bi-bag-plus";
     cartSymbolContainer.appendChild(cartSymbol);
+
     let name: HTMLHeadingElement = document.createElement("h5");
     name.innerHTML = productList[i].name;
     dogproduct.appendChild(name);
+
     let info: HTMLHeadingElement = document.createElement("p");
     info.innerHTML = productList[i].info;
     dogproduct.appendChild(info);
+
     let price: HTMLHeadingElement = document.createElement("p");
     price.innerHTML = "$" + productList[i].price;
     dogproduct.appendChild(price);
 
     productList[i].productSpec = false;
-    updateLocalStorage();
 
     dogImg.addEventListener("click", () => {
       openProductSpec(i);
     });
+    
     cartSymbol.addEventListener("click", () => {
       addToCart(i);
     });

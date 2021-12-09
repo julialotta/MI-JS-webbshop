@@ -1,20 +1,37 @@
-import { openProductSpec } from "./openProductSpec";
-import { updateLocalStorage } from "./updateLocalStorage";
 import { productList } from "../models/productList";
-//import { changeTotal } from "./changeTotal";
 import { removeFromCart } from "./removeFromCart";
 import { showTotal } from "./showTotal";
 import { minusDogs } from "./changeTotal";
 export function createCartHTML() {
-  for (let i = 0; i < productList.length; i++) {
-    if (productList[i].cart === true) {
+  let productsCartContainer:HTMLElement = document.getElementById("cart");
+  productsCartContainer.innerHTML = "";
+  let heading = document.createElement("h3");
+  heading.innerHTML = "Dina varor";
+  productsCartContainer.appendChild(heading);
+  let productDiv = document.createElement("div");
+  productDiv.className = "cartContainer";
+  productsCartContainer.appendChild(productDiv);
+   let cartTotal: HTMLSpanElement = document.createElement("span");
+  cartTotal.innerHTML = "";
+  
+  for (let i = 0; i < orderInfoList.length; i++){
+
+    if (orderInfoList.length == 0) {
+      console.log("inget i varukorgen"); 
+    } else {      
+      console.log(orderInfoList.length);
       let dogProduct: HTMLDivElement = document.createElement("div");
-      dogProduct.classList.add("dogproduct");
+      dogProduct.className = "dogproduct";
+      productDiv.appendChild(dogProduct);
+    
       let dogImageCartContainer: HTMLDivElement = document.createElement("div");
-      dogImageCartContainer.classList.add("dogimgcontainer");
+      dogImageCartContainer.className = "dogimgcontainer";
+      dogProduct.appendChild(dogImageCartContainer);
+
       let cartIMG: HTMLImageElement = document.createElement("img");
-      cartIMG.src = productList[i].picture;
-      cartIMG.alt = productList[i].pictureAlt;
+      cartIMG.src = orderInfoList[i].product.picture;
+      cartIMG.alt = orderInfoList[i].product.pictureAlt;
+      dogImageCartContainer.appendChild(cartIMG);
 
       let cartIconContainer: HTMLDivElement = document.createElement("div");
       cartIconContainer.classList.add("crossIconContainer");
@@ -55,8 +72,15 @@ export function createCartHTML() {
 
       dogProduct.appendChild(dogImageCartContainer);
       dogImageCartContainer.appendChild(cartIMG);
+      
       dogImageCartContainer.appendChild(cartIconContainer);
+      
+      let cartIcon: HTMLElement = document.createElement("i");
+      cartIcon.className = "bi bi-x-circle";
       cartIconContainer.appendChild(cartIcon);
+      
+      let dogCartName: HTMLElement = document.createElement("h5");
+      dogCartName.innerHTML = orderInfoList[i].product.name;
       dogProduct.appendChild(dogCartName);
       dogProduct.appendChild(cartDogPrice);
       dogProduct.appendChild(totalOfDogs);
@@ -64,16 +88,23 @@ export function createCartHTML() {
       let productsCartContainer =
         document.getElementsByClassName("cartContainer")[0];
 
-      productsCartContainer.appendChild(dogProduct);
+
+      let cartDogPrice: HTMLElement = document.createElement("p");
+      cartDogPrice.className = "dogprice";
+      cartDogPrice.innerHTML = "$" + orderInfoList[i].product.price;
+      dogProduct.appendChild(cartDogPrice);
 
       cartIcon.addEventListener("click", () => {
         removeFromCart(i);
       });
     }
-  }
 
-  let cartTotal: HTMLSpanElement = document.createElement("span");
-  cartTotal.innerHTML = "Totalt: ";
+
+  }
+  let categoryCartContainer = document.getElementById("cart");
+  cartTotal.innerHTML = "Totalt:";
+  categoryCartContainer.appendChild(cartTotal);
+
   cartTotal.classList.add("cartTotal");
 
   let totalSum: HTMLSpanElement = document.createElement("span");
@@ -87,10 +118,9 @@ export function createCartHTML() {
   doneCartButton.type = "submit";
   doneCartButton.innerHTML = "Gå vidare till betalning";
 
-  let categoryCartContainer = document.getElementsByClassName("category")[0];
-  categoryCartContainer.appendChild(cartTotal);
   categoryCartContainer.appendChild(doneCartButton);
 
   showTotal();
   //changeTotal();
 }
+

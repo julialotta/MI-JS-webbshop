@@ -1,4 +1,4 @@
-import { productList } from "../models/productList";
+import { orderInfoList } from "../models/orderInfoList";
 
 export function showTotal() {
   let sum = 0;
@@ -7,6 +7,7 @@ export function showTotal() {
       let price = productList[i].price;
       sum += price;
     }
+
   }
   let totalSum = document.getElementsByClassName("addSum")[0];
   totalSum.innerHTML = "$" + sum;
