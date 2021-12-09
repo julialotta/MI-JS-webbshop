@@ -1,6 +1,11 @@
+import { inCart } from "../models/cartList";
+import { Incart } from "../models/Incart";
 import { productList } from "../models/productList";
-import { updateLocalStorage } from "./updateLocalStorage";
+import { updateCartLocalStorage } from "./updateCartLocalStorage";
+
 export function addToCart(i: number) {
-  productList[i].cart = !productList[i].cart;
-  updateLocalStorage();
+    let newCart = productList[i];
+    let cart1 = new Incart (newCart);
+    inCart.push(cart1);
+    updateCartLocalStorage();
 }

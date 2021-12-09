@@ -1,50 +1,51 @@
-import { openProductSpec } from "./openProductSpec";
-import { updateLocalStorage } from "./updateLocalStorage";
-import { productList } from "../models/productList";
-import { Products } from "../models/Products";
+import { inCart } from "../models/cartList";
 import { removeFromCart } from "./removeFromCart";
 import { showTotal } from "./showTotal";
 
 export function createCartHTML() {
-  for (let i = 0; i < productList.length; i++) {
-    if (productList[i].cart === true) {
+  for (let i = 0; i < inCart.length; i++){
+    if (inCart === undefined || inCart.length == 0) {
+      console.log("inget i varukorgen"); 
+    } else {
+
+      console.log(inCart.length);
+      let productsCartContainer = document.getElementById("cart");
       let dogProduct: HTMLDivElement = document.createElement("div");
-      dogProduct.classList.add("dogproduct");
+      dogProduct.className = "dogproduct";
+      productsCartContainer.appendChild(dogProduct);
+    
       let dogImageCartContainer: HTMLDivElement = document.createElement("div");
-      dogImageCartContainer.classList.add("dogimgcontainer");
+      dogImageCartContainer.className = "dogimgcontainer";
+      dogProduct.appendChild(dogImageCartContainer);
+
       let cartIMG: HTMLImageElement = document.createElement("img");
-      cartIMG.src = productList[i].picture;
-      cartIMG.alt = productList[i].pictureAlt;
+      cartIMG.src = inCart[i].product.picture;
+      cartIMG.alt = inCart[i].product.pictureAlt;
+      dogImageCartContainer.appendChild(cartIMG);
 
       let cartIconContainer: HTMLDivElement = document.createElement("div");
-      cartIconContainer.classList.add("crossIconContainer");
-      let cartIcon: HTMLElement = document.createElement("i");
-      cartIcon.classList.add("fas");
-      cartIcon.classList.add("fa-times");
-      let dogCartName: HTMLElement = document.createElement("h5");
-      dogCartName.innerHTML = productList[i].name;
-      let cartDogPrice: HTMLElement = document.createElement("p");
-      cartDogPrice.classList.add("dogprice");
-      cartDogPrice.innerHTML = "$" + productList[i].price;
-
-      dogProduct.appendChild(dogImageCartContainer);
-      dogImageCartContainer.appendChild(cartIMG);
+      cartIconContainer.className = "crossIconContainer";
       dogImageCartContainer.appendChild(cartIconContainer);
+      
+      let cartIcon: HTMLElement = document.createElement("i");
+      cartIcon.classList.add("fas", "fa-times");
       cartIconContainer.appendChild(cartIcon);
+      
+      let dogCartName: HTMLElement = document.createElement("h5");
+      dogCartName.innerHTML = inCart[i].product.name;
       dogProduct.appendChild(dogCartName);
+
+      let cartDogPrice: HTMLElement = document.createElement("p");
+      cartDogPrice.className ="dogprice";
+      cartDogPrice.innerHTML = "$" + inCart[i].product.price;
       dogProduct.appendChild(cartDogPrice);
-
-      let productsCartContainer =
-        document.getElementsByClassName("cartContainer")[0];
-
-      productsCartContainer.appendChild(dogProduct);
 
       cartIcon.addEventListener("click", () => {
         removeFromCart(i);
       });
     }
   }
-
+/* 
   let cartTotal: HTMLSpanElement = document.createElement("span");
   cartTotal.innerHTML = "Totalt:";
   cartTotal.classList.add("cartTotal");
@@ -64,5 +65,6 @@ export function createCartHTML() {
   categoryCartContainer.appendChild(cartTotal);
   categoryCartContainer.appendChild(doneCartButton);
 
-  showTotal();
-}
+  showTotal(); */
+  }
+

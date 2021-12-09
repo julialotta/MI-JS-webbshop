@@ -1,7 +1,6 @@
 import { productList } from "../models/productList";
 import { addToCart } from "./addToCart";
 import { openProductSpec } from "./openProductSpec";
-import { updateLocalStorage } from "./updateLocalStorage";
 
 /* Category:
 1 = Sassy classy and bad-assy
@@ -59,7 +58,6 @@ export function createProductHtml() {
     dogproduct.appendChild(price);
 
     productList[i].productSpec = false;
-    updateLocalStorage();
 
     dogImg.addEventListener("click", () => {
       openProductSpec(i);

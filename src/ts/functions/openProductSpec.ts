@@ -1,8 +1,8 @@
 import { productList } from "../models/productList";
-import { updateLocalStorage } from "./updateLocalStorage";
+import { updateSpecLocalStorage } from "./updateSpecLocalStorage";
 
 export function openProductSpec (i: number) {
     productList[i].productSpec = !productList[i].productSpec;
-    updateLocalStorage ();
+    updateSpecLocalStorage ();
     window.location.href = "product-spec.html#backArrow";
 }
