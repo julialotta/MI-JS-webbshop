@@ -21,6 +21,44 @@
     position: absolute;
     bottom: 4px;
     left: 0;
+
+    i {
+      color: $black;
+      font-size: 15px;
+      position: absolute;
+      padding: 6px;
+      bottom: 0px;
+      left: 0;
+    }
+    i:hover {
+      animation: wiggle 2.2s infinite;
+    }
+    @keyframes wiggle {
+      0% {
+        transform: rotate(0deg);
+      }
+      20% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(25deg);
+      }
+      30% {
+        transform: rotate(-25deg);
+      }
+      35% {
+        transform: rotate(25deg);
+      }
+      40% {
+        transform: rotate(-25deg);
+      }
+      45% {
+        transform: rotate(25deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+    }
   }
 }
 

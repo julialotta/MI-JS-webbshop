@@ -1,8 +1,12 @@
 import { productList } from "../models/productList";
 import { updateLocalStorage } from "./updateLocalStorage";
 export function removeFromCart(i: number) {
-  productList[i].cart = !productList[i].cart == false;
-  updateLocalStorage();
+  for (let i = 0; i < productList.length; i++) {
+    if (productList[i].cart === true) {
+      productList[i].cart = !productList[i].cart;
+      updateLocalStorage();
+    }
+  }
 }
 
 
