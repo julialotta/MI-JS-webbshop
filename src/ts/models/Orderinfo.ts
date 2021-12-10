@@ -1,11 +1,11 @@
-import { Products } from "./Products";
+import { Product } from "./Product";
 
 export class Orderinfo {
-    product: Products;
+    product: Product;
     quantity: number;
 
         constructor(
-            product: Products,
+            product: Product,
             quantity: number
         )
         

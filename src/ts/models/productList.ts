@@ -1,6 +1,6 @@
-import { Products } from "./Products";
+import { Product } from "./Product";
 
-let product101 = new Products(
+let product101 = new Product(
   "Doga Lipa",
   "/assets/productImages/Sassy/Sassy, classy and bad-assy 1.png",
   "Dog with pink glasses",
@@ -14,7 +14,7 @@ let product101 = new Products(
   false
 );
 
-let product102 = new Products(
+let product102 = new Product(
   "Alan Barker",
   "/assets/productImages/Sassy/Sassy, classy and bad-assy 2.png",
   "Dog with headphones",
@@ -28,7 +28,7 @@ let product102 = new Products(
   false
 );
 
-let product103 = new Products(
+let product103 = new Product(
   "Louis Vuffton",
   "/assets/productImages/Sassy/Sassy, classy and bad-assy 3.png",
   "Dog with LV bag",
@@ -42,7 +42,7 @@ let product103 = new Products(
   false
 );
 
-let product104 = new Products(
+let product104 = new Product(
   "Post Mabone",
   "/assets/productImages/Sassy/Sassy, classy and bad-assy 4.png",
   "Dog with black cape",
@@ -56,7 +56,7 @@ let product104 = new Products(
   false
 );
 
-let product201 = new Products(
+let product201 = new Product(
   "Kanye Woff",
   "/assets/productImages/Kriminella/Kriminella men snalla 1.png",
   "Dog with gold chain",
@@ -70,7 +70,7 @@ let product201 = new Products(
   false
 );
 
-let product202 = new Products(
+let product202 = new Product(
   "Bones & Clyde",
   "/assets/productImages/Kriminella/Kriminella men snalla 2.png",
   "Dogs in white and gold",
@@ -84,7 +84,7 @@ let product202 = new Products(
   false
 );
 
-let product203 = new Products(
+let product203 = new Product(
   "XXX",
   "/assets/productImages/Kriminella/Kriminella men snalla 3.png",
   "Dog with black hoodie",
@@ -98,7 +98,7 @@ let product203 = new Products(
   false
 );
 
-let product301 = new Products(
+let product301 = new Product(
   "Mr Pawsome",
   "/assets/productImages/Singlar/Singlar som vill mingla 1.png",
   "Dog with shiny glasses",
@@ -112,7 +112,7 @@ let product301 = new Products(
   false
 );
 
-let product302 = new Products(
+let product302 = new Product(
   "XXX",
   "/assets/productImages/Singlar/Singlar som vill mingla 2.png",
   "Dog with black dress",
@@ -126,7 +126,7 @@ let product302 = new Products(
   false
 );
 
-let product303 = new Products(
+let product303 = new Product(
   "XXX",
   "/assets/productImages/Singlar/Singlar som vill mingla 3.png",
   "Dog with blue dress",
@@ -140,7 +140,7 @@ let product303 = new Products(
   false
 );
 
-let product304 = new Products(
+let product304 = new Product(
   "Hairy Styles",
   "/assets/productImages/Singlar/Singlar som vill mingla 4.png",
   "Dog with shirt and bow tie",
@@ -154,7 +154,7 @@ let product304 = new Products(
   false
 );
 
-let product401 = new Products(
+let product401 = new Product(
   "Mary Puppins",
   "/assets/productImages/Puppy/Call me Puppy 1.png",
   "Grey puppy",
@@ -168,7 +168,7 @@ let product401 = new Products(
   false
 );
 
-let product402 = new Products(
+let product402 = new Product(
   "Puppy Fiction",
   "/assets/productImages/Puppy/Call me Puppy 2.png",
   "Puppy with red toy",
@@ -182,7 +182,7 @@ let product402 = new Products(
   false
 )
 
-let product403 = new Products(
+let product403 = new Product(
   "Ms Puppylar",
   "/assets/productImages/Puppy/Call me Puppy 3.png",
   "Beige puppy",
@@ -196,7 +196,7 @@ let product403 = new Products(
   false
 );
 
-let product501 = new Products(
+let product501 = new Product(
   "Frallan",
   "/assets/productImages/Oldies/Oldies but goodies 1.png",
   "Dog with wig",
@@ -210,7 +210,7 @@ let product501 = new Products(
   false
 );
 
-let product502 = new Products(
+let product502 = new Product(
   "Janne Schäfer",
   "/assets/productImages/Oldies/Oldies but goodies 2.png",
   "Dog with ugly glasses",
@@ -224,7 +224,7 @@ let product502 = new Products(
   false
 );
 
-let product503 = new Products(
+let product503 = new Product(
   "XXX",
   "/assets/productImages/Oldies/Oldies but goodies 3.png",
   "Dog with red dress",
@@ -238,7 +238,7 @@ let product503 = new Products(
   false
 );
 
-let product504 = new Products(
+let product504 = new Product(
   "Dogtor Snuffles",
   "/assets/productImages/Oldies/Oldies but goodies 4.png",
   "XXX",
