@@ -6,6 +6,10 @@ export function showTotal() {
       let price = orderInfoList[i].product.price;
       sum += price;  
   }
-  let totalSum = document.getElementsByClassName("addSum")[0];
-  totalSum.innerHTML = "$" + sum;
+  for (let i = 0; i < 2; i++) {
+    let totalSum = document.getElementsByClassName("addSum");
+  let test = totalSum[i] as HTMLElement;
+  /* test.innerHTML = "$" ; */
+  }
+
 }

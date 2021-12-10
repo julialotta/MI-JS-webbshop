@@ -1,9 +1,11 @@
+import { Products } from "./Products";
+
 export class Orderinfo {
-    product: object;
+    product: Products;
     quantity: number;
 
         constructor(
-            product: object,
+            product: Products,
             quantity: number
         )
         

@@ -4,7 +4,8 @@ import { minusDogs } from "./changeTotal";
 import { orderInfoList } from "../models/orderInfoList";
 
 export function createCartHTML() {
-    let productsCartContainer:HTMLElement = document.getElementById("cart");
+
+  let productsCartContainer:HTMLElement = document.getElementById("cart");
   productsCartContainer.innerHTML = "";
   let heading = document.createElement("h3");
   heading.innerHTML = "Dina varor";
@@ -60,8 +61,7 @@ export function createCartHTML() {
       let dogsShowTotal: HTMLSpanElement = document.createElement("p");
       dogsShowTotal.id ="totalOfDogs";
       let quantity: number = orderInfoList[i].quantity;
-      let stringQuantity = String(quantity);
-      dogsShowTotal.innerHTML = " " + stringQuantity;
+      dogsShowTotal.innerHTML =  quantity.toString();
 
       totalOfDogs.appendChild(dogsShowTotal);
 
@@ -96,9 +96,9 @@ export function createCartHTML() {
 
   cartTotal.appendChild(totalSum);
 
-  let doneCartButton: HTMLButtonElement = document.createElement("button");
+  let doneCartButton: HTMLAnchorElement = document.createElement("a");
   doneCartButton.classList.add("checkoutBtn");
-  doneCartButton.type = "submit";
+  doneCartButton.href = "http://localhost:54116/checkout.html";
   doneCartButton.innerHTML = "Gå vidare till betalning";
 
   categoryCartContainer.appendChild(doneCartButton);
