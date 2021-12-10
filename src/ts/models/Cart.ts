@@ -3,30 +3,75 @@ import { Orderinfo } from "./Orderinfo";
 import { productList } from "./productList";
 
 export class Cart {
-    cartList: Orderinfo[];
+  cartList: Orderinfo[];
 
-    constructor(){
-        this.cartList = JSON.parse(localStorage.getItem("savedCartList")) || [];
-    }
+  constructor() {
+    this.cartList = JSON.parse(localStorage.getItem("savedCartList")) || [];
+  }
 
-    addToCart(i:number) {
+  addToCart(i: number) {
     let newCart = productList[i];
-    let cart1 = new Orderinfo (newCart,1);
+    let cart1 = new Orderinfo(newCart, 1);
     this.cartList.push(cart1);
     let p = document.getElementById("floatingcartnumber");
     p.innerHTML = this.cartList.length.toString();
 
     let listastext = JSON.stringify(this.cartList);
     localStorage.setItem("savedCartList", listastext);
-    }
+  }
 
-    removeFromCart(i: number) {
-    this.cartList.splice(i,1);
+  removeFromCart(i: number) {
+    this.cartList.splice(i, 1);
     let listastext = JSON.stringify(this.cartList);
     localStorage.setItem("savedCartList", listastext);
     createCartHTML();
-    }
+  }
 
+  plusDogs(i: number) {
+    this.cartList[i].quantity++;
+    let listastext = JSON.stringify(this.cartList);
+    localStorage.setItem("savedCartList", listastext);
+    createCartHTML();
+  }
+
+  minusDogs(i: number) {
+    this.cartList[i].quantity--;
+    let listastext = JSON.stringify(this.cartList);
+    localStorage.setItem("savedCartList", listastext);
+    createCartHTML();
+    if (this.cartList[i].quantity < 1) {
+      this.removeFromCart(i);
+      let listastext = JSON.stringify(this.cartList);
+      localStorage.setItem("savedCartList", listastext);
+      createCartHTML();
+    }
+  }
+
+  /*noItems() {
+    if (this.cartList.length === 0) {
+      let noItemsContainer: HTMLElement = document.getElementById("cart");
+      let textContainer: HTMLDivElement = document.createElement("div");
+      textContainer.classList.add("emptyCartContainer");
+
+      let noItemsSpan: HTMLElement = document.createElement("h3");
+      noItemsSpan.innerHTML = "Din varukorg är tom";
+      noItemsSpan.classList.add("emptyCart");
+
+      textContainer.appendChild(noItemsSpan);
+      noItemsContainer.appendChild(textContainer);
+    }
+  }*/
+
+  showTotal() {
+    let sum = 0;
+    for (let i = 0; i < this.cartList.length; i++) {
+      let price = this.cartList[i].product.price * this.cartList[i].quantity;
+      sum += price;
+    }
+    let totalSum = document.getElementsByClassName("addSum")[0];
+    totalSum.innerHTML = "$" + sum;
+  }
 }
 
-export let orderInfoList = JSON.parse(localStorage.getItem("savedCartList")) || [];
+export let orderInfoList =
+  JSON.parse(localStorage.getItem("savedCartList")) || [];
