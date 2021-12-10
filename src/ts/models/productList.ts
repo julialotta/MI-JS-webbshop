@@ -180,7 +180,7 @@ let product402 = new Products(
   "puppy",
   500,
   false
-)
+);
 
 let product403 = new Products(
   "Ms Puppylar",
