@@ -1,32 +1,31 @@
-import { updateCartLocalStorage } from "../functions/updateLocalStorage";
+import { createCartHTML } from "../functions/createCartHTML";
 import { Orderinfo } from "./Orderinfo";
 import { productList } from "./productList";
 
 export class Cart {
-    orderInfoList: Orderinfo[];
+    cartList: Orderinfo[];
 
     constructor(){
-        this.orderInfoList = JSON.parse(localStorage.getItem("savedCartList")) || [];
+        this.cartList = JSON.parse(localStorage.getItem("savedCartList")) || [];
     }
 
     addToCart(i:number) {
     let newCart = productList[i];
     let cart1 = new Orderinfo (newCart,1);
-    this.orderInfoList.push(cart1);
+    this.cartList.push(cart1);
     let p = document.getElementById("floatingcartnumber");
-    p.innerHTML = this.orderInfoList.length.toString();
-    console.log(cart1);
+    p.innerHTML = this.cartList.length.toString();
+
+    let listastext = JSON.stringify(this.cartList);
+    localStorage.setItem("savedCartList", listastext);
     }
 
     removeFromCart(i: number) {
-    this.orderInfoList.splice(i,1);
-    updateCartLocalStorage();
+    this.cartList.splice(i,1);
+    let listastext = JSON.stringify(this.cartList);
+    localStorage.setItem("savedCartList", listastext);
+    createCartHTML();
     }
-
-    /*  updateCartLocalStorage(); {
-        console.log("hej");
-        
-    } */
 
 }
 

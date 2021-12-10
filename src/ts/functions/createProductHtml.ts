@@ -1,7 +1,6 @@
 import { orderInfoList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { Cart } from "../models/Cart";
-import { openProductSpec } from "./openProductSpec";
 
 
 export function createProductHtml() {
@@ -51,11 +50,14 @@ export function createProductHtml() {
     productList[i].productSpec = false;
 
     dogImg.addEventListener("click", () => {
-      openProductSpec(i);
+    productList[i].productSpec = !productList[i].productSpec;
+    window.location.href = "product-spec.html#backArrow";
+    let listastext = JSON.stringify(productList);
+    localStorage.setItem("savedList", listastext);
     });
 
-    let cart = new Cart();
     cartSymbol.addEventListener("click", () => {
+      let cart = new Cart();
       cart.addToCart(i);
     });
 
@@ -85,4 +87,6 @@ export function createProductHtml() {
       cat5.appendChild(dogproduct);
     }
   }
+  let listastext = JSON.stringify(productList);
+    localStorage.setItem("savedList", listastext);
 }
