@@ -7,7 +7,6 @@
 }
 .cartContainer {
   display: flex;
-  flex-direction: column;
   align-self: center;
   overflow-x: scroll;
   width: 100%;
@@ -86,19 +85,25 @@
   font-weight: 200;
 }
 .cartTotalDogs {
+  display: flex;
+  flex-direction: row;
+  width: 30px;
   font-family: $primary-font;
-  padding-top: 10px;
-  font-weight: 200;
+
+  i {
+    padding-left: 10px;
+  }
 }
-#cartTotal,
-.totalOfDogs {
+
+#totalOfDogs {
+  font-weight: 800;
+  padding-left: 5px;
+}
+#cartTotal {
+  padding-left: 5px;
   font-weight: 800;
 }
 
-.fa-minus,
-.fa-plus {
-  color: $black;
-  font-size: 10px;
-  padding: 5px;
+.hover {
   cursor: pointer;
 }

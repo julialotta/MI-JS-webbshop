@@ -11,7 +11,6 @@ export class Products {
   price: number;
   cart: boolean;
   productSpec: boolean;
-  amount: number;
 
   constructor(
     name: string,
@@ -26,7 +25,6 @@ export class Products {
     price: number,
     cart: boolean,
     productSpec: boolean,
-    amount: number
   ) {
     this.name = name;
     this.picture = picture;
@@ -40,15 +38,5 @@ export class Products {
     this.price = price;
     this.cart = cart;
     this.productSpec = productSpec;
-    this.amount = amount;
   }
 }
-/* 
-
-
-let task1 = new Todos ("Something reeaaally important", false, 1);
-let task2 = new Todos ("Something some what important...", false, 2);
-let task3 = new Todos ("Something not that important", false, 3);
-
-let list = JSON.parse(localStorage.getItem("savedList")) || [task1, task2, task3];
- */
