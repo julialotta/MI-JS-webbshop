@@ -1,15 +1,18 @@
 import { orderInfoList } from "../models/orderInfoList";
 import { productList } from "../models/productList";
-import { addToCart } from "./addToCart";
+import { addToCart } from "./cartFunctions";
 import { openProductSpec } from "./openProductSpec";
-
 
 export function createProductHtml() {
   let p = document.getElementById("floatingcartnumber");
   p.innerHTML = orderInfoList.length;
 
   for (let i = 0; i < productList.length; i++) {
+    let fixContainer: HTMLDivElement = document.createElement("div");
+    fixContainer.id = "cart";
+    fixContainer.style.display = "none";
     let dogproduct: HTMLDivElement = document.createElement("div");
+    dogproduct.appendChild(fixContainer);
     let dogImgContainer: HTMLDivElement = document.createElement("div");
     dogImgContainer.className = "dogimgcontainer";
     dogproduct.appendChild(dogImgContainer);
@@ -53,7 +56,7 @@ export function createProductHtml() {
     dogImg.addEventListener("click", () => {
       openProductSpec(i);
     });
-    
+
     cartSymbol.addEventListener("click", () => {
       addToCart(i);
     });
