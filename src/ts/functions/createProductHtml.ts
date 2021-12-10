@@ -1,6 +1,6 @@
 import { orderInfoList } from "../models/orderInfoList";
 import { productList } from "../models/productList";
-import { addToCart } from "./addToCart";
+import { Cart } from "../models/Cart";
 import { openProductSpec } from "./openProductSpec";
 
 
@@ -53,9 +53,11 @@ export function createProductHtml() {
     dogImg.addEventListener("click", () => {
       openProductSpec(i);
     });
+
+  let cart = new Cart();
     
     cartSymbol.addEventListener("click", () => {
-      addToCart(i);
+      cart.addToCart(i);
     });
 
     if (productList[i].category === "sassy") {

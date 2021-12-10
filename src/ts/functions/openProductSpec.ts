@@ -1,5 +1,5 @@
 import { productList } from "../models/productList";
-import { updateSpecLocalStorage } from "./updateSpecLocalStorage";
+import { updateSpecLocalStorage } from "./updateLocalStorage";
 
 export function openProductSpec (i: number) {
     productList[i].productSpec = !productList[i].productSpec;

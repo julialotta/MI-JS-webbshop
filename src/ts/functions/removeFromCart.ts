@@ -1,5 +1,5 @@
 import { orderInfoList } from "../models/orderInfoList";
-import { updateCartLocalStorage } from "./updateCartLocalStorage";
+import { updateCartLocalStorage } from "./updateLocalStorage";
 
 
 export function removeFromCart(i: number) {

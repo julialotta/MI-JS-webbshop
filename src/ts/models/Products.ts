@@ -9,7 +9,6 @@ export class Products {
   snores: string;
   category: string;
   price: number;
-  cart: boolean;
   productSpec: boolean;
 
   constructor(
@@ -23,7 +22,6 @@ export class Products {
     snores: string,
     category: string,
     price: number,
-    cart: boolean,
     productSpec: boolean,
   ) {
     this.name = name;
@@ -36,7 +34,6 @@ export class Products {
     this.snores = snores;
     this.category = category;
     this.price = price;
-    this.cart = cart;
     this.productSpec = productSpec;
   }
 }

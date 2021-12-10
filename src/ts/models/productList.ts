@@ -11,8 +11,7 @@ let product101 = new Products(
   "Bara om hon är riktigt trött",
   "sassy",
   500,
-  false,
-  false,
+  false
 );
 
 let product102 = new Products(
@@ -26,8 +25,7 @@ let product102 = new Products(
   "snores?",
   "sassy",
   500,
-  false,
-  false,
+  false
 );
 
 let product103 = new Products(
@@ -41,8 +39,7 @@ let product103 = new Products(
   "snores?",
   "sassy",
   500,
-  false,
-  false,
+  false
 );
 
 let product104 = new Products(
@@ -56,8 +53,7 @@ let product104 = new Products(
   "snores?",
   "sassy",
   500,
-  false,
-  false,
+  false
 );
 
 let product201 = new Products(
@@ -71,8 +67,7 @@ let product201 = new Products(
   "snores?",
   "kriminella",
   500,
-  false,
-  false,
+  false
 );
 
 let product202 = new Products(
@@ -86,8 +81,7 @@ let product202 = new Products(
   "Inte så värst",
   "kriminella",
   500,
-  false,
-  false,
+  false
 );
 
 let product203 = new Products(
@@ -101,8 +95,7 @@ let product203 = new Products(
   "snores?",
   "kriminella",
   500,
-  false,
-  false,
+  false
 );
 
 let product301 = new Products(
@@ -116,8 +109,7 @@ let product301 = new Products(
   "Dessvärre, speciellt dagen efter",
   "singlar",
   500,
-  false,
-  false,
+  false
 );
 
 let product302 = new Products(
@@ -131,8 +123,7 @@ let product302 = new Products(
   "snores?",
   "singlar",
   500,
-  false,
-  false,
+  false
 );
 
 let product303 = new Products(
@@ -146,8 +137,7 @@ let product303 = new Products(
   "snores?",
   "singlar",
   500,
-  false,
-  false,
+  false
 );
 
 let product304 = new Products(
@@ -161,8 +151,7 @@ let product304 = new Products(
   "snores?",
   "singlar",
   500,
-  false,
-  false,
+  false
 );
 
 let product401 = new Products(
@@ -176,8 +165,7 @@ let product401 = new Products(
   "snores?",
   "puppy",
   500,
-  false,
-  false,
+  false
 );
 
 let product402 = new Products(
@@ -191,9 +179,8 @@ let product402 = new Products(
   "snores?",
   "puppy",
   500,
-  false,
-  false,
-);
+  false
+)
 
 let product403 = new Products(
   "Ms Puppylar",
@@ -206,8 +193,7 @@ let product403 = new Products(
   "snores?",
   "puppy",
   500,
-  false,
-  false,
+  false
 );
 
 let product501 = new Products(
@@ -221,8 +207,7 @@ let product501 = new Products(
   "snores?",
   "oldies",
   500,
-  false,
-  false,
+  false
 );
 
 let product502 = new Products(
@@ -236,8 +221,7 @@ let product502 = new Products(
   "snores?",
   "oldies",
   500,
-  false,
-  false,
+  false
 );
 
 let product503 = new Products(
@@ -251,8 +235,7 @@ let product503 = new Products(
   "snores?",
   "oldies",
   500,
-  false,
-  false,
+  false
 );
 
 let product504 = new Products(
@@ -266,8 +249,7 @@ let product504 = new Products(
   "snores?",
   "oldies",
   500,
-  false,
-  false,
+  false
 );
 
 export let productList = JSON.parse(localStorage.getItem("savedList")) || [
