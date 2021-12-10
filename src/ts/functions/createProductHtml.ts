@@ -1,4 +1,4 @@
-import { orderInfoList } from "../models/orderInfoList";
+import { orderInfoList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { Cart } from "../models/Cart";
 import { openProductSpec } from "./openProductSpec";
@@ -54,8 +54,7 @@ export function createProductHtml() {
       openProductSpec(i);
     });
 
-  let cart = new Cart();
-    
+    let cart = new Cart();
     cartSymbol.addEventListener("click", () => {
       cart.addToCart(i);
     });

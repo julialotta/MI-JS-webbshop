@@ -1,10 +1,10 @@
-import { removeFromCart } from "./removeFromCart";
 import { showTotal } from "./showTotal";
 import { minusDogs } from "./changeTotal";
-import { orderInfoList } from "../models/orderInfoList";
+import { orderInfoList } from "../models/Cart";
+import { Cart } from "../models/Cart";
 
-export function createCartHTML() {
-
+export function createCartHTML() {  
+  let cart = new Cart();
   let productsCartContainer:HTMLElement = document.getElementById("cart");
   productsCartContainer.innerHTML = "";
   let heading = document.createElement("h3");
@@ -16,12 +16,7 @@ export function createCartHTML() {
    let cartTotal: HTMLSpanElement = document.createElement("span");
   cartTotal.innerHTML = "";
   
-  for (let i = 0; i < orderInfoList.length; i++){
-
-    if (orderInfoList.length == 0) {
-      console.log("inget i varukorgen"); 
-    } else {      
-       console.log(orderInfoList.length);
+  for (let i = 0; i < cart.orderInfoList.length; i++){
       let dogProduct: HTMLDivElement = document.createElement("div");
       dogProduct.className = "dogproduct";
       productDiv.appendChild(dogProduct);
@@ -32,8 +27,8 @@ export function createCartHTML() {
       
 
       let cartIMG: HTMLImageElement = document.createElement("img");
-      cartIMG.src = orderInfoList[i].product.picture;
-      cartIMG.alt = orderInfoList[i].product.pictureAlt;
+      cartIMG.src = cart.orderInfoList[i].product.picture
+      cartIMG.alt = cart.orderInfoList[i].product.pictureAlt;
       dogImageCartContainer.appendChild(cartIMG);
 
       let cartIconContainer: HTMLDivElement = document.createElement("div");
@@ -45,12 +40,12 @@ export function createCartHTML() {
       cartIconContainer.appendChild(cartIcon);
 
       let dogCartName: HTMLElement = document.createElement("h5");
-      dogCartName.innerHTML = orderInfoList[i].product.name;
+      dogCartName.innerHTML = cart.orderInfoList[i].product.name;
       dogProduct.appendChild(dogCartName);
 
       let cartDogPrice: HTMLElement = document.createElement("p");
       cartDogPrice.className = "dogprice";
-      cartDogPrice.innerHTML = "$" + orderInfoList[i].product.price;
+      cartDogPrice.innerHTML = "$" + cart.orderInfoList[i].product.toString();
       dogProduct.appendChild(cartDogPrice);
 
       let totalOfDogs: HTMLSpanElement = document.createElement("p");
@@ -60,8 +55,8 @@ export function createCartHTML() {
 
       let dogsShowTotal: HTMLSpanElement = document.createElement("p");
       dogsShowTotal.id ="totalOfDogs";
-      let quantity: number = orderInfoList[i].quantity;
-      dogsShowTotal.innerHTML =  quantity.toString();
+      let quantity: number = cart.orderInfoList[i].quantity;
+      dogsShowTotal.innerHTML = "" + quantity;
 
       totalOfDogs.appendChild(dogsShowTotal);
 
@@ -75,15 +70,14 @@ export function createCartHTML() {
 
       removeADogButton.addEventListener("click", () => {
         minusDogs();
-      });      
+      });     
+      
 
       cartIcon.addEventListener("click", () => {
-        removeFromCart(i);
+        cart.removeFromCart(i);
       });
     }
 
-
-  }
   let categoryCartContainer = document.getElementById("cart");
   cartTotal.innerHTML = "Totalt: ";
   categoryCartContainer.appendChild(cartTotal);
