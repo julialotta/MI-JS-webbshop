@@ -1,4 +1,4 @@
-import { orderInfoList } from "../models/orderInfoList";
+import { orderInfoList } from "../models/Cart";
 
 export function showTotal() {
   let sum = 0;

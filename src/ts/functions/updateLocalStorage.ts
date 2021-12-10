@@ -1,5 +1,5 @@
 import { customerInfoList } from "../models/customerInfoList";
-import { orderInfoList } from "../models/orderInfoList";
+import { orderInfoList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { createCartHTML } from "./createCartHTML";
 
