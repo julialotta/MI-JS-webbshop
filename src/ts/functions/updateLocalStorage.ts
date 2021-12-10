@@ -1,20 +1,13 @@
-import { customerInfoList } from "../models/customerInfoList";
-import { orderInfoList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { createCartHTML } from "./createCartHTML";
 
 
-export function updateCustomerLocalStorage () {
+/* export function updateCustomerLocalStorage () {
     let listastext = JSON.stringify(customerInfoList);
     localStorage.setItem("savedCustomerList", listastext);
     createCartHTML ();
-}
+} */
 
-export function updateCartLocalStorage () {    
-    let listastext = JSON.stringify(orderInfoList);
-    localStorage.setItem("savedCartList", listastext);
-    createCartHTML ();
-}
 
 export function updateSpecLocalStorage () {
     let listastext = JSON.stringify(productList);
