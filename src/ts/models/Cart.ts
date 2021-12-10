@@ -16,7 +16,6 @@ export class Cart {
     let p = document.getElementById("floatingcartnumber");
     p.innerHTML = this.orderInfoList.length.toString();
     console.log(cart1);
-    
     }
 
     removeFromCart(i: number) {
