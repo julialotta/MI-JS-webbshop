@@ -1,13 +1,14 @@
 import { Cart } from "../models/Cart";
-import { productList } from "../models/productList";
 
 export function createCartHTML() {
   let cart = new Cart();
   let productsCartContainer: HTMLElement = document.getElementById("cart");
   productsCartContainer.innerHTML = "";
+  
 
   let categoryCartContainer = document.getElementById("cartTotal");
   categoryCartContainer.innerHTML = "";
+
   if (cart.cartList.length == 0) {
     let textContainer: HTMLDivElement = document.createElement("div");
     textContainer.classList.add("emptyCartContainer");
@@ -22,14 +23,21 @@ export function createCartHTML() {
     let heading = document.createElement("h3");
     heading.innerHTML = "Dina varor";
     productsCartContainer.appendChild(heading);
+    let dogContainer: HTMLDivElement = document.createElement("div");
+      dogContainer.className = "dogcontainer";
+      productsCartContainer.appendChild(dogContainer);
+
+
 
     let categoryCartContainer = document.getElementById("cartTotal");
     categoryCartContainer.innerHTML = "";
 
     for (let i = 0; i < cart.cartList.length; i++) {
+
+
       let dogProduct: HTMLDivElement = document.createElement("div");
       dogProduct.className = "dogproduct";
-      productsCartContainer.appendChild(dogProduct);
+      dogContainer.appendChild(dogProduct);
 
       let dogImageCartContainer: HTMLDivElement = document.createElement("div");
       dogImageCartContainer.className = "dogimgcontainer";
@@ -104,7 +112,7 @@ export function createCartHTML() {
 
     let doneCartButton: HTMLAnchorElement = document.createElement("a");
     doneCartButton.classList.add("checkoutBtn");
-    doneCartButton.href = "/checkout.html";
+    doneCartButton.href = "checkout.html";
     doneCartButton.innerHTML = "Gå vidare till betalning";
 
     categoryCartContainer.appendChild(doneCartButton);

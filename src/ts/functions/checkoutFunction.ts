@@ -1,9 +1,4 @@
-export function customerInfo () {
-let nameInput:HTMLInputElement = document.getElementById("name") as HTMLInputElement;
-let cName = nameInput.value;
-console.log(cName);
-
-}
+import { CompleteOrder, completeOrderList } from "../models/Completeorder";
 
 export function hideForm() {
   let bothforms = document.getElementsByClassName("forms");
@@ -41,30 +36,28 @@ export function openForm() {
   }
 }
 
+export function completeOrder () {
+
+let customer = new CompleteOrder;
+let nameInput:HTMLInputElement = document.getElementById("name") as HTMLInputElement;
+let cName = nameInput.value;
+customer.name = cName;
+
+let emailInput:HTMLInputElement = document.getElementById("email") as HTMLInputElement;
+let email = emailInput.value;
+customer.email = email;
+
+let adressInput:HTMLInputElement = document.getElementById("adress") as HTMLInputElement;
+let adress = adressInput.value;
+customer.adress = adress;
+
+let cityInput:HTMLInputElement = document.getElementById("city") as HTMLInputElement;
+let city = cityInput.value;
+customer.city = city;
 
 
-/* function addToList() {
-    let input = document.getElementById("todoinput");
-    let prio = document.getElementById("prioinput");
-        if ((input.value.length == 0) || (prio.value == "Pick priority") ) {
-            alert("Make sure to write something and to pick priority");
-        } else {
-    let newTask = input.value;
-    let listObject = new Todos (newTask);
-    let val = prio.value;
-    listObject.checked = false; 
 
-    if (val == "1") {
-        listObject.prio = 1;
-    } if (val == "2") {
-         listObject.prio = 2;
-    } if (val == "3") {
-         listObject.prio = 3
-    }
 
-    list.push(listObject);
-    input.value = "";
-    prio.value = "Pick priority"
-    updateLocalStorage ();
+let listastext = JSON.stringify(completeOrderList);
+sessionStorage.setItem("completedOrderList", listastext);
 }
-} */

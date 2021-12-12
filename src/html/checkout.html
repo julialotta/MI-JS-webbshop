@@ -63,6 +63,7 @@
           <section class="productpage">
           <article id="cart" class="category">
           </article>
+          <div id="cartTotal"></div>
           </section>
           <section class="checkoutForm">
             <h2>Kassa</h2>
@@ -167,8 +168,8 @@
                   type="text"
                   id="expMonth"
                   name="expireDate"
-                  placeholder="22/10"
-                  pattern="[1-30]{1-2}/[1-12]{1-2}"
+                  placeholder="02/23"
+                  pattern="[1-12]{1-2}/[1-99]{1-2}"
                 />
                 <label for="cvv">Cvv:</label>
                 <input
@@ -176,7 +177,7 @@
                   id="cvv"
                   name="cvv"
                   placeholder="123"
-                  pattern="[0-9]{3}"
+                  pattern="[0-9]{3-4}"
                 />
                 <label
                   >
@@ -185,7 +186,7 @@
                     >Totalsumma:
                     <div class = "addSum"></div>
                   </span>
-                  <button type="submit">Genomför köp</button>
+                  <a id="submit" type="submit" href="thanku.html">Genomför köp</a>
                 </article>
               </form>
             </article>

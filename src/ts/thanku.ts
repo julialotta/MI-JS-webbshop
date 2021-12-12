@@ -1,10 +1,9 @@
-/* import { funktionensNamn } from "./functions/funktionensNamn";
- */
 import { burgerMenu } from "./functions/burgerMenu";
+import { createThankYouHtml } from "./functions/createThankYouHtml";
 
 
 window.onload = () => {
     burgerMenu();
-    alert("it's working");
-/* funktionensNamn () */
+    createThankYouHtml();
+
 };

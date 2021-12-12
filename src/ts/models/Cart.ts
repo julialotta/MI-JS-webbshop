@@ -13,8 +13,12 @@ export class Cart {
     let newCart = productList[i];
     let cart1 = new Orderinfo(newCart, 1);
     this.cartList.push(cart1);
+    let quantity = 0;
+      for (let i = 0; i < this.cartList.length; i++) {
+        quantity += this.cartList[i].quantity;     
+      }
     let p = document.getElementById("floatingcartnumber");
-    p.innerHTML = this.cartList.length.toString();
+    p.innerHTML = ""+ quantity;
 
     let listastext = JSON.stringify(this.cartList);
     localStorage.setItem("savedCartList", listastext);
@@ -39,6 +43,7 @@ export class Cart {
     let listastext = JSON.stringify(this.cartList);
     localStorage.setItem("savedCartList", listastext);
     createCartHTML();
+    
     if (this.cartList[i].quantity < 1) {
       this.removeFromCart(i);
       let listastext = JSON.stringify(this.cartList);
@@ -46,21 +51,6 @@ export class Cart {
       createCartHTML();
     }
   }
-
-  /*noItems() {
-    if (this.cartList.length === 0) {
-      let noItemsContainer: HTMLElement = document.getElementById("cart");
-      let textContainer: HTMLDivElement = document.createElement("div");
-      textContainer.classList.add("emptyCartContainer");
-
-      let noItemsSpan: HTMLElement = document.createElement("h3");
-      noItemsSpan.innerHTML = "Din varukorg är tom";
-      noItemsSpan.classList.add("emptyCart");
-
-      textContainer.appendChild(noItemsSpan);
-      noItemsContainer.appendChild(textContainer);
-    }
-  }*/
 
   showTotal() {
     let sum = 0;
@@ -73,5 +63,5 @@ export class Cart {
   }
 }
 
-export let orderInfoList =
+export let cartList =
   JSON.parse(localStorage.getItem("savedCartList")) || [];

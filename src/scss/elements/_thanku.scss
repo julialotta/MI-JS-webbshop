@@ -1,27 +1,13 @@
 .gifLogo {
   height: 250px;
   border-radius: 5px;
-}
-.logoNameThanku {
-  width: 100%;
-  text-align: center;
-
-  .headerFont {
-    cursor: pointer;
-    font-family: $header-font;
-    font-size: 14pt;
-    color: $black;
-    text-decoration: none;
-
-    @include for-tablet-landscape-up {
-      font-size: 22pt;
-    }
-  }
+  margin: 20px 0;
 }
 
 .gifHeader {
   font-family: $header-font;
   font-size: 14pt;
+  margin: 0;
   @include for-phone-landscape-up {
     font-size: 16pt;
   }
@@ -94,10 +80,10 @@
         border-bottom: 1px solid rgb(185, 176, 176);
       }
 
-      .totalPrice {
+      /* .totalPrice {
         display: flex;
         justify-content: center;
-      }
+      } */
     }
 
     .thankuHeader {
