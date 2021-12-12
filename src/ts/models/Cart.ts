@@ -9,10 +9,11 @@ export class Cart {
     this.cartList = JSON.parse(localStorage.getItem("savedCartList")) || [];
   }
 
-  addToCart(i: number) {
+    addToCart(i: number) {
     let newCart = productList[i];
     let cart1 = new Orderinfo(newCart, 1);
     this.cartList.push(cart1);
+
     let quantity = 0;
       for (let i = 0; i < this.cartList.length; i++) {
         quantity += this.cartList[i].quantity;     
@@ -43,7 +44,6 @@ export class Cart {
     let listastext = JSON.stringify(this.cartList);
     localStorage.setItem("savedCartList", listastext);
     createCartHTML();
-    
     if (this.cartList[i].quantity < 1) {
       this.removeFromCart(i);
       let listastext = JSON.stringify(this.cartList);

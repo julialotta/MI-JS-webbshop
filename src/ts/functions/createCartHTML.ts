@@ -1,4 +1,5 @@
-import { Cart } from "../models/Cart";
+import { Cart, cartList } from "../models/Cart";
+import { Orderinfo } from "../models/Orderinfo";
 
 export function createCartHTML() {
   let cart = new Cart();
@@ -28,13 +29,12 @@ export function createCartHTML() {
       productsCartContainer.appendChild(dogContainer);
 
 
-
     let categoryCartContainer = document.getElementById("cartTotal");
     categoryCartContainer.innerHTML = "";
 
+
     for (let i = 0; i < cart.cartList.length; i++) {
-
-
+    
       let dogProduct: HTMLDivElement = document.createElement("div");
       dogProduct.className = "dogproduct";
       dogContainer.appendChild(dogProduct);
@@ -73,7 +73,7 @@ export function createCartHTML() {
       let dogsShowTotal: HTMLSpanElement = document.createElement("p");
       dogsShowTotal.id = "totalOfDogs";
       let quantity: number = cart.cartList[i].quantity;
-      dogsShowTotal.innerHTML = "" + quantity; //toString();
+      dogsShowTotal.innerHTML = "" + quantity;
 
       totalOfDogs.appendChild(dogsShowTotal);
 
@@ -96,7 +96,23 @@ export function createCartHTML() {
       cartIcon.addEventListener("click", () => {
         cart.removeFromCart(i);
       });
-    }
+
+        for (let j = 0; j < cart.cartList.length; j++) {
+          if (i != j && cart.cartList[i].product.name === cart.cartList[j].product.name) { 
+        cart.cartList[i].quantity++;
+        dogsShowTotal.innerHTML = cart.cartList[i].quantity.toString();
+        cart.cartList.splice(j, 1);
+        let listastext = JSON.stringify(cart.cartList);
+        localStorage.setItem("savedCartList", listastext);
+
+                    
+          }}
+  } } 
+
+
+      
+  
+
     let cartTotal: HTMLSpanElement = document.createElement("span");
     cartTotal.innerHTML = "";
     cartTotal.innerHTML = "Totalt: ";
@@ -118,6 +134,4 @@ export function createCartHTML() {
     categoryCartContainer.appendChild(doneCartButton);
 
     cart.showTotal();
-    // cart.noItems();
   }
-}
