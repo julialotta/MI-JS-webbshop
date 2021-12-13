@@ -36,21 +36,21 @@ export function openForm() {
   }
 }
 
+
 export function completeOrder() {
   let customer = new CompleteOrder();
-  let nameInput: HTMLInputElement = document.getElementById(
-    "name"
-  ) as HTMLInputElement;
-  let cName = nameInput.value;
-  customer.name = cName;
 
+  let nameInput:HTMLInputElement = document.getElementById("name") as HTMLInputElement;
+let cName = nameInput.value;
+customer.name = cName;
+  
   let emailInput: HTMLInputElement = document.getElementById(
     "email"
   ) as HTMLInputElement;
   let email = emailInput.value;
   customer.email = email;
 
-  let adressInput: HTMLInputElement = document.getElementById(
+let adressInput: HTMLInputElement = document.getElementById(
     "adress"
   ) as HTMLInputElement;
   let adress = adressInput.value;
@@ -66,7 +66,50 @@ export function completeOrder() {
   sessionStorage.setItem("completedOrderList", listastext);
 }
 
-export function orderNumber() {
+
+}
+
+export function orderSummary () {
+  let customerInfo:HTMLElement = document.getElementById("customerInfo");
+  customerInfo.className = "orderConfirmation";
+
+  let section:HTMLElement = document.createElement("section");
+  section.className = "shippingContainer";
+  customerInfo.appendChild(section);
+
+  let headline = document.createElement("h4");
+  headline.innerHTML = "Order confirmation";
+  section.appendChild(headline);
+
+
+  for (let i = 0; i < completeOrderList.length; i++) {
+    let name = document.createElement("span");
+  let adress = document.createElement("span");
+  let city = document.createElement("span");
+  let email = document.createElement("span");
+  name.innerHTML = completeOrderList[i].name;
+  adress.innerHTML = completeOrderList[i].adress;
+  city.innerHTML = completeOrderList[i].city;
+  email.innerHTML = completeOrderList[i].email;
+
+  section.appendChild(name)
+  section.appendChild(adress)
+  section.appendChild(city)
+  section.appendChild(email)
+    
+  }
+  
+  
+
+
+
+
+  
+  
+}
+
+
+  export function orderNumber() {
   let orderNumber: number[] = [];
   let test = "";
 
@@ -79,3 +122,4 @@ export function orderNumber() {
   let ordernr = document.getElementsByClassName("orderNumber")[0];
   ordernr.innerHTML = "Ordernummer: " + test;
 }
+
