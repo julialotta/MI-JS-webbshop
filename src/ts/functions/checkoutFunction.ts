@@ -36,25 +36,47 @@ export function openForm() {
   }
 }
 
-export function completeOrder () {
+export function completeOrder() {
+  let customer = new CompleteOrder();
+  let nameInput: HTMLInputElement = document.getElementById(
+    "name"
+  ) as HTMLInputElement;
+  let cName = nameInput.value;
+  customer.name = cName;
 
-let customer = new CompleteOrder;
-let nameInput:HTMLInputElement = document.getElementById("name") as HTMLInputElement;
-let cName = nameInput.value;
-customer.name = cName;
+  let emailInput: HTMLInputElement = document.getElementById(
+    "email"
+  ) as HTMLInputElement;
+  let email = emailInput.value;
+  customer.email = email;
 
-let emailInput:HTMLInputElement = document.getElementById("email") as HTMLInputElement;
-let email = emailInput.value;
-customer.email = email;
+  let adressInput: HTMLInputElement = document.getElementById(
+    "adress"
+  ) as HTMLInputElement;
+  let adress = adressInput.value;
+  customer.adress = adress;
 
-let adressInput:HTMLInputElement = document.getElementById("adress") as HTMLInputElement;
-let adress = adressInput.value;
-customer.adress = adress;
+  let cityInput: HTMLInputElement = document.getElementById(
+    "city"
+  ) as HTMLInputElement;
+  let city = cityInput.value;
+  customer.city = city;
 
-let cityInput:HTMLInputElement = document.getElementById("city") as HTMLInputElement;
-let city = cityInput.value;
-customer.city = city;
+  let listastext = JSON.stringify(completeOrderList);
+  sessionStorage.setItem("completedOrderList", listastext);
+}
 
-let listastext = JSON.stringify(completeOrderList);
-sessionStorage.setItem("completedOrderList", listastext);
+export function orderNumber() {
+  let getOrderNumberButton: HTMLElement = document.getElementById(
+    "submit"
+  ) as HTMLElement;
+  let orderNumber = [];
+  console.log(orderNumber);
+
+  getOrderNumberButton.addEventListener("click", () => {
+    for (let i = 0; i <= 10; i++) {
+      orderNumber.push(Math.round(Math.random() * 9));
+      console.log(orderNumber);
+    }
+  });
 }
