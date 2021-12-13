@@ -1,9 +1,10 @@
 import { burgerMenu } from "./functions/burgerMenu";
-import { createThankYouHtml } from "./functions/createThankYouHtml";
+import { orderSummary } from "./functions/checkoutFunction";
 
 
 window.onload = () => {
     burgerMenu();
-    createThankYouHtml();
+    orderSummary();
+
 
 };
