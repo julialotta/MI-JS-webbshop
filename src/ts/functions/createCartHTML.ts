@@ -6,10 +6,7 @@ export function createCartHTML() {
   let productsCartContainer: HTMLElement = document.getElementById("cart");
   productsCartContainer.innerHTML = "";
   let cartTotal: HTMLSpanElement = document.createElement("span");
-  let totalSum: HTMLSpanElement = document.createElement("span");
   let categoryCartContainer = document.getElementById("sumContainer");
-  categoryCartContainer.innerHTML = "";
-  
 
   if (cart.cartList.length == 0) {
     let textContainer: HTMLDivElement = document.createElement("div");
@@ -21,6 +18,7 @@ export function createCartHTML() {
 
     textContainer.appendChild(noItemsSpan);
     productsCartContainer.appendChild(textContainer);
+    categoryCartContainer.innerHTML = "";
   } else {
     let heading = document.createElement("h3");
     heading.innerHTML = "Dina varor";
@@ -29,7 +27,6 @@ export function createCartHTML() {
     dogContainer.className = "dogcontainer";
     productsCartContainer.appendChild(dogContainer);
 
-    categoryCartContainer.innerHTML = "";
 
     for (let i = 0; i < cart.cartList.length; i++) {
     
@@ -104,7 +101,8 @@ export function createCartHTML() {
             createCartHTML();    
           }}
   } 
-                categoryCartContainer.innerHTML = "";
+    let totalSum: HTMLSpanElement = document.createElement("span");
+    categoryCartContainer.innerHTML = "";
 
 
     cartTotal.innerHTML = "Totalt: ";

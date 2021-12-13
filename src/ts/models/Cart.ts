@@ -20,7 +20,6 @@ export class Cart {
       }
     let p = document.getElementById("floatingcartnumber");
     p.innerHTML = ""+ quantity;
-
     let listastext = JSON.stringify(this.cartList);
     localStorage.setItem("savedCartList", listastext);
   }
