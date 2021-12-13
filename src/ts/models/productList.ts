@@ -85,7 +85,7 @@ let product202 = new Product(
 );
 
 let product203 = new Product(
-  "XXX",
+  "XX1",
   "/assets/productImages/Kriminella/Kriminella men snalla 3.png",
   "Dog with black hoodie",
   "XXX är en liten men kaxig hund som är full av liv och tillgiven sin familj. Han är modig och vaktar varsamt mot tänkbara farligheter. Har en tendens att tro att han är lite större än vad han är.",
@@ -113,7 +113,7 @@ let product301 = new Product(
 );
 
 let product302 = new Product(
-  "XXX",
+  "XX2",
   "/assets/productImages/Singlar/Singlar som vill mingla 2.png",
   "Dog with black dress",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
@@ -127,7 +127,7 @@ let product302 = new Product(
 );
 
 let product303 = new Product(
-  "XXX",
+  "XX3",
   "/assets/productImages/Singlar/Singlar som vill mingla 3.png",
   "Dog with blue dress",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
@@ -225,7 +225,7 @@ let product502 = new Product(
 );
 
 let product503 = new Product(
-  "XXX",
+  "XX4",
   "/assets/productImages/Oldies/Oldies but goodies 3.png",
   "Dog with red dress",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
@@ -241,7 +241,7 @@ let product503 = new Product(
 let product504 = new Product(
   "Dogtor Snuffles",
   "/assets/productImages/Oldies/Oldies but goodies 4.png",
-  "XXX",
+  "Dog with hat",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
   0,
   "toy",
