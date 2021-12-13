@@ -1,7 +1,15 @@
+import { Cart, cartList } from "../models/Cart";
 import { productList } from "../models/productList";
 
 
 export function createProductSpec () {
+    let quantity = 0;
+         for (let i = 0; i < cartList.length; i++) {
+             quantity += cartList[i].quantity;     
+            }
+    let p = document.getElementById("floatingcartnumber");
+    p.innerHTML = ""+ quantity;
+    
     for (let i = 0; i < productList.length; i++) {
         if (productList[i].productSpec === true) {
             let container: HTMLElement = document.getElementById("product-spec");
@@ -25,8 +33,15 @@ export function createProductSpec () {
             cartSymbolContainer.className = "cartSymbolContainer";
             dogImgContainer?.appendChild(cartSymbolContainer);
             let cartSymbol: HTMLElement = document.createElement("i");
-            cartSymbol.className = "fas fa-cart-plus";
+            cartSymbol.className = "bi bi-bag-plus";
             cartSymbolContainer?.appendChild(cartSymbol);
+
+            cartSymbol.addEventListener("click", () => {
+                let cart = new Cart();
+                cart.addToCart(i);
+                });
+
+
             let info:HTMLParagraphElement = document.createElement("p");
             info.innerHTML = productList[i].info;
             dogproduct?.appendChild(info);
@@ -56,5 +71,14 @@ export function createProductSpec () {
             price.innerHTML = "$" + productList[i].price;
             dogproduct.appendChild(price);
         }
+    }
+}
+
+
+export function backToProductPage () {
+    for (let i = 0; i < productList.length; i++) {
+    if (productList[i].productSpec === true) {
+        window.location.href = "product-page.html#" + productList[i].category +"target";
+    }
     }
 }

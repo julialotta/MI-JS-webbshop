@@ -13,3 +13,4 @@ export class Orderinfo {
             this.product = product;
             this.quantity = quantity;
      }};
+

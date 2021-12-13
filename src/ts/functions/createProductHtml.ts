@@ -1,12 +1,16 @@
-import { orderInfoList } from "../models/Cart";
+import { cartList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { Cart } from "../models/Cart";
 
 
 export function createProductHtml() {
+  let quantity = 0;
+  for (let i = 0; i < cartList.length; i++) {
+      quantity += cartList[i].quantity;     
+    }
   let p = document.getElementById("floatingcartnumber");
-  p.innerHTML = orderInfoList.length;
-
+  p.innerHTML = ""+ quantity;
+  
   for (let i = 0; i < productList.length; i++) {
     let dogproduct: HTMLDivElement = document.createElement("div");
     let dogImgContainer: HTMLDivElement = document.createElement("div");
