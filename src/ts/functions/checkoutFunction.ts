@@ -67,16 +67,15 @@ export function completeOrder() {
 }
 
 export function orderNumber() {
-  let getOrderNumberButton: HTMLElement = document.getElementById(
-    "submit"
-  ) as HTMLElement;
-  let orderNumber = [];
-  console.log(orderNumber);
+  let orderNumber: number[] = [];
+  let test = "";
 
-  getOrderNumberButton.addEventListener("click", () => {
-    for (let i = 0; i <= 10; i++) {
-      orderNumber.push(Math.round(Math.random() * 9));
-      console.log(orderNumber);
-    }
-  });
+  for (let i = 0; i < 10; i++) {
+    orderNumber.push(Math.round(Math.random() * 9));
+  }
+  for (let i = 0; i < orderNumber.length; i++) {
+    test = orderNumber[i] + test;
+  }
+  let ordernr = document.getElementsByClassName("orderNumber")[0];
+  ordernr.innerHTML = "Ordernummer: " + test;
 }
