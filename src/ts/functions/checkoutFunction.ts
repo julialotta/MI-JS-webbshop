@@ -67,7 +67,7 @@ let adressInput: HTMLInputElement = document.getElementById(
 }
 
 
-}
+
 
 export function orderSummary () {
   let customerInfo:HTMLElement = document.getElementById("customerInfo");
