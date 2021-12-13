@@ -27,9 +27,7 @@ export function createCartHTML() {
     dogContainer.className = "dogcontainer";
     productsCartContainer.appendChild(dogContainer);
 
-
     for (let i = 0; i < cart.cartList.length; i++) {
-    
       let dogProduct: HTMLDivElement = document.createElement("div");
       dogProduct.className = "dogproduct";
       dogContainer.appendChild(dogProduct);
@@ -92,18 +90,21 @@ export function createCartHTML() {
         cart.removeFromCart(i);
       });
 
-        for (let j = 0; j < cart.cartList.length; j++) {
-          if (i != j && cart.cartList[i].product.name === cart.cartList[j].product.name) {
-            cart.cartList[i].quantity++;
-            cart.cartList.splice(j, 1);
-            let listastext = JSON.stringify(cart.cartList);
-            localStorage.setItem("savedCartList", listastext);
-            createCartHTML();    
-          }}
-  } 
+      for (let j = 0; j < cart.cartList.length; j++) {
+        if (
+          i != j &&
+          cart.cartList[i].product.name === cart.cartList[j].product.name
+        ) {
+          cart.cartList.splice(j, 1);
+          cart.cartList[i].quantity++;
+          let listastext = JSON.stringify(cart.cartList);
+          localStorage.setItem("savedCartList", listastext);
+          createCartHTML();
+        }
+      }
+    }
     let totalSum: HTMLSpanElement = document.createElement("span");
     categoryCartContainer.innerHTML = "";
-
 
     cartTotal.innerHTML = "Totalt: ";
     categoryCartContainer.appendChild(cartTotal);
@@ -123,4 +124,5 @@ export function createCartHTML() {
     categoryCartContainer.appendChild(doneCartButton);
 
     cart.showTotal();
-  }}
+  }
+}

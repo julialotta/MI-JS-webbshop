@@ -1,16 +1,16 @@
 import { cartList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { Cart } from "../models/Cart";
-
+import { createCartHTML } from "./createCartHTML";
 
 export function createProductHtml() {
   let quantity = 0;
   for (let i = 0; i < cartList.length; i++) {
-      quantity += cartList[i].quantity;     
-    }
+    quantity += cartList[i].quantity;
+  }
   let p = document.getElementById("floatingcartnumber");
-  p.innerHTML = ""+ quantity;
-  
+  p.innerHTML = "" + quantity;
+
   for (let i = 0; i < productList.length; i++) {
     let dogproduct: HTMLDivElement = document.createElement("div");
     let dogImgContainer: HTMLDivElement = document.createElement("div");
@@ -54,10 +54,10 @@ export function createProductHtml() {
     productList[i].productSpec = false;
 
     dogImg.addEventListener("click", () => {
-    productList[i].productSpec = !productList[i].productSpec;
-    window.location.href = "product-spec.html#backArrow";
-    let listastext = JSON.stringify(productList);
-    localStorage.setItem("savedList", listastext);
+      productList[i].productSpec = !productList[i].productSpec;
+      window.location.href = "product-spec.html#backArrow";
+      let listastext = JSON.stringify(productList);
+      localStorage.setItem("savedList", listastext);
     });
 
     cartSymbol.addEventListener("click", () => {
@@ -92,5 +92,5 @@ export function createProductHtml() {
     }
   }
   let listastext = JSON.stringify(productList);
-    localStorage.setItem("savedList", listastext);
+  localStorage.setItem("savedList", listastext);
 }

@@ -9,17 +9,17 @@ export class Cart {
     this.cartList = JSON.parse(localStorage.getItem("savedCartList")) || [];
   }
 
-    addToCart(i: number) {
+  addToCart(i: number) {
     let newCart = productList[i];
     let cart1 = new Orderinfo(newCart, 1);
     this.cartList.push(cart1);
 
     let quantity = 0;
-      for (let i = 0; i < this.cartList.length; i++) {
-        quantity += this.cartList[i].quantity;     
-      }
+    for (let i = 0; i < this.cartList.length; i++) {
+      quantity += this.cartList[i].quantity;
+    }
     let p = document.getElementById("floatingcartnumber");
-    p.innerHTML = ""+ quantity;
+    p.innerHTML = "" + quantity;
     let listastext = JSON.stringify(this.cartList);
     localStorage.setItem("savedCartList", listastext);
   }
@@ -62,5 +62,4 @@ export class Cart {
   }
 }
 
-export let cartList =
-  JSON.parse(localStorage.getItem("savedCartList")) || [];
+export let cartList = JSON.parse(localStorage.getItem("savedCartList")) || [];
