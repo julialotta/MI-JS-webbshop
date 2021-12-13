@@ -5,10 +5,11 @@ export function createCartHTML() {
   let cart = new Cart();
   let productsCartContainer: HTMLElement = document.getElementById("cart");
   productsCartContainer.innerHTML = "";
-  
-
-  let categoryCartContainer = document.getElementById("cartTotal");
+  let cartTotal: HTMLSpanElement = document.createElement("span");
+  let totalSum: HTMLSpanElement = document.createElement("span");
+  let categoryCartContainer = document.getElementById("sumContainer");
   categoryCartContainer.innerHTML = "";
+  
 
   if (cart.cartList.length == 0) {
     let textContainer: HTMLDivElement = document.createElement("div");
@@ -25,13 +26,10 @@ export function createCartHTML() {
     heading.innerHTML = "Dina varor";
     productsCartContainer.appendChild(heading);
     let dogContainer: HTMLDivElement = document.createElement("div");
-      dogContainer.className = "dogcontainer";
-      productsCartContainer.appendChild(dogContainer);
+    dogContainer.className = "dogcontainer";
+    productsCartContainer.appendChild(dogContainer);
 
-
-    let categoryCartContainer = document.getElementById("cartTotal");
     categoryCartContainer.innerHTML = "";
-
 
     for (let i = 0; i < cart.cartList.length; i++) {
     
@@ -98,29 +96,22 @@ export function createCartHTML() {
       });
 
         for (let j = 0; j < cart.cartList.length; j++) {
-          if (i != j && cart.cartList[i].product.name === cart.cartList[j].product.name) { 
-        cart.cartList[i].quantity++;
-        dogsShowTotal.innerHTML = cart.cartList[i].quantity.toString();
-        cart.cartList.splice(j, 1);
-        let listastext = JSON.stringify(cart.cartList);
-        localStorage.setItem("savedCartList", listastext);
-
-                    
+          if (i != j && cart.cartList[i].product.name === cart.cartList[j].product.name) {
+            cart.cartList[i].quantity++;
+            cart.cartList.splice(j, 1);
+            let listastext = JSON.stringify(cart.cartList);
+            localStorage.setItem("savedCartList", listastext);
+            createCartHTML();    
           }}
-  } } 
+  } 
+                categoryCartContainer.innerHTML = "";
 
 
-      
-  
-
-    let cartTotal: HTMLSpanElement = document.createElement("span");
-    cartTotal.innerHTML = "";
     cartTotal.innerHTML = "Totalt: ";
     categoryCartContainer.appendChild(cartTotal);
 
     cartTotal.classList.add("cartTotal");
 
-    let totalSum: HTMLSpanElement = document.createElement("span");
     totalSum.id = "cartTotal";
     totalSum.classList.add("addSum");
 
@@ -134,4 +125,4 @@ export function createCartHTML() {
     categoryCartContainer.appendChild(doneCartButton);
 
     cart.showTotal();
-  }
+  }}

@@ -55,9 +55,6 @@ let cityInput:HTMLInputElement = document.getElementById("city") as HTMLInputEle
 let city = cityInput.value;
 customer.city = city;
 
-
-
-
 let listastext = JSON.stringify(completeOrderList);
 sessionStorage.setItem("completedOrderList", listastext);
 }
