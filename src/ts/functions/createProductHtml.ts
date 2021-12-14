@@ -41,14 +41,14 @@ export function createProductHtml() {
     let name: HTMLHeadingElement = document.createElement("h5");
     name.innerHTML = productList[i].name;
     dogproduct.appendChild(name);
+    
+    let price: HTMLHeadingElement = document.createElement("p");
+    price.innerHTML = "$" + productList[i].price;
+    dogproduct.appendChild(price);
 
     let info: HTMLHeadingElement = document.createElement("p");
     info.innerHTML = productList[i].info;
     dogproduct.appendChild(info);
-
-    let price: HTMLHeadingElement = document.createElement("p");
-    price.innerHTML = "$" + productList[i].price;
-    dogproduct.appendChild(price);
 
     productList[i].productSpec = false;
 
