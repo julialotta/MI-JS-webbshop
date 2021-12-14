@@ -16,6 +16,9 @@ export function createProductHtml() {
     dogImgContainer.className = "dogimgcontainer";
     dogproduct.appendChild(dogImgContainer);
     let dogImg: HTMLImageElement = document.createElement("img");
+
+    // console.log(productList[i].picture);
+
     dogImg.src = productList[i].picture;
     dogImg.alt = productList[i].pictureAlt;
 
