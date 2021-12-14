@@ -4,11 +4,11 @@ let product101 = new Product(
   "Doga Lipa",
   "/assets/productImages/Sassy/Sassy, classy and bad-assy 1.png",
   "Dog with pink glasses",
-  "This english french has a talent for singing.",
+  "This english frenchie has a talent for singing.",
   4,
-  "Tuggleksak",
-  "Allt som matte äter",
-  "Bara om hon är riktigt trött",
+  "A yummy chewing toy",
+  "Dogritos",
+  "Only if she's reeeeaally tired",
   "sassy",
   500,
   false
@@ -20,9 +20,9 @@ let product102 = new Product(
   "Dog with headphones",
   "This english, norweigan AND french bulldog is an awesome DJ.",
   4.5,
-  "Pipande leksak",
-  "candy",
-  "snores?",
+  "squeaky toy",
+  "A juicy dog bone",
+  "Occasionally, but not so intensely",
   "sassy",
   500,
   false
@@ -32,11 +32,11 @@ let product103 = new Product(
   "Louis Vuffton",
   "/assets/productImages/Sassy/Sassy, classy and bad-assy 3.png",
   "Dog with LV bag",
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
+  "This sassy lady has a passion for fashion",
   3,
-  "Mjukdjur som går att tugga sönder",
-  "candy",
-  "snores?",
+  "Any stuffed animal",
+  "Puppuccino dog brew",
+  "Never",
   "sassy",
   500,
   false
@@ -49,8 +49,8 @@ let product104 = new Product(
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
   5,
   "Frisbee",
-  "candy",
-  "snores?",
+  "Pig ears",
+  "Loudly",
   "sassy",
   500,
   false
@@ -85,10 +85,10 @@ let product202 = new Product(
 );
 
 let product203 = new Product(
-  "XX1",
+  "Hairy Pawter",
   "/assets/productImages/Kriminella/Kriminella men snalla 3.png",
   "Dog with black hoodie",
-  "XXX är en liten men kaxig hund som är full av liv och tillgiven sin familj. Han är modig och vaktar varsamt mot tänkbara farligheter. Har en tendens att tro att han är lite större än vad han är.",
+  "Hairy Pawter är en liten men kaxig hund som är full av liv och tillgiven sin familj. Han är modig och vaktar varsamt mot tänkbara farligheter. Har en tendens att tro att han är lite större än vad han är.",
   5,
   "toy",
   "candy",
@@ -113,10 +113,10 @@ let product301 = new Product(
 );
 
 let product302 = new Product(
-  "XX2",
+  "Audrey Hepbone",
   "/assets/productImages/Singlar/Singlar som vill mingla 2.png",
   "Dog with black dress",
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
+  "This lovely lady lives by the quote: 'One is never over-dressed or under-dressed with a Little Black Dress.'",
   0,
   "toy",
   "candy",
@@ -127,7 +127,7 @@ let product302 = new Product(
 );
 
 let product303 = new Product(
-  "XX3",
+  "Sarah Jessica Barker",
   "/assets/productImages/Singlar/Singlar som vill mingla 3.png",
   "Dog with blue dress",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
@@ -144,11 +144,11 @@ let product304 = new Product(
   "Hairy Styles",
   "/assets/productImages/Singlar/Singlar som vill mingla 4.png",
   "Dog with shirt and bow tie",
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
+  "Has a happy wiggling bottom but no tail wag. Loves to sing and dance.",
   0,
-  "toy",
-  "candy",
-  "snores?",
+  "Football",
+  "Meatballs",
+  "From time to time",
   "singlar",
   500,
   false
@@ -225,7 +225,7 @@ let product502 = new Product(
 );
 
 let product503 = new Product(
-  "XX4",
+  "Billie Holidog",
   "/assets/productImages/Oldies/Oldies but goodies 3.png",
   "Dog with red dress",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum laborum corrupti eius distinctio consequatur.",
