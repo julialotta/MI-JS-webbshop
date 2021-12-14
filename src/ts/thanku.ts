@@ -5,6 +5,5 @@ import { createThankuHTML } from "./functions/createThankuHTML";
 
 window.onload = () => {
   burgerMenu();
-  // orderSummary();
   createThankuHTML();
 };
