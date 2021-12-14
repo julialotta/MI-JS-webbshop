@@ -7,8 +7,8 @@ export function createProductHtml() {
   for (let i = 0; i < cartList.length; i++) {
     quantity += cartList[i].quantity;
   }
-  let p = document.getElementById("floatingcartnumber");
-  p.innerHTML = "" + quantity;
+  let floatingCart = document.getElementById("floatingcartnumber");
+  floatingCart.innerHTML = "" + quantity;
 
   for (let i = 0; i < productList.length; i++) {
     let dogproduct: HTMLDivElement = document.createElement("div");
@@ -41,14 +41,14 @@ export function createProductHtml() {
     let name: HTMLHeadingElement = document.createElement("h5");
     name.innerHTML = productList[i].name;
     dogproduct.appendChild(name);
+    
+    let price: HTMLHeadingElement = document.createElement("p");
+    price.innerHTML = "$" + productList[i].price;
+    dogproduct.appendChild(price);
 
     let info: HTMLHeadingElement = document.createElement("p");
     info.innerHTML = productList[i].info;
     dogproduct.appendChild(info);
-
-    let price: HTMLHeadingElement = document.createElement("p");
-    price.innerHTML = "$" + productList[i].price;
-    dogproduct.appendChild(price);
 
     productList[i].productSpec = false;
 
@@ -62,6 +62,7 @@ export function createProductHtml() {
     cartSymbol.addEventListener("click", () => {
       let cart = new Cart();
       cart.addToCart(i);
+      floatingCartBounce ();
     });
 
     if (productList[i].category === "sassy") {
@@ -92,4 +93,14 @@ export function createProductHtml() {
   }
   let listastext = JSON.stringify(productList);
   localStorage.setItem("savedList", listastext);
+}
+
+function floatingCartBounce () {
+  let floatingCart = document.getElementById("floatingcart");
+  floatingCart.className = "bounce";
+  setTimeout(stopBounce, 2000)
+}
+function stopBounce () {
+  let floatingCart = document.getElementById("floatingcart");
+  floatingCart.className = "floatingcart";
 }

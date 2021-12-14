@@ -102,8 +102,7 @@ let adressInput: HTMLInputElement = document.getElementById(
   orderList.push(customer);
   let listastext = JSON.stringify(customer);
   sessionStorage.setItem("orderConfirmationList", listastext);
-
-
+  
 }
 
 export function orderSummary () {
