@@ -1,8 +1,19 @@
-import { Cart } from "../models/Cart";
+import { Cart, cartList } from "../models/Cart";
 import { CompleteOrder } from "../models/Completeorder";
+
+/*function getTotalOfDog(i: number) {
+  let orderedDogs = new CompleteOrder();
+
+  let totalSumDog = 0;
+  for (let i = 0; i < orderedDogs.order.length; i++) {
+    totalSumDog +=
+      orderedDogs.order[i].quantity * orderedDogs.order[i].product.price;
+  }
+}*/
 
 export function createThankuHTML() {
   let order = new CompleteOrder();
+  let cartFunctions = new Cart();
   order = JSON.parse(sessionStorage.getItem("orderConfirmationList")) || {};
   console.log(order);
 
@@ -20,7 +31,7 @@ export function createThankuHTML() {
 
   let orderNumber: HTMLElement = document.createElement("h3");
   orderNumber.classList.add("orderNumber");
-  orderNumber.innerHTML = "" + order.orderNr;
+  orderNumber.innerHTML = "Ordernumber: " + order.orderNr;
   orderinfoContainer.appendChild(orderNumber);
   console.log(orderNumber);
 
@@ -54,14 +65,20 @@ export function createThankuHTML() {
 
   let orderedProducts: HTMLElement = document.createElement("h5");
   orderedProducts.innerHTML = "PRODUCTS";
+  orderedProducts.classList.add("showOrderHeader");
+
   containerDescription.appendChild(orderedProducts);
 
   let orderedQTY: HTMLElement = document.createElement("h5");
   orderedQTY.innerHTML = "QTY";
+  orderedQTY.classList.add("orderedQTYHeader");
+
   containerDescription.appendChild(orderedQTY);
 
   let orderedPrice: HTMLElement = document.createElement("h5");
   orderedPrice.innerHTML = "PRICE";
+  orderedPrice.classList.add("orderedPriceHeader");
+
   containerDescription.appendChild(orderedPrice);
 
   orderinfoContainer.appendChild(containerDescription);
@@ -89,6 +106,7 @@ export function createThankuHTML() {
     showOrderdItemsContainer.classList.add("itemsThanku");
 
     let thankuIMG: HTMLImageElement = document.createElement("img");
+    thankuIMG.classList.add("imgOrdered");
     thankuIMG.src = order.order[i].product.picture;
     thankuIMG.alt = order.order[i].product.pictureAlt;
 
@@ -98,8 +116,7 @@ export function createThankuHTML() {
 
     let priceOrderedItem: HTMLSpanElement = document.createElement("span");
     priceOrderedItem.classList.add("priceOnItem");
-    showOrderdItemsContainer.innerHTML =
-      "" + order.order[i].product.price.toString();
+    priceOrderedItem.innerHTML = "$" + order.order[i].product.price.toString();
 
     showOrderdItemsContainer.appendChild(thankuIMG);
     showOrderdItemsContainer.appendChild(QTYOrderedItem);
@@ -109,15 +126,18 @@ export function createThankuHTML() {
   }
 
   let totalPriceOfOrder: HTMLElement = document.createElement("section");
+  totalPriceOfOrder.innerHTML = "Total: ";
   totalPriceOfOrder.id = "totalPrice";
   orderinfoContainer.appendChild(totalPriceOfOrder);
 
   let totalpriceItem: HTMLElement = document.createElement("h5");
-  totalpriceItem.innerHTML = "Total: ";
+  totalpriceItem.classList.add("addSum");
   totalPriceOfOrder.appendChild(totalpriceItem);
+  cartFunctions.showTotal();
 
   let continueShoppingThanku: HTMLDivElement = document.createElement("div");
   continueShoppingThanku.classList.add("backBtnContainer");
+  orderinfoContainer.appendChild(continueShoppingThanku);
 
   let continueShoppingButtonThanku = document.createElement("a");
   continueShoppingButtonThanku.classList.add("backToShoppingButton");

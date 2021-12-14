@@ -11,6 +11,9 @@ export function hideForm() {
 }
 
 export function openForm() {
+  let callFunction = new Cart();
+  callFunction.showTotal();
+
   let formsDisplayButton = document.getElementsByClassName("closeOpenForm");
 
   for (let i = 0; i < formsDisplayButton.length; i++) {
@@ -82,12 +85,14 @@ export function completeOrder() {
   customer.cvv = parseInt(cvvInput);
 
   let orderNumber: number[] = [];
-  let number = 0;
-  for (let i = 0; i < 10; i++) {
-    orderNumber.push(Math.round(Math.random() * 9));
+  let number: number = 0;
+  console.log(orderNumber);
+
+  for (let i = 0; i < 1; i++) {
+    orderNumber.push(Math.round(Math.random() * 1000000000));
   }
   for (let i = 0; i < orderNumber.length; i++) {
-    number = orderNumber[i] + number;
+    number += orderNumber[i];
   }
 
   customer.orderNr = number;
@@ -97,70 +102,3 @@ export function completeOrder() {
   let listastext = JSON.stringify(customer);
   sessionStorage.setItem("orderConfirmationList", listastext);
 }
-
-/*export function orderSummary() {
-  let orderedItems = new Orderconfirmation();
-  let orderInfo: HTMLElement = document.getElementsByClassName(
-    "orderedItems"
-  )[0] as HTMLElement;
-  let itemsContainerThanku: HTMLElement = document.getElementsByClassName(
-    "itemsDescription"
-  )[0] as HTMLElement;
-
-  for (let i = 0; i < orderedItems.orderList.length; i++) {
-    let showOrderdItemsContainer: HTMLElement =
-      document.createElement("section");
-    showOrderdItemsContainer.classList.add("itemsThanku");
-
-    let pictureOrderedItem: HTMLSpanElement = document.createElement("span");
-    pictureOrderedItem.classList.add("orderedProduct");
-    showOrderdItemsContainer.innerHTML =
-      .cartList[i].product.picture;
-
-    let QTYOrderedItem: HTMLSpanElement = document.createElement("span");
-    QTYOrderedItem.classList.add("quantity");
-    showOrderdItemsContainer.innerHTML = "" + orderedCart.cartList[i].quantity;
-
-    let priceOrderedItem: HTMLSpanElement = document.createElement("span");
-    priceOrderedItem.classList.add("priceOnItem");
-    showOrderdItemsContainer.innerHTML =
-      "" + orderedCart.cartList[i].product.price;
-
-    showOrderdItemsContainer.appendChild(pictureOrderedItem);
-    showOrderdItemsContainer.appendChild(QTYOrderedItem);
-    showOrderdItemsContainer.appendChild(priceOrderedItem);
-    let orderedItemsContainer: HTMLElement = document.getElementsByClassName(
-      "orderedItems"
-    )[0] as HTMLElement;
-    itemsContainerThanku.appendChild(showOrderdItemsContainer);
-    orderedItemsContainer.appendChild(itemsContainerThanku);
-  }
-  /*let order= new Orderconfirmation ();
-
-  let customerInfo:HTMLElement = document.getElementById("customerInfo");
-  customerInfo.className = "orderConfirmation";
-
-  let section:HTMLElement = document.createElement("section");
-  section.className = "shippingContainer";
-  customerInfo.appendChild(section);
-
-  let headline = document.createElement("h4");
-  headline.innerHTML = "Order confirmation";
-  section.appendChild(headline);
-    
-  let name:HTMLSpanElement = document.createElement("span");
-  let adress:HTMLSpanElement = document.createElement("span");
-  let city = document.createElement("span");
-  let email = document.createElement("span");
-  let ordernr = document.createElement("span");
-  section.appendChild(name);
-  section.appendChild(adress);
-  section.appendChild(city);
-  section.appendChild(email);
-  section.appendChild(ordernr);
-
-  for (let i = 0; i < order.orderList.length; i++) {
-    console.log("körs ej?");
-    
-  name.innerHTML = "" + order.orderList[i].name;
-}*/
