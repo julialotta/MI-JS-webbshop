@@ -1,9 +1,9 @@
-import { createCartHTML } from "../functions/createCartHTML";
-import { Orderinfo } from "./Orderinfo";
+import { createCartHTML } from "../functions/createCartHtml";
+import { Cartquantity } from "./Cartquantity";
 import { productList } from "./productList";
 
 export class Cart {
-  cartList: Orderinfo[];
+  cartList: Cartquantity[];
 
   constructor() {
     this.cartList = JSON.parse(localStorage.getItem("savedCartList")) || [];
@@ -11,7 +11,7 @@ export class Cart {
 
   addToCart(i: number) {
     let newCart = productList[i];
-    let cart1 = new Orderinfo(newCart, 1);
+    let cart1 = new Cartquantity(newCart, 1);
     this.cartList.push(cart1);
 
     let quantity = 0;

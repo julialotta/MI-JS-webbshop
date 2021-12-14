@@ -1,24 +1,14 @@
-import { Cart, cartList } from "../models/Cart";
-import { CompleteOrder } from "../models/Completeorder";
+import { Cart } from "../models/Cart";
+import { Customerinfo } from "../models/Customerinfo";
 
-/*function getTotalOfDog(i: number) {
-  let orderedDogs = new CompleteOrder();
-
-  let totalSumDog = 0;
-  for (let i = 0; i < orderedDogs.order.length; i++) {
-    totalSumDog +=
-      orderedDogs.order[i].quantity * orderedDogs.order[i].product.price;
-  }
-}*/
 
 export function createThankuHTML() {
-  let order = new CompleteOrder();
+  let order = new Customerinfo();
   let cartFunctions = new Cart();
   order = JSON.parse(sessionStorage.getItem("orderConfirmationList")) || {};
-  console.log(order);
 
   let orderConfirmationContainer: HTMLElement =
-    document.getElementById("hejhej");
+    document.getElementById("orderConfirmation");
 
   let orderinfoContainer: HTMLElement = document.createElement("main");
   orderinfoContainer.classList.add("orderInfoContainer");
@@ -33,7 +23,6 @@ export function createThankuHTML() {
   orderNumber.classList.add("orderNumber");
   orderNumber.innerHTML = "Ordernumber: " + order.orderNr;
   orderinfoContainer.appendChild(orderNumber);
-  console.log(orderNumber);
 
   let shippingOrderContainer: HTMLDivElement = document.createElement("div");
   shippingOrderContainer.classList.add("shippingOrderContainer");
@@ -46,7 +35,6 @@ export function createThankuHTML() {
   let orderName: HTMLSpanElement = document.createElement("span");
   orderName.innerHTML = "" + order.name;
   shippingOrderContainer.appendChild(orderName);
-  console.log("namn", order.name);
 
   let orderCity: HTMLSpanElement = document.createElement("span");
   orderCity.innerHTML = "" + order.city;
@@ -83,10 +71,6 @@ export function createThankuHTML() {
 
   orderinfoContainer.appendChild(containerDescription);
 
-  /*let orderConfirmation: HTMLElement = document.createElement("article");
-  orderConfirmation.classList.add("orderConfirmation");
-  orderConfirmation.id = "customerInfo";
-  orderinfoContainer.appendChild(orderConfirmation);*/
 
   let orderedItems: HTMLElement = document.createElement("article");
   orderedItems.classList.add("orderedItems");
@@ -96,10 +80,7 @@ export function createThankuHTML() {
   itemsDescription.classList.add("itemsDescription");
   orderedItems.appendChild(itemsDescription);
 
-  console.log(order);
-
   for (let i = 0; i < order.order.length; i++) {
-    console.log("oder", order.order[i]);
 
     let showOrderdItemsContainer: HTMLElement =
       document.createElement("section");
@@ -116,7 +97,8 @@ export function createThankuHTML() {
 
     let priceOrderedItem: HTMLSpanElement = document.createElement("span");
     priceOrderedItem.classList.add("priceOnItem");
-    priceOrderedItem.innerHTML = "$" + order.order[i].product.price.toString();
+    let sum = order.order[i].product.price * order.order[i].quantity;
+    priceOrderedItem.innerHTML = "$" + sum;
 
     showOrderdItemsContainer.appendChild(thankuIMG);
     showOrderdItemsContainer.appendChild(QTYOrderedItem);
@@ -127,13 +109,20 @@ export function createThankuHTML() {
 
   let totalPriceOfOrder: HTMLElement = document.createElement("section");
   totalPriceOfOrder.innerHTML = "Total: ";
-  totalPriceOfOrder.id = "totalPrice";
   orderinfoContainer.appendChild(totalPriceOfOrder);
 
   let totalpriceItem: HTMLElement = document.createElement("h5");
-  totalpriceItem.classList.add("addSum");
   totalPriceOfOrder.appendChild(totalpriceItem);
-  cartFunctions.showTotal();
+  totalpriceItem.id = "totalPrice";
+
+  let sum = 0;
+  for (let i = 0; i < order.order.length; i++) {
+      let price = order.order[i].product.price * order.order[i].quantity;
+      sum += price;
+    }
+      totalpriceItem.innerHTML = "$" + sum;
+
+
 
   let continueShoppingThanku: HTMLDivElement = document.createElement("div");
   continueShoppingThanku.classList.add("backBtnContainer");
@@ -144,4 +133,6 @@ export function createThankuHTML() {
   continueShoppingButtonThanku.href = "product-page.html#product-page";
   continueShoppingButtonThanku.innerHTML = "Shoppa mer";
   continueShoppingThanku.appendChild(continueShoppingButtonThanku);
+
+  localStorage.clear();
 }

@@ -11,11 +11,11 @@ export function createCartHTML() {
     let textContainer: HTMLDivElement = document.createElement("div");
     textContainer.classList.add("emptyCartContainer");
 
-    let noItemsSpan: HTMLElement = document.createElement("h3");
-    noItemsSpan.innerHTML = "Your shopping cart is empty";
-    noItemsSpan.classList.add("emptyCart");
+    let emptyCart: HTMLElement = document.createElement("h3");
+    emptyCart.innerHTML = "Your shopping cart is empty";
+    emptyCart.classList.add("emptyCart");
 
-    textContainer.appendChild(noItemsSpan);
+    textContainer.appendChild(emptyCart);
     productsCartContainer.appendChild(textContainer);
     categoryCartContainer.innerHTML = "";
   } else {

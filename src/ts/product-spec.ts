@@ -1,5 +1,5 @@
 import { burgerMenu } from "./functions/burgerMenu";
-import { createProductSpec, backToProductPage } from "./functions/createProductSpec";
+import { createProductSpec, backToProductPage } from "./functions/createProductSpecHtml";
 
 
 window.onload = () => {

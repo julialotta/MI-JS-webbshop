@@ -1,9 +1,7 @@
 import { Product } from "./Product";
-//kriminella } from "../../assets/productImages/Kriminella/Kriminella men snalla 1.png";
 
 let product101 = new Product(
   "Doga Lipa",
-  //kriminella,
   "/assets/productImages/Sassy/Sassy, classy and bad-assy 1.png",
   "Dog with pink glasses",
   "This english frenchie has a talent for singing.",

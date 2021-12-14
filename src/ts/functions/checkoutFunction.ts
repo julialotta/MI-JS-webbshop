@@ -1,8 +1,7 @@
 
 import { Cart, cartList } from "../models/Cart";
-
-import { CompleteOrder } from "../models/Completeorder";
-import { Orderconfirmation, orderList } from "../models/Orderconfirmation";
+import { Customerinfo } from "../models/Customerinfo";
+import { orderList } from "../models/Orderconfirmation";
 
 export function hideForm() {
   let bothforms = document.getElementsByClassName("forms");
@@ -44,13 +43,12 @@ export function openForm() {
 }
 
 export function completeOrder() {
-  let customer= new CompleteOrder();
+  let customer= new Customerinfo();
 
 
 let nameInput:HTMLInputElement = document.getElementById("name") as HTMLInputElement;
 let cName = nameInput.value;
 customer.name = cName;
-  
 
   let emailInput: HTMLInputElement = document.getElementById(
     "email"
