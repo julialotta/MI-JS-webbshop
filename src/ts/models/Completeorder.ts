@@ -6,7 +6,8 @@ export class CompleteOrder {
   email: string;
   adress: string;
   city: string;
-  cardName: string;
+ 
+  cardName:string;
   cardNumber: number;
   expDate: number;
   cvv: number;
@@ -26,5 +27,6 @@ export class CompleteOrder {
     this.order = JSON.parse(localStorage.getItem("savedCartList")) || [];
   }
 }
+
 export let completeOrderList =
   JSON.parse(sessionStorage.getItem("CompleteOrderList")) || [];

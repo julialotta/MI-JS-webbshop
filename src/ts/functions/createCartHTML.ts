@@ -12,7 +12,7 @@ export function createCartHTML() {
     textContainer.classList.add("emptyCartContainer");
 
     let noItemsSpan: HTMLElement = document.createElement("h3");
-    noItemsSpan.innerHTML = "Din varukorg är tom";
+    noItemsSpan.innerHTML = "Your shopping cart is empty";
     noItemsSpan.classList.add("emptyCart");
 
     textContainer.appendChild(noItemsSpan);
@@ -20,7 +20,7 @@ export function createCartHTML() {
     categoryCartContainer.innerHTML = "";
   } else {
     let heading = document.createElement("h3");
-    heading.innerHTML = "Dina varor";
+    heading.innerHTML = "Your shopping cart";
     productsCartContainer.appendChild(heading);
     let dogContainer: HTMLDivElement = document.createElement("div");
     dogContainer.className = "dogcontainer";
@@ -59,7 +59,7 @@ export function createCartHTML() {
 
       let totalOfDogs: HTMLSpanElement = document.createElement("p");
       totalOfDogs.classList.add("cartTotalDogs");
-      totalOfDogs.innerHTML = "Antal: ";
+      totalOfDogs.innerHTML = "Quantity: ";
       dogProduct.appendChild(totalOfDogs);
 
       let dogsShowTotal: HTMLSpanElement = document.createElement("p");
@@ -105,7 +105,7 @@ export function createCartHTML() {
     let totalSum: HTMLSpanElement = document.createElement("span");
     categoryCartContainer.innerHTML = "";
 
-    cartTotal.innerHTML = "Totalt: ";
+    cartTotal.innerHTML = "Total: ";
     categoryCartContainer.appendChild(cartTotal);
 
     cartTotal.classList.add("cartTotal");
@@ -118,7 +118,7 @@ export function createCartHTML() {
     let doneCartButton: HTMLAnchorElement = document.createElement("a");
     doneCartButton.classList.add("checkoutBtn");
     doneCartButton.href = "checkout.html";
-    doneCartButton.innerHTML = "Gå vidare till betalning";
+    doneCartButton.innerHTML = "CHECKOUT";
 
     categoryCartContainer.appendChild(doneCartButton);
 

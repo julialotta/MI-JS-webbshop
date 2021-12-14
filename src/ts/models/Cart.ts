@@ -57,8 +57,10 @@ export class Cart {
       let price = this.cartList[i].product.price * this.cartList[i].quantity;
       sum += price;
     }
-    let totalSum = document.getElementsByClassName("addSum")[0];
-    totalSum.innerHTML = "$" + sum;
+    let totalSum = document.getElementsByClassName("addSum");
+    for (let i = 0; i < totalSum.length; i++) {
+      totalSum[i].innerHTML = "$" + sum;
+    }
   }
 }
 

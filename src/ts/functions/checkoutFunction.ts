@@ -1,4 +1,6 @@
+
 import { Cart, cartList } from "../models/Cart";
+
 import { CompleteOrder } from "../models/Completeorder";
 import { Orderconfirmation, orderList } from "../models/Orderconfirmation";
 
@@ -42,13 +44,13 @@ export function openForm() {
 }
 
 export function completeOrder() {
-  let customer = new CompleteOrder();
+  let customer= new CompleteOrder();
 
-  let nameInput: HTMLInputElement = document.getElementById(
-    "name"
-  ) as HTMLInputElement;
-  let cName = nameInput.value;
-  customer.name = cName;
+
+let nameInput:HTMLInputElement = document.getElementById("name") as HTMLInputElement;
+let cName = nameInput.value;
+customer.name = cName;
+  
 
   let emailInput: HTMLInputElement = document.getElementById(
     "email"
@@ -65,8 +67,9 @@ export function completeOrder() {
   let cityInput: HTMLInputElement = document.getElementById(
     "city"
   ) as HTMLInputElement;
-  let city = cityInput.value;
+  let city = cityInput.value;  
   customer.city = city;
+
 
   let cardNameInput = document.getElementById("NameOnCard") as HTMLInputElement;
   let cardName = cardNameInput.value;
@@ -102,3 +105,4 @@ export function completeOrder() {
   let listastext = JSON.stringify(customer);
   sessionStorage.setItem("orderConfirmationList", listastext);
 }
+
