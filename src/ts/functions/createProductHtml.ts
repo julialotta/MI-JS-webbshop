@@ -1,7 +1,6 @@
 import { cartList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { Cart } from "../models/Cart";
-import { createCartHTML } from "./createCartHTML";
 
 export function createProductHtml() {
   let quantity = 0;
@@ -17,6 +16,9 @@ export function createProductHtml() {
     dogImgContainer.className = "dogimgcontainer";
     dogproduct.appendChild(dogImgContainer);
     let dogImg: HTMLImageElement = document.createElement("img");
+
+    // console.log(productList[i].picture);
+
     dogImg.src = productList[i].picture;
     dogImg.alt = productList[i].pictureAlt;
 

@@ -1,35 +1,30 @@
 import { Cart } from "./Cart";
+import { Orderinfo } from "./Orderinfo";
 
 export class CompleteOrder {
   name: string;
   email: string;
   adress: string;
   city: string;
-  cardName:string;
-  carNumber: number;
+  cardName: string;
+  cardNumber: number;
   expDate: number;
   cvv: number;
-  order: Cart[];
+  orderNr: number;
+  order: Orderinfo[];
 
   constructor() {
-    this.name = this.name;
-    this.email = this.email;
-    this.adress = this.adress;
-    this.city =this.city;
-    this.cardName = this.cardName;
-    this.carNumber = this.carNumber;
-    this.expDate = this.expDate;
-    this.cvv = this.cvv;
-    this.order = JSON.parse(localStorage.getItem("completedOrderList")) || [];
-
+    // this.name = this.name;
+    // this.email = this.email;
+    // this.adress = this.adress;
+    // this.city = this.city;
+    // this.cardName = this.cardName;
+    // this.cardNumber = this.cardNumber;
+    // this.expDate = this.expDate;
+    // this.cvv = this.cvv;
+    // this.orderNr = this.orderNr;
+    this.order = JSON.parse(localStorage.getItem("savedCartList")) || [];
   }
-
- /*  myFunctiom() {
-  } */
-
-  
-  }
-
-
+}
 export let completeOrderList =
-  JSON.parse(localStorage.getItem("CompleteOrderList")) || [];
+  JSON.parse(sessionStorage.getItem("CompleteOrderList")) || [];

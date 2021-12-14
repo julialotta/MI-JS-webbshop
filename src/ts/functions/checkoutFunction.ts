@@ -1,4 +1,6 @@
-import { CompleteOrder, completeOrderList } from "../models/Completeorder";
+import { Cart, cartList } from "../models/Cart";
+import { CompleteOrder } from "../models/Completeorder";
+import { Orderconfirmation, orderList } from "../models/Orderconfirmation";
 
 export function hideForm() {
   let bothforms = document.getElementsByClassName("forms");
@@ -36,21 +38,22 @@ export function openForm() {
   }
 }
 
-
 export function completeOrder() {
   let customer = new CompleteOrder();
 
-  let nameInput:HTMLInputElement = document.getElementById("name") as HTMLInputElement;
-let cName = nameInput.value;
-customer.name = cName;
-  
+  let nameInput: HTMLInputElement = document.getElementById(
+    "name"
+  ) as HTMLInputElement;
+  let cName = nameInput.value;
+  customer.name = cName;
+
   let emailInput: HTMLInputElement = document.getElementById(
     "email"
   ) as HTMLInputElement;
   let email = emailInput.value;
   customer.email = email;
 
-let adressInput: HTMLInputElement = document.getElementById(
+  let adressInput: HTMLInputElement = document.getElementById(
     "adress"
   ) as HTMLInputElement;
   let adress = adressInput.value;
@@ -62,14 +65,78 @@ let adressInput: HTMLInputElement = document.getElementById(
   let city = cityInput.value;
   customer.city = city;
 
-  let listastext = JSON.stringify(completeOrderList);
-  sessionStorage.setItem("completedOrderList", listastext);
+  let cardNameInput = document.getElementById("NameOnCard") as HTMLInputElement;
+  let cardName = cardNameInput.value;
+  customer.cardName = cardName;
+
+  let cardNumberInput = (
+    document.getElementById("cardNumber") as HTMLInputElement
+  ).value;
+  customer.cardNumber = parseInt(cardNumberInput);
+
+  let expInput = document.getElementById("expMonth") as HTMLInputElement;
+  let exp = expInput.value;
+  customer.expDate = parseInt(exp);
+
+  let cvvInput = (document.getElementById("cvv") as HTMLInputElement).value;
+  customer.cvv = parseInt(cvvInput);
+
+  let orderNumber: number[] = [];
+  let number = 0;
+  for (let i = 0; i < 10; i++) {
+    orderNumber.push(Math.round(Math.random() * 9));
+  }
+  for (let i = 0; i < orderNumber.length; i++) {
+    number = orderNumber[i] + number;
+  }
+
+  customer.orderNr = number;
+  customer.order = cartList;
+
+  orderList.push(customer);
+  let listastext = JSON.stringify(customer);
+  sessionStorage.setItem("orderConfirmationList", listastext);
 }
 
+/*export function orderSummary() {
+  let orderedItems = new Orderconfirmation();
+  let orderInfo: HTMLElement = document.getElementsByClassName(
+    "orderedItems"
+  )[0] as HTMLElement;
+  let itemsContainerThanku: HTMLElement = document.getElementsByClassName(
+    "itemsDescription"
+  )[0] as HTMLElement;
 
+  for (let i = 0; i < orderedItems.orderList.length; i++) {
+    let showOrderdItemsContainer: HTMLElement =
+      document.createElement("section");
+    showOrderdItemsContainer.classList.add("itemsThanku");
 
+    let pictureOrderedItem: HTMLSpanElement = document.createElement("span");
+    pictureOrderedItem.classList.add("orderedProduct");
+    showOrderdItemsContainer.innerHTML =
+      .cartList[i].product.picture;
 
-export function orderSummary () {
+    let QTYOrderedItem: HTMLSpanElement = document.createElement("span");
+    QTYOrderedItem.classList.add("quantity");
+    showOrderdItemsContainer.innerHTML = "" + orderedCart.cartList[i].quantity;
+
+    let priceOrderedItem: HTMLSpanElement = document.createElement("span");
+    priceOrderedItem.classList.add("priceOnItem");
+    showOrderdItemsContainer.innerHTML =
+      "" + orderedCart.cartList[i].product.price;
+
+    showOrderdItemsContainer.appendChild(pictureOrderedItem);
+    showOrderdItemsContainer.appendChild(QTYOrderedItem);
+    showOrderdItemsContainer.appendChild(priceOrderedItem);
+    let orderedItemsContainer: HTMLElement = document.getElementsByClassName(
+      "orderedItems"
+    )[0] as HTMLElement;
+    itemsContainerThanku.appendChild(showOrderdItemsContainer);
+    orderedItemsContainer.appendChild(itemsContainerThanku);
+  }
+  /*let order= new Orderconfirmation ();
+
   let customerInfo:HTMLElement = document.getElementById("customerInfo");
   customerInfo.className = "orderConfirmation";
 
@@ -80,46 +147,20 @@ export function orderSummary () {
   let headline = document.createElement("h4");
   headline.innerHTML = "Order confirmation";
   section.appendChild(headline);
-
-
-  for (let i = 0; i < completeOrderList.length; i++) {
-    let name = document.createElement("span");
-  let adress = document.createElement("span");
+    
+  let name:HTMLSpanElement = document.createElement("span");
+  let adress:HTMLSpanElement = document.createElement("span");
   let city = document.createElement("span");
   let email = document.createElement("span");
-  name.innerHTML = completeOrderList[i].name;
-  adress.innerHTML = completeOrderList[i].adress;
-  city.innerHTML = completeOrderList[i].city;
-  email.innerHTML = completeOrderList[i].email;
+  let ordernr = document.createElement("span");
+  section.appendChild(name);
+  section.appendChild(adress);
+  section.appendChild(city);
+  section.appendChild(email);
+  section.appendChild(ordernr);
 
-  section.appendChild(name)
-  section.appendChild(adress)
-  section.appendChild(city)
-  section.appendChild(email)
+  for (let i = 0; i < order.orderList.length; i++) {
+    console.log("körs ej?");
     
-  }
-  
-  
-
-
-
-
-  
-  
-}
-
-
-  export function orderNumber() {
-  let orderNumber: number[] = [];
-  let test = "";
-
-  for (let i = 0; i < 10; i++) {
-    orderNumber.push(Math.round(Math.random() * 9));
-  }
-  for (let i = 0; i < orderNumber.length; i++) {
-    test = orderNumber[i] + test;
-  }
-  let ordernr = document.getElementsByClassName("orderNumber")[0];
-  ordernr.innerHTML = "Ordernummer: " + test;
-}
-
+  name.innerHTML = "" + order.orderList[i].name;
+}*/
