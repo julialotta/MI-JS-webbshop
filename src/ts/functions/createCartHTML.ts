@@ -1,5 +1,4 @@
-import { Cart, cartList } from "../models/Cart";
-import { Orderinfo } from "../models/Orderinfo";
+import { Cart } from "../models/Cart";
 
 export function createCartHTML() {
   let cart = new Cart();

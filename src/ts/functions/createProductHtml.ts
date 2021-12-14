@@ -1,7 +1,6 @@
 import { cartList } from "../models/Cart";
 import { productList } from "../models/productList";
 import { Cart } from "../models/Cart";
-import { createCartHTML } from "./createCartHTML";
 
 export function createProductHtml() {
   let quantity = 0;
