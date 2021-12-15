@@ -1,27 +1,29 @@
 {
-  "name": "mi-js-webbshop",
+  "name": "mi-js-webshop",
   "version": "1.0.0",
-  "description": "webshop",
+  "description": "Draw me like one of your french bulldogs webshop",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel src/index.html",
+    "build": "parcel src/index.html src/html/*.html src/assets/productImages/*/*.png --no-cache",
     "cyp": "cypress open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julialotta/MI-JS-webbshop.git"
+    "url": "git+https://github.com/julialotta/MI-JS-webshop.git"
   },
-  "author": "julia-lotta & tuva-li",
+  "author": "Julia-Lotta Tinglof, Tuva-Li Wass Vallin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/julialotta/MI-JS-webbshop/issues"
+    "url": "https://github.com/julialotta/MI-JS-webshop/issues"
   },
-  "homepage": "https://github.com/julialotta/MI-JS-webbshop#readme",
+  "homepage": "https://github.com/julialotta/MI-JS-webshop#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
-    "cypress": "^9.1.0",
+    "cypress": "^9.1.1",
     "parcel": "^2.0.1",
-    "typescript": "^4.5.2"
-  }
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {}
+
 }
