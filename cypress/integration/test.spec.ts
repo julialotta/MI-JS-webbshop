@@ -1,6 +1,3 @@
-/// <reference types="cypress" />
-// @ts-check
-
 describe("test for webshop", () => {
   it("It should check menu links", () => {
     cy.visit("http://localhost:1234");
@@ -21,6 +18,7 @@ describe("test for webshop", () => {
     cy.get(".floatingcart").click();
     cy.get(".dogcontainer").children().should("have.length", 1);
   });
+
 
   it("Should add 3 dogs in cart, total 4 dogs", () => {
     for (let i = 0; i < 3; i++) {
@@ -59,9 +57,35 @@ describe("test for webshop", () => {
       "#sassy > :nth-child(2) > .dogimgcontainer > .cartSymbolContainer > .bi"
     ).click();
     cy.get(".floatingcart").click();
-    cy.get("#sumContainer > :nth-child(1) > #cartTotal").should(
-      "have.html",
-      "$1150"
-    );
+    cy.get("#sumContainer > :nth-child(1) > #cartTotal").should("have.html", "$1150");
   });
+
+   it("should add to cart, continue to checkout and place order", () => {
+    cy.visit("http://localhost:1234/html/product-page.html");
+    cy.get(
+      "#sassy > :nth-child(1) > .dogimgcontainer > .cartSymbolContainer > .bi"
+    ).click();
+    cy.get(".floatingcart").click();
+    cy.get(".checkoutBtn").click();
+    cy.get("#openFirstForm").click();
+    cy.get("#name").type("Name");
+    cy.get("#email").type("Email@mail.se");
+    cy.get("#adress").type("Adressvagen 1");
+    cy.get("#city").type("City");
+    cy.get("#openSecondForm").click();
+    cy.get("#NameOnCard").type("Name");
+    cy.get("#cardNumber").type("1111222233334444");
+    cy.get("#expMonth").type("01/24");
+    cy.get("#cvv").type("123");
+    cy.get("#submit").click();
+    cy.get(".shippingOrderContainer > :nth-child(2)").should("have.text", "Name")
+    cy.get(".shippingOrderContainer > :nth-child(3)").should("have.text", "Email@mail.se")
+    cy.get(".shippingOrderContainer > :nth-child(4)").should("have.text", "Adressvagen 1")
+    cy.get(".shippingOrderContainer > :nth-child(5)").should("have.text", "City")
+    cy.get(".quantity").should("have.html", "1")
+    cy.get(".priceOnItem").should("have.html", "$600")
+    cy.get("#totalPrice").should("have.html", "$600")
+
+  });
+
 });

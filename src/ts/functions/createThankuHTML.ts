@@ -35,18 +35,18 @@ export function createThankuHTML() {
   let orderName: HTMLSpanElement = document.createElement("span");
   orderName.innerHTML = "" + order.name;
   shippingOrderContainer.appendChild(orderName);
-
-  let orderCity: HTMLSpanElement = document.createElement("span");
-  orderCity.innerHTML = "" + order.city;
-  shippingOrderContainer.appendChild(orderCity);
+  
+  let orderMail: HTMLSpanElement = document.createElement("span");
+  orderMail.innerHTML = "" + order.email;
+  shippingOrderContainer.appendChild(orderMail);
 
   let orderAdress: HTMLSpanElement = document.createElement("span");
   orderAdress.innerHTML = "" + order.adress;
   shippingOrderContainer.appendChild(orderAdress);
-
-  let orderMail: HTMLSpanElement = document.createElement("span");
-  orderMail.innerHTML = "" + order.email;
-  shippingOrderContainer.appendChild(orderMail);
+  
+  let orderCity: HTMLSpanElement = document.createElement("span");
+  orderCity.innerHTML = "" + order.city;
+  shippingOrderContainer.appendChild(orderCity);
 
   let containerDescription: HTMLDivElement = document.createElement("div");
   containerDescription.classList.add("containerOfDescriptions");
