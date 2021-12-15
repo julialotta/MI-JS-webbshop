@@ -74,7 +74,7 @@ describe("test for webshop", () => {
     cy.get("#city").type("City");
     cy.get("#openSecondForm").click();
     cy.get("#NameOnCard").type("Name");
-    cy.get("#cardNumber").type("1111222233334444");
+    cy.get("#cardNumber").type("1111 2222 3333 4444");
     cy.get("#expMonth").type("01/24");
     cy.get("#cvv").type("123");
     cy.get("#submit").click();
