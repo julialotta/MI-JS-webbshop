@@ -1,3 +1,6 @@
+/// <reference types="cypress" />
+// @ts-check
+
 describe("test for webshop", () => {
   it("It should check menu links", () => {
     cy.visit("http://localhost:1234");
@@ -31,5 +34,16 @@ describe("test for webshop", () => {
       "not.have.class",
       "bi-chevron-compact-down"
     );
+  });
+
+   it("should delete product in cart", () => {
+    cy.visit("http://localhost:1234/html/product-page.html");
+    cy.get(
+      "#sassy > :nth-child(1) > .dogimgcontainer > .cartSymbolContainer > .bi"
+    ).click();
+    cy.get(".floatingcart").click();
+    cy.get(".dogcontainer > .dogproduct > .dogimgcontainer > .crossIconContainer > .bi").click();
+    cy.get("#cart").children().should("have.class", "emptyCartContainer");
+
   });
 });

@@ -20,6 +20,9 @@
   "homepage": "https://github.com/julialotta/MI-JS-webshop#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.1",
-    "parcel": "^2.0.1"
-  }
+    "cypress": "^9.1.1",
+    "parcel": "^2.0.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {}
 }
