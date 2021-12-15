@@ -96,6 +96,7 @@ export function createProductHtml() {
   }
   let listastext = JSON.stringify(productList);
   localStorage.setItem("savedList", listastext);
+  sessionStorage.clear();
 }
 
 function floatingCartBounce () {
