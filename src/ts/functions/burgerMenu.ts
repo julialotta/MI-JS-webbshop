@@ -2,8 +2,8 @@ export function burgerMenu () {
     let btn:HTMLElement = document.getElementById(
     "burgerCircle"
     ) as HTMLElement;
-     btn.addEventListener('click', test)
-  function test(){
+     btn.addEventListener('click', openMenu)
+  function openMenu(){
   let menu: HTMLElement = document.getElementById(
     "menu"
     ) as HTMLElement;
