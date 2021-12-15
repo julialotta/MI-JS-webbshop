@@ -13,7 +13,7 @@ describe("test for webshop", () => {
     cy.url().should("contain", "http://localhost:1234/html/product-page.html");
   });
 
-  it("should have 1 child/product", () => {
+  it("should add 1 dog", () => {
     cy.visit("http://localhost:1234/html/product-page.html");
     cy.get(
       "#sassy > :nth-child(1) > .dogimgcontainer > .cartSymbolContainer > .bi"
@@ -22,10 +22,12 @@ describe("test for webshop", () => {
     cy.get(".dogcontainer").children().should("have.length", 1);
   });
 
-  /*it("Should remove item from cart", () => {
-    cy.get(".bi-plus-circle").click();
-    cy.get("#totalOfDogs").should("have.attr", 2);
-  });*/
+  it("Should add 3 dogs in cart, total 4 dogs", () => {
+    for (let i = 0; i < 3; i++) {
+      cy.get(".bi-plus-circle").click();
+    }
+    cy.get("#totalOfDogs").should("have.html", "4");
+  });
 
   it("should change class name", () => {
     cy.visit("http://localhost:1234/html/checkout.html");
@@ -36,27 +38,30 @@ describe("test for webshop", () => {
     );
   });
 
-   it("should add 1 and delete 1 product in cart", () => {
+  it("should add 1 and delete 1 product in cart", () => {
     cy.visit("http://localhost:1234/html/product-page.html");
     cy.get(
       "#sassy > :nth-child(1) > .dogimgcontainer > .cartSymbolContainer > .bi"
     ).click();
     cy.get(".floatingcart").click();
-    cy.get(".dogcontainer > .dogproduct > .dogimgcontainer > .crossIconContainer > .bi").click();
+    cy.get(
+      ".dogcontainer > .dogproduct > .dogimgcontainer > .crossIconContainer > .bi"
+    ).click();
     cy.get("#cart").children().should("have.class", "emptyCartContainer");
-
   });
 
-    it("should check total sum in cart", () => {
+  it("should check total sum in cart", () => {
     cy.visit("http://localhost:1234/html/product-page.html");
     cy.get(
       "#sassy > :nth-child(1) > .dogimgcontainer > .cartSymbolContainer > .bi"
     ).click();
-     cy.get(
+    cy.get(
       "#sassy > :nth-child(2) > .dogimgcontainer > .cartSymbolContainer > .bi"
     ).click();
     cy.get(".floatingcart").click();
-    cy.get("#sumContainer > :nth-child(1) > #cartTotal").should("have.html", "$1150");
-
+    cy.get("#sumContainer > :nth-child(1) > #cartTotal").should(
+      "have.html",
+      "$1150"
+    );
   });
 });
