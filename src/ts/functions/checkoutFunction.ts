@@ -102,5 +102,7 @@ customer.name = cName;
   orderList.push(customer);
   let listastext = JSON.stringify(customer);
   sessionStorage.setItem("orderConfirmationList", listastext);
-}
+
+/*   window.open("thanku.html");
+ */}
 

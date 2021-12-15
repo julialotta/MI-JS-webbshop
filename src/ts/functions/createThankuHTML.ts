@@ -1,4 +1,3 @@
-import { Cart } from "../models/Cart";
 import { Customerinfo } from "../models/Customerinfo";
 
 
