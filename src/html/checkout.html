@@ -77,8 +77,8 @@
                 class="bi bi-chevron-compact-down openAndClose"
               ></i>
             </h3>
+          <form class="personalDataForm paymentForm" method="post">
             <article id="firstOfForms" class="forms firstForm">
-              <form class="personalDataForm">
                 <label for="name"
                   ><i class="bi bi-person-fill"></i> Full name:</label
                 >
@@ -118,16 +118,15 @@
                   placeholder="Stockholm"
                   required
                 />
-              </form>
             </article>
-            <h3 class="closeOpenForm" id="openSecondForm">
+              <h3 class="closeOpenForm" id="openSecondForm">
               PAYMENT
               <i
                 id="openOrCloseArrow"
                 class="bi bi-chevron-compact-down openAndClose"
               ></i>
-            </h3>
-            <article id="secondOfForms" class="forms secondForm">
+              </h3>
+              <article id="secondOfForms" class="forms secondForm">
               <div class="acceptedCards">
                 <span>Accepted cards:</span>
                 <div class="cardsContainer">
@@ -148,7 +147,7 @@
                   />
                 </div>
               </div>
-              <form class="paymentForm">
+              
                 <label for="NameOnCard">Card holders name:</label>
                 <input
                   type="text"
@@ -159,19 +158,21 @@
                 />
                 <label for="cardNumber">Credit card number:</label>
                 <input
-                  type="number"
-                  id="cardNumber"
-                  name="cardnumber"
-                  placeholder="1111-2222-1111-2222"
-                  pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                type="text"
+                id="cardNumber"
+                name="cardnumber"
+                placeholder="1111 2222 3333 4444"
+                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+                required
                 />
                 <label for="expMonth">Expire date:</label>
                 <input
-                  type="number"
+                  type="text"
                   id="expMonth"
                   name="expireDate"
                   placeholder="02/23"
-                  pattern="[1-12]{1-2}/[1-99]{1-2}"
+                  pattern="[1-12]{1-2}[/][1-99]{1-2}"
+                  required
                 />
                 <label for="cvv">Cvv:</label>
                 <input
@@ -180,6 +181,7 @@
                   name="cvv"
                   placeholder="123"
                   pattern="[0-9]{3-4}"
+                  required
                 />
                 <label
                   >
@@ -188,10 +190,10 @@
                     >Total:
                     <div class = "addSum" id="cartTotal"></div>
                   </span>
-                  <a id="submit"  type="submit" href="thanku.html">Place order</a>
+                  <input id="submit" type="submit" value="Place order"/>
                 </article>
-              </form>
-            </article>
+              </article>
+          </form>
           </section>
         </div>
       </main>

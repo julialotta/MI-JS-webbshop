@@ -4,7 +4,6 @@ import { Customerinfo } from "../models/Customerinfo";
 
 export function createThankuHTML() {
   let order = new Customerinfo();
-  let cartFunctions = new Cart();
   order = JSON.parse(sessionStorage.getItem("orderConfirmationList")) || {};
 
   let orderConfirmationContainer: HTMLElement =
